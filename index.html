@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>永貞國小數位閱讀成果網｜蘆映書院・2024–2026 閱讀教學典藏平臺</title>
+  <meta name="description" content="苗栗縣頭份市永貞國民小學數位閱讀成果網與蘆映書院官方入口，整合 2024–2026 閱讀推動計畫、MSSR 晨讀運動、明日說書人、主題書展、識字金銀島研究與八大分類典藏成果。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- 鍵盤導覽快速跳轉列（無障礙焦點顯示） -->
+  <div class="skip-links" role="region" aria-label="鍵盤快速導覽">
+    <a href="#main-nav" class="skip-link">跳至上方導覽（U）</a>
+    <a href="#main-content" class="skip-link">跳至主要內容（C）</a>
+    <a href="#site-footer" class="skip-link">跳至頁尾資訊（Z）</a>
+  </div>
+
+  <!-- ================= HEADER：L1 系統工具列 + L2 全域主導覽列 ================= -->
+  <header class="site-header">
+    <!-- L1：頂部系統工具列（Utility Bar） -->
+    <div class="utility-bar" aria-label="館務狀態與常用服務">
+      <div class="container utility-inner">
+        <div class="utility-stats">
+          <div class="utility-pill" id="library-status-pill" aria-live="polite">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span id="library-status-text">今日開館狀態：週一至週五 07:45–16:00（蘆映書院 1F・貞學樓 3F 書軒）</span>
+          </div>
+          <button type="button" class="utility-metric-btn" data-open-modal="modal-archive" data-archive-cat="03_晨讀運動與MSSR" title="檢視全校閱讀量化統計">
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+            </svg>
+            <span>本學期全校累積借閱：<strong id="semester-borrow-count">7,428</strong> 冊（月均 7 冊／生・館藏 13,310 冊）</span>
+          </button>
+        </div>
+
+        <nav class="utility-actions" aria-label="快速系統工具">
+          <button type="button" class="utility-action-btn" data-open-modal="modal-opac">
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+            </svg>
+            <span>圖書查詢系統</span>
+          </button>
+          <button type="button" class="utility-action-btn" data-open-modal="modal-talkbook">
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/>
+            </svg>
+            <span>聊書投稿</span>
+          </button>
+          <button type="button" class="utility-action-btn" data-open-modal="modal-volunteer">
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
+            </svg>
+            <span>志工排班</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- L2：全域主導覽列（Main Header） -->
+    <div class="main-header">
+      <div class="container main-header-inner">
+        <a href="#top" class="brand-lockup" aria-label="永貞國小數位閱讀成果網首頁">
+          <svg class="brand-crest" viewBox="0 0 56 56" width="48" height="48" role="img" aria-hidden="true">
+            <rect x="2" y="2" width="52" height="52" rx="12" fill="#1E3A8A"/>
+            <rect x="6" y="6" width="44" height="44" rx="9" fill="none" stroke="#D97706" stroke-width="1.5" opacity="0.85"/>
+            <path d="M15 38V19c4.5-2.2 9.2-2.2 13 0v19c-3.8-1.8-8.5-1.8-13 0Z" fill="#FFFFFF"/>
+            <path d="M41 38V19c-4.5-2.2-9.2-2.2-13 0v19c3.8-1.8 8.5-1.8 13 0Z" fill="#FEF3C7"/>
+            <circle cx="28" cy="13.5" r="3" fill="#D97706"/>
+            <path d="M13 42.5h30" stroke="#D97706" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <div class="brand-titles">
+            <div class="brand-zh-row">
+              <span class="brand-zh">永貞國小數位閱讀成果網</span>
+              <span class="brand-badge">蘆映書院</span>
+            </div>
+            <span class="brand-en">Yongzhen Elementary School Digital Reading Hub &amp; Luying Academy</span>
+          </div>
+        </a>
+
+        <nav id="main-nav" class="primary-nav" aria-label="全域主導覽" tabindex="-1">
+          <ul class="nav-list" role="menubar">
+            <li class="nav-item has-dropdown" role="none">
+              <button type="button" class="nav-link" aria-expanded="false" aria-haspopup="true">
+                認識本院
+                <svg class="chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+              </button>
+              <div class="dropdown-menu" role="menu">
+                <a href="#archive-explorer" role="menuitem" data-filter-cat="02_圖書館空間改造與蘆映書院">蘆映書院命名緣起與 300 萬改造</a>
+                <a href="#site-footer" role="menuitem" data-open-floorplan="luying">永馨樓 1F 蘆映書院・平面配置圖</a>
+                <a href="#site-footer" role="menuitem" data-open-floorplan="zhixue">貞學樓 3F 靜思書軒・館室動線</a>
+                <a href="#archive-explorer" role="menuitem">2024–2026 八大分類典藏總覽（6,745 檔）</a>
+              </div>
+            </li>
+
+            <li class="nav-item has-dropdown" role="none">
+              <button type="button" class="nav-link" aria-expanded="false" aria-haspopup="true">
+                行政單位
+                <svg class="chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+              </button>
+              <div class="dropdown-menu" role="menu">
+                <a href="#archive-explorer" role="menuitem" data-filter-cat="01_閱讀推動計畫與行政評鑑">閱讀推動計畫與訪視評選（Cat 01）</a>
+                <a href="#l4-hub" role="menuitem" data-open-modal="modal-volunteer">圖書館家長志工暨小大使團隊</a>
+                <a href="#l4-hub" role="menuitem" data-open-modal="modal-opac">中圖法編目與館藏 13,310 冊查詢</a>
+                <a href="#archive-explorer" role="menuitem" data-filter-cat="02_圖書館空間改造與蘆映書院">縣府 7 萬元空間標竿參訪實錄</a>
+              </div>
+            </li>
+
+            <li class="nav-item has-dropdown" role="none">
+              <button type="button" class="nav-link" aria-expanded="false" aria-haspopup="true">
+                學術與課程
+                <svg class="chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+              </button>
+              <div class="dropdown-menu" role="menu">
+                <a href="#archive-explorer" role="menuitem" data-filter-cat="03_晨讀運動與MSSR">MSSR 晨讀十年與英語明日閱讀（Cat 03）</a>
+                <a href="#archive-explorer" role="menuitem" data-filter-cat="06_閱讀素養課程與語文寫作">《子竹嚐肉》《紅磚牆外的世界窗》跨域教案</a>
+                <a href="#l5-audience" role="menuitem" data-select-stage="mid">國語日報讀報與「新聞小偵探」策略</a>
+                <a href="#l5-audience" role="menuitem" data-select-stage="high">AI 科普繪本創作與媒體識讀（Cat 06）</a>
+              </div>
+            </li>
+
+            <li class="nav-item has-dropdown" role="none">
+              <button type="button" class="nav-link" aria-expanded="false" aria-haspopup="true">
+                研究中心
+                <svg class="chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+              </button>
+              <div class="dropdown-menu" role="menu">
+                <a href="#archive-explorer" role="menuitem" data-filter-cat="07_識字金銀島與閱讀研討會研究">識字金銀島高年級適性教學研究（Cat 07）</a>
+                <a href="#archive-explorer" role="menuitem" data-filter-cat="07_識字金銀島與閱讀研討會研究">2025 自主學習節論文發表暨授權典藏</a>
+                <a href="#archive-explorer" role="menuitem" data-filter-cat="07_識字金銀島與閱讀研討會研究">2026 第十六屆閱讀評量與教學研討會</a>
+                <a href="#archive-explorer" role="menuitem" data-filter-cat="08_圖推研習社群與獲獎證照">圖推教師 AI 賦能研習與夢 N 共備社群</a>
+              </div>
+            </li>
+
+            <li class="nav-item has-dropdown" role="none">
+              <button type="button" class="nav-link" aria-expanded="false" aria-haspopup="true">
+                招生資訊
+                <svg class="chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+              </button>
+              <div class="dropdown-menu" role="menu">
+                <a href="#l5-audience" role="menuitem" data-select-stage="low">新生「閱讀起步走」精選適齡書單</a>
+                <a href="#l4-hub" role="menuitem" data-l4-tab="activities">114–115 暑期創意讀寫營隊紀實</a>
+                <a href="#l4-hub" role="menuitem" data-open-modal="modal-volunteer">小大使暨家長說故事志工招募</a>
+                <a href="#l5-audience" role="menuitem">家校共學 MSSR 與數位 AI 親子指引</a>
+              </div>
+            </li>
+
+            <li class="nav-item has-dropdown" role="none">
+              <button type="button" class="nav-link" aria-expanded="false" aria-haspopup="true">
+                訊息綜覽
+                <svg class="chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+              </button>
+              <div class="dropdown-menu" role="menu">
+                <a href="#l4-hub" role="menuitem" data-l4-tab="bookfair">115-1 主題書展「書中自有祕密基地」</a>
+                <a href="#l4-hub" role="menuitem" data-l4-tab="activities">明日說書人與週三聽故事專區（2,317 檔）</a>
+                <a href="#l4-hub" role="menuitem" data-l4-tab="newbooks">新書通報與陳沼濤基金會贈書專櫃</a>
+                <a href="#l3-hero" role="menuitem" data-open-modal="modal-honors">全校榮譽典範與企業捐資芳名錄</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-tools">
+          <form id="global-search-form" class="global-search" role="search" aria-label="全站關鍵字搜尋">
+            <label for="global-search-input" class="sr-only">搜尋全站成果、教案、書單與典藏檔案</label>
+            <input
+              id="global-search-input"
+              type="search"
+              placeholder="搜尋書單、教案、MSSR..."
+              autocomplete="off"
+            >
+            <button type="submit" class="search-submit-btn" aria-label="執行搜尋">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+              </svg>
+            </button>
+          </form>
+
+          <button
+            type="button"
+            id="hamburger-btn"
+            class="hamburger-btn"
+            aria-label="開啟或關閉行動版主選單"
+            aria-expanded="false"
+            aria-controls="mobile-drawer"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 行動裝置漢堡側滑選單（Hamburger Drawer） -->
+    <div id="mobile-drawer" class="mobile-drawer" hidden aria-label="行動版網站導覽">
+      <div class="mobile-drawer-inner container">
+        <form id="mobile-search-form" class="mobile-search" role="search">
+          <label for="mobile-search-input" class="sr-only">行動版全站搜尋</label>
+          <input id="mobile-search-input" type="search" placeholder="輸入關鍵字搜尋（如：蘆映書院、子竹嚐肉、書展）">
+          <button type="submit" class="btn btn-primary btn-sm">搜尋</button>
+        </form>
+        <div class="mobile-nav-accordion" id="mobile-nav-accordion"></div>
+        <div class="mobile-quick-actions">
+          <button type="button" class="btn btn-outline btn-sm" data-open-modal="modal-opac">圖書查詢系統</button>
+          <button type="button" class="btn btn-outline btn-sm" data-open-modal="modal-talkbook">聊書投稿</button>
+          <button type="button" class="btn btn-gold btn-sm" data-open-modal="modal-volunteer">志工排班</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- L3：視覺焦點與榮譽跑馬燈（Hero & Ticker） -->
+    <section id="l3-hero" class="hero-section" aria-roledescription="carousel" aria-label="永貞國小數位閱讀重點宣傳輪播">
+      <div class="hero-viewport">
+        <div class="hero-track" id="hero-track">
+          <!-- Slide 1 -->
+          <article class="hero-slide is-active" data-slide="0" aria-hidden="false">
+            <img src="assets/images/hero-mssr.jpg" alt="永貞國小學生於晨讀運動 MSSR 時段專注閱讀課外書籍" class="hero-bg">
+            <div class="hero-scrim" aria-hidden="true"></div>
+            <div class="container hero-content">
+              <div class="hero-copy">
+                <span class="hero-kicker">2025 明日閱讀年度推薦學校 ‧ MSSR 深耕十年實證</span>
+                <h1 class="hero-title">蘆映書院啟航，讓閱讀成為孩子看見世界的窗</h1>
+                <p class="hero-desc">
+                  整合永馨樓 181 ㎡「蘆映書院」美學改造與貞學樓 3F 靜思書軒典藏資源，每日 07:45–08:05 全校 351 位師生共同實踐身教式閱讀（MSSR），113–115 年累計典藏 6,745 份真實教案、影像與研究實績。
+                </p>
+                <div class="hero-cta-row">
+                  <button type="button" class="btn btn-gold" data-open-floorplan="luying">檢視蘆映書院空間藍圖</button>
+                  <a href="#archive-explorer" class="btn btn-ghost-light">探索 2024–2026 八大典藏庫</a>
+                </div>
+              </div>
+              <aside class="hero-stat-panel" aria-label="核心推進指標">
+                <div class="hero-stat-item">
+                  <span class="stat-num">6,745</span>
+                  <span class="stat-label">分類典藏檔案（24.13 GB）</span>
+                </div>
+                <div class="hero-stat-item">
+                  <span class="stat-num">13,310+</span>
+                  <span class="stat-label">總館藏冊數（+2,400 班級書庫）</span>
+                </div>
+                <div class="hero-stat-item">
+                  <span class="stat-num">10 年</span>
+                  <span class="stat-label">MSSR 身教式晨讀深耕歷程</span>
+                </div>
+              </aside>
+            </div>
+          </article>
+
+          <!-- Slide 2 -->
+          <article class="hero-slide" data-slide="1" aria-hidden="true">
+            <img src="assets/images/hero-bookmobile.jpg" alt="誠品行動書車駛入永貞國小操場旁，學生開心挑選書架上繪本與讀物" class="hero-bg">
+            <div class="hero-scrim" aria-hidden="true"></div>
+            <div class="container hero-content">
+              <div class="hero-copy">
+                <span class="hero-kicker">多元共讀網絡 ‧ 說書人與行動書車實景紀實</span>
+                <h2 class="hero-title">從週三聽故事到站上明日說書人全國舞台</h2>
+                <p class="hero-desc">
+                  攜手誠品行動書車、財團法人陳沼濤文教基金會與 7-ELEVEN《e 啟讀出未來》專案，豐沛實體與數位好書資源；累積 2,317 檔週三說故事與朝會推薦影音，培養孩子自信表達與思辨分享力。
+                </p>
+                <div class="hero-cta-row">
+                  <a href="#l4-hub" class="btn btn-gold" data-l4-tab="activities">瀏覽閱讀活動實況</a>
+                  <button type="button" class="btn btn-ghost-light" data-open-modal="modal-opac">立即查詢館藏新書</button>
+                </div>
+              </div>
+              <aside class="hero-stat-panel" aria-label="活動參與實績">
+                <div class="hero-stat-item">
+                  <span class="stat-num">2,317</span>
+                  <span class="stat-label">週三聽故事與說書影像紀錄</span>
+                </div>
+                <div class="hero-stat-item">
+                  <span class="stat-num">1,011</span>
+                  <span class="stat-label">書展、書車與校外圖館參訪檔</span>
+                </div>
+                <div class="hero-stat-item">
+                  <span class="stat-num">100%</span>
+                  <span class="stat-label">全校教師入班陪讀實踐率</span>
+                </div>
+              </aside>
+            </div>
+          </article>
+
+          <!-- Slide 3 -->
+          <article class="hero-slide" data-slide="2" aria-hidden="true">
+            <img src="assets/images/hero-sharing.jpg" alt="2026 教育部跨域美感教育季桃竹苗區合作學校成果分享會大合照，永貞國小教師團隊登台發表" class="hero-bg">
+            <div class="hero-scrim" aria-hidden="true"></div>
+            <div class="container hero-content">
+              <div class="hero-copy">
+                <span class="hero-kicker">學術研究領航 ‧ 2025 自主學習節暨 2026 第十六屆閱讀研討會</span>
+                <h2 class="hero-title">識字金銀島適性教學 ×《紅磚牆外的世界窗》跨域發表</h2>
+                <p class="hero-desc">
+                  建構「診斷—教學—回饋」識字適性支持架構，帶動高年級低成就學生穩定跨越 2,000 字門檻並勇奪全國識字英雄榜前 20 名；同步以頭份蘆竹湳磚牆窗花結合雙語繪本與 SDGs 驚豔桃竹苗分享會。
+                </p>
+                <div class="hero-cta-row">
+                  <a href="#archive-explorer" class="btn btn-gold" data-filter-cat="07_識字金銀島與閱讀研討會研究">檢視學術與研究檔案</a>
+                  <a href="#l5-audience" class="btn btn-ghost-light" data-select-stage="high">體驗高年級跨域探究</a>
+                </div>
+              </div>
+              <aside class="hero-stat-panel" aria-label="學術研究數據">
+                <div class="hero-stat-item">
+                  <span class="stat-num">2,985 字</span>
+                  <span class="stat-label">實驗班六年級期末均字量實績</span>
+                </div>
+                <div class="hero-stat-item">
+                  <span class="stat-num">496 檔</span>
+                  <span class="stat-label">《子竹嚐肉》《世界窗》教案影像</span>
+                </div>
+                <div class="hero-stat-item">
+                  <span class="stat-num">1,000</span>
+                  <span class="stat-label">研討會籌備暨識字測驗研究檔案</span>
+                </div>
+              </aside>
+            </div>
+          </article>
+        </div>
+
+        <!-- 輪播控制列（左右切換箭頭 + 進度指示點 + 無障礙暫停/播放按鈕） -->
+        <button type="button" id="hero-prev" class="hero-arrow hero-arrow-prev" aria-label="上一則宣傳橫幅">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button type="button" id="hero-next" class="hero-arrow hero-arrow-next" aria-label="下一則宣傳橫幅">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+
+        <div class="hero-controls">
+          <div class="hero-dots" id="hero-dots" role="tablist" aria-label="輪播進度指示">
+            <button type="button" class="hero-dot is-active" role="tab" aria-selected="true" aria-label="切換至第 1 則：蘆映書院與 MSSR 晨讀十年" data-slide-target="0"></button>
+            <button type="button" class="hero-dot" role="tab" aria-selected="false" aria-label="切換至第 2 則：明日說書人與誠品行動書車" data-slide-target="1"></button>
+            <button type="button" class="hero-dot" role="tab" aria-selected="false" aria-label="切換至第 3 則：識字金銀島與跨域成果發表" data-slide-target="2"></button>
+          </div>
+          <span class="hero-counter" id="hero-counter" aria-live="polite">01 / 03</span>
+          <button type="button" id="hero-toggle" class="hero-pause-btn" aria-pressed="false" aria-label="暫停主視覺自動輪播">
+            <svg class="icon-pause" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+            <svg class="icon-play" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true" hidden><polygon points="6 4 20 12 6 20 6 4"/></svg>
+            <span id="hero-toggle-text">暫停輪播</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 下方跑馬燈：榮譽典範與捐資芳名錄 -->
+      <div class="honor-ticker-bar" aria-label="榮譽典範與捐資芳名錄動態公告">
+        <div class="container ticker-inner">
+          <div class="ticker-badge">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+            <span>榮譽典範與捐資芳名錄</span>
+          </div>
+
+          <div class="ticker-viewport" id="ticker-viewport" aria-live="off">
+            <div class="ticker-item is-active" id="ticker-active-text">
+              <span class="ticker-tag">年度典範</span>
+              <span>狂賀！永貞國小榮獲「2025 明日閱讀年度推薦學校」暨全國第二級典範學校認證，10+ 位教師榮膺 MSSR 典範教師！</span>
+            </div>
+          </div>
+
+          <div class="ticker-controls">
+            <button type="button" id="ticker-next-btn" class="ticker-ctrl-btn" aria-label="顯示下一筆榮譽典範">下一筆</button>
+            <button type="button" id="ticker-toggle" class="ticker-ctrl-btn" aria-pressed="false" aria-label="暫停榮譽跑馬燈">
+              <span id="ticker-toggle-text">暫停</span>
+            </button>
+            <button type="button" id="open-honors-modal" class="ticker-more-link" data-open-modal="modal-honors">
+              更多典範 &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- L4：動態內容中樞（非對稱佈局） -->
+    <section id="l4-hub" class="section-block l4-section" aria-labelledby="l4-heading">
+      <div class="container">
+        <div class="section-header-row">
+          <div>
+            <span class="section-eyebrow">CAMPUS READING HUB ‧ 2024–2026</span>
+            <h2 id="l4-heading" class="section-title">閱讀動態中樞與年度實績</h2>
+          </div>
+          <p class="section-subtitle">
+            即時整合主題書展、全校共讀現場、新書到館通報、識字暨說書榮譽榜與圖書小志工服務資訊
+          </p>
+        </div>
+
+        <!-- 非對稱兩欄主體 -->
+        <div class="asymmetric-grid">
+          <!-- 左側主區：最新書展 / 閱讀活動 / 新書通報（7/12 寬度） -->
+          <div class="hub-main-card">
+            <div class="tab-bar" role="tablist" aria-label="閱讀動態分類頁籤">
+              <button type="button" role="tab" id="tab-btn-bookfair" class="hub-tab is-active" aria-selected="true" aria-controls="panel-bookfair" data-l4-target="bookfair">
+                <span class="tab-dot" aria-hidden="true"></span>最新書展
+              </button>
+              <button type="button" role="tab" id="tab-btn-activities" class="hub-tab" aria-selected="false" aria-controls="panel-activities" data-l4-target="activities">
+                <span class="tab-dot" aria-hidden="true"></span>閱讀活動
+              </button>
+              <button type="button" role="tab" id="tab-btn-newbooks" class="hub-tab" aria-selected="false" aria-controls="panel-newbooks" data-l4-target="newbooks">
+                <span class="tab-dot" aria-hidden="true"></span>新書通報
+              </button>
+            </div>
+
+            <!-- Panel 1: 最新書展 -->
+            <div id="panel-bookfair" class="tab-panel is-active" role="tabpanel" aria-labelledby="tab-btn-bookfair">
+              <div class="bookfair-spotlight">
+                <button type="button" class="spotlight-thumb-btn" data-lightbox-src="assets/images/bookfair-poster.jpg" data-lightbox-title="115-1 主題書展「書中自有祕密基地」官方策展海報（靜思書軒展出）" aria-label="放大檢視 115-1 主題書展海報">
+                  <img src="assets/images/bookfair-poster.jpg" alt="115-1 主題書展書中自有祕密基地海報" class="spotlight-poster">
+                  <span class="zoom-badge">點擊看大圖</span>
+                </button>
+                <div class="spotlight-body">
+                  <div class="chip-row">
+                    <span class="chip chip-gold">115-1 主題強檔</span>
+                    <span class="chip chip-navy">展出地點：靜思書軒 &amp; 蘆映書院</span>
+                  </div>
+                  <h3 class="spotlight-title">115-1 主題書展：「書中自有祕密基地」</h3>
+                  <p class="spotlight-text">
+                    結合 300 萬元圖書館改造與校園祕密基地命名活動，策劃低、中、高年級三大進階書單（共 15 本主題核心圖書與挑戰學習單）：低年級從《圖書館獅子》《沒有名字的貓》出發；中年級透過《文字工廠》《老房子》探索空間轉化；高年級思辨《檸檬圖書館》《神奇圖書館》。
+                  </p>
+                  <div class="meta-bullets">
+                    <span>展期：115-1 期中週系列活動</span>
+                    <span>搭配學習單：祕密基地命名挑戰賽（入選前 5 名頒獎）</span>
+                  </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary btn-sm" data-open-modal="modal-opac" data-opac-filter="祕密基地書展">瀏覽 15 本策展書單</button>
+                    <button type="button" class="btn btn-outline btn-sm" data-open-modal="modal-archive" data-archive-cat="05_主題書展書車與多元閱讀活動">查看書展歷程檔案（45 檔）</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sub-exhibition-grid">
+                <article class="mini-exhibit-card">
+                  <div class="mini-exhibit-top">
+                    <span class="chip chip-soft">40 周年校慶特展</span>
+                    <span class="date-label">2026.11–12</span>
+                  </div>
+                  <h4>「永」往直前・「貞」心 40：校慶時光記憶書展</h4>
+                  <p>針對一至六年級精選《小雞過生日》《爺爺一定有辦法》《花婆婆》《魔法十年屋》《許願樹》《記憶傳承人》等 24 本典藏館藏與校慶時光小書摺頁。</p>
+                  <button type="button" class="text-action-btn" data-open-modal="modal-opac" data-opac-filter="40周年校慶書展">查詢 24 本分齡校慶書單 &rarr;</button>
+                </article>
+                <article class="mini-exhibit-card">
+                  <div class="mini-exhibit-top">
+                    <span class="chip chip-soft">數位繪本與節慶書展</span>
+                    <span class="date-label">2025–2026</span>
+                  </div>
+                  <h4>萬聖節・聖誕傳情・元宵燈謎暨 AI 科普書展</h4>
+                  <p>融合 SEL 社會情緒學習、雙語繪本《Who Is the Protagonist?》AI 創作展示與國語日報讀報任務，讓書香融入每個校園節氣。</p>
+                  <button type="button" class="text-action-btn" data-lightbox-src="assets/images/minibook-40th.jpg" data-lightbox-title="永貞 40 周年時光機八格摺頁學習單（取自 Cat 02 蘆映書院典藏）">預覽時光機摺頁教材 &rarr;</button>
+                </article>
+              </div>
+            </div>
+
+            <!-- Panel 2: 閱讀活動 -->
+            <div id="panel-activities" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-activities" hidden>
+              <div class="activity-filter-bar" role="group" aria-label="閱讀活動類型篩選">
+                <button type="button" class="pill-filter is-active" data-act-filter="all">全部活動實績</button>
+                <button type="button" class="pill-filter" data-act-filter="story">說書與聽故事</button>
+                <button type="button" class="pill-filter" data-act-filter="excursion">書車與走讀參訪</button>
+                <button type="button" class="pill-filter" data-act-filter="inquiry">跨域研討與實作</button>
+              </div>
+              <div class="activity-cards-grid" id="activity-cards-grid">
+                <article class="activity-card" data-act-type="story">
+                  <img src="assets/images/storytelling-girl.jpg" alt="學生於朝會持《不放棄的小刺蝟》繪本自信進行好書推薦" loading="lazy">
+                  <div class="activity-card-body">
+                    <span class="act-meta">週三聽故事 &amp; 學生朝會 ‧ 2,317 檔</span>
+                    <h4>晨光好書推薦暨《週三聽故事》跨年段共學</h4>
+                    <p>結合校長與圖推教師身教說書，訓練學生從朝會《不放棄的小刺蝟》分享走向明日說書人全國賽舞台。</p>
+                    <button type="button" class="text-action-btn" data-open-modal="modal-archive" data-archive-cat="04_明日說書人與週三聽故事">進入 Cat 04 影音檔案庫 &rarr;</button>
+                  </div>
+                </article>
+
+                <article class="activity-card" data-act-type="excursion">
+                  <img src="assets/images/library-visit.jpg" alt="五甲學生穿著校服於公共圖書館進行現場導覽與尋寶學習單探索" loading="lazy">
+                  <div class="activity-card-body">
+                    <span class="act-meta">校外走讀實察 ‧ 101 檔</span>
+                    <h4>公共圖書館參訪暨十大分類尋寶任務</h4>
+                    <p>帶領中年級學生實地走入公共圖書館認識館藏動線、練習自行借還書並完成《圖書館尋寶學習單》掃描存證。</p>
+                    <button type="button" class="text-action-btn" data-open-modal="modal-archive" data-archive-cat="05_主題書展書車與多元閱讀活動">查看參訪實況與教材 &rarr;</button>
+                  </div>
+                </article>
+
+                <article class="activity-card" data-act-type="inquiry">
+                  <img src="assets/images/succulent-inquiry.jpg" alt="《子竹嚐肉》跨領域美感閱讀課程，學生圍桌近距離觀察多肉植物微觀世界" loading="lazy">
+                  <div class="activity-card-body">
+                    <span class="act-meta">跨域素養教案 ‧ 496 檔</span>
+                    <h4>《子竹嚐肉》知足常樂與《紅磚牆外的世界窗》</h4>
+                    <p>揉合國語文經典閱讀、自然微觀多肉植物、蘆竹湳古厝窗花幾何與 Padlet 雲端藝廊，登上 2026 桃竹苗分享會。</p>
+                    <button type="button" class="text-action-btn" data-open-modal="modal-archive" data-archive-cat="06_閱讀素養課程與語文寫作">查看教案與作品典藏 &rarr;</button>
+                  </div>
+                </article>
+
+                <article class="activity-card" data-act-type="inquiry">
+                  <img src="assets/images/activity-tablet.jpg" alt="教師陪伴學生運用平板載具進行數位閱讀與線上共讀探究" loading="lazy">
+                  <div class="activity-card-body">
+                    <span class="act-meta">MSSR 2.0 數位共讀 ‧ 115 場次</span>
+                    <h4>e 啟讀出未來電子書載具 &amp; 暑期創意讀寫營</h4>
+                    <p>導入 7-ELEVEN 專案電子書閱讀器與「新聞小偵探」事實查核課，開辦暑期一至五年級創意讀寫營隊。</p>
+                    <button type="button" class="text-action-btn" data-open-modal="modal-archive" data-archive-cat="01_閱讀推動計畫與行政評鑑">查看載具受贈與計畫檔 &rarr;</button>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Panel 3: 新書通報 -->
+            <div id="panel-newbooks" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-newbooks" hidden>
+              <div class="newbooks-banner">
+                <img src="assets/images/book-donation.jpg" alt="永貞國小教師正於桌前拆封檢視企業贈書與最新購入兒童讀物" loading="lazy">
+                <div>
+                  <span class="chip chip-gold">館藏持續擴充至 13,310+ 冊</span>
+                  <h3>114–115 新書通報：聯合採購 522 冊 × 陳沼濤文教基金會贈書</h3>
+                  <p>本月新編目上架涵蓋苗栗縣聯合採購（522 本）、23 萬圖書採購計畫、本土語言選書及陳沼濤文教基金會捐贈套書（《三腳貓偵探團》《烏龍小學的唐詩遊樂園》等），全數已完成中圖法貼標上架。</p>
+                </div>
+              </div>
+              <div class="newbooks-list" id="newbooks-list"></div>
+              <div class="newbooks-footer-actions">
+                <button type="button" class="btn btn-primary btn-sm" data-open-modal="modal-opac">開啟完整 45+ 本館藏互動檢索</button>
+                <a href="https://eschool.mlc.edu.tw/054652/library" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">前往苗栗縣立圖書系統網（另開新視窗）</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右側欄：閱讀小達人榮譽榜 & 小志工招募（5/12 寬度） -->
+          <div class="hub-side-stack">
+            <!-- 閱讀小達人榮譽榜 -->
+            <article class="side-card honor-card" aria-labelledby="side-honor-title">
+              <div class="side-card-head">
+                <div>
+                  <span class="side-kicker">EXCELLENCE SHOWCASE</span>
+                  <h3 id="side-honor-title">閱讀小達人榮譽榜</h3>
+                </div>
+                <div class="mini-tab-group" role="tablist" aria-label="榮譽榜分類">
+                  <button type="button" role="tab" class="mini-tab is-active" aria-selected="true" data-honor-tab="literacy">識字英雄</button>
+                  <button type="button" role="tab" class="mini-tab" aria-selected="false" data-honor-tab="story">說書/作文</button>
+                </div>
+              </div>
+
+              <div class="honor-panel is-active" id="honor-panel-literacy">
+                <div class="honor-visual-row">
+                  <button type="button" class="honor-thumb-btn" data-lightbox-src="assets/images/literacy-hero.jpg" data-lightbox-title="114 學年度第 2 學期學習島嶼識字英雄榜全國前 20 名（永貞國小 3 生上榜）">
+                    <img src="assets/images/literacy-hero.jpg" alt="114-2 識字英雄榜全國前 20 名榜單海報" loading="lazy">
+                  </button>
+                  <div class="honor-list-box">
+                    <p class="honor-lead">114-2 識字英雄榜全國前 20 名</p>
+                    <ul class="rank-list">
+                      <li><span class="rank-pill gold">第 7 名</span><strong>林 ○ 語</strong><small>苗栗縣永貞國小</small></li>
+                      <li><span class="rank-pill silver">第 8 名</span><strong>鍾 ○ 冠</strong><small>苗栗縣永貞國小</small></li>
+                      <li><span class="rank-pill bronze">第 15 名</span><strong>陳 ○ 彤</strong><small>苗栗縣永貞國小</small></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="honor-stat-strip">
+                  <span>601 實驗班期末均字量：<strong>2,985 字</strong>（最高達 3,838 字）</span>
+                  <button type="button" class="text-action-btn" data-lightbox-src="assets/images/literacy-chart.jpg" data-lightbox-title="識字金銀島 601 班 114-2 期末施測分布報告">看數據圖表</button>
+                </div>
+              </div>
+
+              <div class="honor-panel" id="honor-panel-story" hidden>
+                <div class="honor-visual-row">
+                  <button type="button" class="honor-thumb-btn" data-lightbox-src="assets/images/storyteller-winners.jpg" data-lightbox-title="2025 明日說書人全國博覽會國小高年級組佳作榜單（王湘婷、蔡妤瑄）">
+                    <img src="assets/images/storyteller-winners.jpg" alt="2025 明日說書人博覽會佳作名單紅框標示永貞國小" loading="lazy">
+                  </button>
+                  <div class="honor-list-box">
+                    <p class="honor-lead">全國說書人 &amp; 苗栗文狀元</p>
+                    <ul class="rank-list">
+                      <li><span class="rank-pill gold">全國佳作</span><strong>王湘婷・蔡妤瑄</strong><small>2025 明日說書人高年級組</small></li>
+                      <li><span class="rank-pill navy">縣狀元/秀才</span><strong>江沂潔・饒恩慈</strong><small>114 苗栗文狀元寫作競賽</small></li>
+                      <li><span class="rank-pill navy">國語文代表</span><strong>張林可薇・白羽菲</strong><small>明日說書人與英語競賽</small></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="honor-stat-strip">
+                  <span>另有 113 酷英英聽王暨 2026 夢 N 發表佳績</span>
+                  <button type="button" class="text-action-btn" data-lightbox-src="assets/images/writing-award.jpg" data-lightbox-title="114 翰墨鳴華・苗栗縣文狀元頒獎典禮（五年級秀才饒恩慈登台受獎）">看頒獎實照</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 小志工招募 -->
+            <article class="side-card volunteer-card" aria-labelledby="side-vol-title">
+              <div class="side-card-head">
+                <div>
+                  <span class="side-kicker">SERVICE &amp; AMBASSADORS</span>
+                  <h3 id="side-vol-title">圖書小志工與家長志工招募</h3>
+                </div>
+                <span class="chip chip-gold">招募進行中</span>
+              </div>
+              <p class="volunteer-quote">
+                「您就像一顆閃亮的星星，照亮學校，溫暖學生」——誠摯邀請家長故事志工與中、高年級圖書館小大使共同守護蘆映書院。
+              </p>
+              <dl class="volunteer-info-grid">
+                <div>
+                  <dt>服務時段</dt>
+                  <dd>早 09:00–11:30｜午 13:00–15:00（週一至週五）</dd>
+                </div>
+                <div>
+                  <dt>任務項目</dt>
+                  <dd>櫃台借還書、進班說故事、主題書展闖關、小大使架位理書</dd>
+                </div>
+                <div>
+                  <dt>諮詢窗口</dt>
+                  <dd>圖書管理員 邱郅惟（037-623290*745）</dd>
+                </div>
+              </dl>
+              <div class="volunteer-cta-row">
+                <button type="button" class="btn btn-gold btn-sm" data-open-modal="modal-volunteer">查看班表並登記排班</button>
+                <button type="button" class="btn btn-outline btn-sm" data-lightbox-src="assets/images/volunteer-poster.jpg" data-lightbox-title="永貞國小圖書志工招募單實件（取自 Cat 01 行政檔案庫）">檢視招募原件海報</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- E:\2024-2026閱讀教學 八大分類典藏總覽全景（可直接點擊檢視各類檔案與次資料夾） -->
+        <div id="archive-explorer" class="archive-directory-wrap" aria-labelledby="archive-dir-title">
+          <div class="archive-dir-head">
+            <div>
+              <span class="section-eyebrow">ARCHIVE INTEGRATED ‧ E:\2024-2026閱讀教學</span>
+              <h3 id="archive-dir-title" class="archive-dir-title">2024–2026 閱讀教學八大典藏資料庫</h3>
+            </div>
+            <div class="archive-dir-meta">
+              <span>已去重整合 <strong>6,745</strong> 檔（影像 5,855 ‧ 文件 890 ‧ 共 24.13 GB）｜第 09 類收錄全機 16,152 筆影像盤點總清冊</span>
+            </div>
+          </div>
+
+          <div class="archive-grid" id="archive-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- L5：受眾任務分流中心（Audience Hub） -->
+    <section id="l5-audience" class="section-block l5-section" aria-labelledby="l5-heading">
+      <div class="container">
+        <div class="section-header-row">
+          <div>
+            <span class="section-eyebrow">AUDIENCE &amp; LEARNING PATHWAYS</span>
+            <h2 id="l5-heading" class="section-title">受眾任務分流中心</h2>
+          </div>
+          <p class="section-subtitle">
+            依年段閱讀能力與教學任務精準分流：切換左三項校內學習區探索分齡策略與書單，或直達右側五大官學數位平台
+          </p>
+        </div>
+
+        <!-- 8 大受眾分流入口格線 -->
+        <div class="audience-grid">
+          <!-- 1. 低年級繪本區 -->
+          <button type="button" class="audience-card is-stage is-active" data-stage="low" aria-pressed="true">
+            <span class="aud-badge">校內分流 01</span>
+            <div class="aud-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h8M8 11h6"/></svg>
+            </div>
+            <h3>低年級繪本區</h3>
+            <p>圖書館禮儀、故事結構啟蒙、新生閱讀起步走與 40 周年慶生繪本</p>
+            <span class="aud-action">檢視任務書單 &darr;</span>
+          </button>
+
+          <!-- 2. 中年級橋梁書 -->
+          <button type="button" class="audience-card is-stage" data-stage="mid" aria-pressed="false">
+            <span class="aud-badge">校內分流 02</span>
+            <div class="aud-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg>
+            </div>
+            <h3>中年級橋梁書</h3>
+            <p>六何法閱讀策略、國語日報新聞小偵探、小組討論與橋樑小說探索</p>
+            <span class="aud-action">檢視任務書單 &darr;</span>
+          </button>
+
+          <!-- 3. 高年級跨域探究 -->
+          <button type="button" class="audience-card is-stage" data-stage="high" aria-pressed="false">
+            <span class="aud-badge">校內分流 03</span>
+            <div class="aud-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
+            </div>
+            <h3>高年級跨域探究</h3>
+            <p>《子竹嚐肉》《世界窗》跨域美感、AI 科普繪本、事實觀點判讀與媒體素養</p>
+            <span class="aud-action">檢視任務書單 &darr;</span>
+          </button>
+
+          <!-- 4. 主題書單（外部連結） -->
+          <a href="https://eschool.mlc.edu.tw/054652/library" target="_blank" rel="noopener noreferrer" class="audience-card is-external">
+            <span class="aud-badge ext">校務圖書網 &#8599;</span>
+            <div class="aud-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h6"/></svg>
+            </div>
+            <h3>主題書單</h3>
+            <p>直達苗栗縣永貞國小校務圖書館系統查詢全館主題館藏與即時借還狀態</p>
+            <span class="aud-action">前往平台（另開視窗）&rarr;</span>
+          </a>
+
+          <!-- 5. 明日閱讀專區（外部連結） -->
+          <a href="https://www.readingfortomorrow.org/LightUpMssr/2025/achievementPage.php?school_id=054652" target="_blank" rel="noopener noreferrer" class="audience-card is-external">
+            <span class="aud-badge ext">中央大學 MSSR &#8599;</span>
+            <div class="aud-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2m-7.07-15.07 1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
+            </div>
+            <h3>明日閱讀專區</h3>
+            <p>檢視永貞國小（代碼 054652）於全國 2025 明日閱讀日暨點亮 MSSR 成果頁</p>
+            <span class="aud-action">前往專區（另開視窗）&rarr;</span>
+          </a>
+
+          <!-- 6. 教育雲電子書（外部連結） -->
+          <a href="https://oidcebook.nlpi.edu.tw/" target="_blank" rel="noopener noreferrer" class="audience-card is-external">
+            <span class="aud-badge ext">國立公共資訊圖書館 &#8599;</span>
+            <div class="aud-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h8M8 14h5"/></svg>
+            </div>
+            <h3>教育雲電子書</h3>
+            <p>師生以教育雲 OpenID 登入即借即看，搭配《祕密基地》電子書共讀書單</p>
+            <span class="aud-action">立即借閱電子書（另開視窗）&rarr;</span>
+          </a>
+
+          <!-- 7. 識字金銀島資源整合平台（外部連結） -->
+          <a href="https://pair-nknu.k12ea.gov.tw/" target="_blank" rel="noopener noreferrer" class="audience-card is-external">
+            <span class="aud-badge ext">高師大適性平臺 &#8599;</span>
+            <div class="aud-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>識字金銀島資源整合平台</h3>
+            <p>進行標準化識字量色點分層測驗、筆順適性任務挑戰與全國識字英雄榜查詢</p>
+            <span class="aud-action">進入測驗平台（另開視窗）&rarr;</span>
+          </a>
+
+          <!-- 8. 家校共學數位AI指引（外部連結） -->
+          <a href="https://drive.google.com/file/d/1HpEKZPP31BM9LrWQqFaXkKN71FF01_g_/view" target="_blank" rel="noopener noreferrer" class="audience-card is-external">
+            <span class="aud-badge ext">雲端指引手冊 &#8599;</span>
+            <div class="aud-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>
+            </div>
+            <h3>家校共學數位AI指引</h3>
+            <p>閱覽親師生共讀數位工具、AI 輔助繪本故事創作與安全數位閱讀實作指南</p>
+            <span class="aud-action">開啟線上指引（另開視窗）&rarr;</span>
+          </a>
+        </div>
+
+        <!-- 互動式分齡學習任務詳情看板（連動上方 低／中／高 年段按鈕） -->
+        <div class="stage-detail-panel" id="stage-detail-panel" aria-live="polite"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= L6：頁尾治理與雙據點矩陣（Footer） ================= -->
+  <footer id="site-footer" class="site-footer" tabindex="-1">
+    <div class="container">
+      <!-- 上方收合區：4 欄手風琴收合選單（手機版可點擊展開） -->
+      <div class="footer-accordion-grid" id="footer-accordion" role="navigation" aria-label="頁尾治理與特色計畫連結">
+        <div class="footer-col">
+          <button type="button" class="footer-acc-trigger" aria-expanded="true" aria-controls="fpanel-gov">
+            <span>校務與法規公開</span>
+            <svg class="acc-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <ul id="fpanel-gov" class="footer-acc-panel">
+            <li><a href="#archive-explorer" data-filter-cat="01_閱讀推動計畫與行政評鑑">114–115 深耕閱讀暨 2 萬元核章計畫</a></li>
+            <li><a href="#archive-explorer" data-filter-cat="01_閱讀推動計畫與行政評鑑">圖推教師減課鐘點費與經費支用明細</a></li>
+            <li><a href="#archive-explorer" data-filter-cat="01_閱讀推動計畫與行政評鑑">閱讀督導訪視自評表與佐證文件</a></li>
+            <li><a href="#l4-hub" data-open-modal="modal-opac">中國圖書分類法編目暨採購書單</a></li>
+            <li><a href="#archive-explorer">全機 2024–2026 閱讀盤點總清冊（Cat 09）</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <button type="button" class="footer-acc-trigger" aria-expanded="true" aria-controls="fpanel-pd">
+            <span>師培與教學品質</span>
+            <svg class="acc-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <ul id="fpanel-pd" class="footer-acc-panel">
+            <li><a href="#archive-explorer" data-filter-cat="08_圖推研習社群與獲獎證照">115 圖推教師初階／進階暨 AI 工作助理教材</a></li>
+            <li><a href="#archive-explorer" data-filter-cat="03_晨讀運動與MSSR">中央大學明日閱讀（MSSR）十年歷程報告</a></li>
+            <li><a href="#archive-explorer" data-filter-cat="06_閱讀素養課程與語文寫作">夢 N 台中場《從讀到寫》國語 A 班共備</a></li>
+            <li><a href="#archive-explorer" data-filter-cat="07_識字金銀島與閱讀研討會研究">2025 自主學習節＆2026 第十六屆閱讀研討會</a></li>
+            <li><a href="#l3-hero" data-lightbox-src="assets/images/ncu-cert.jpg" data-lightbox-title="國立中央大學 20.5 小時 MSSR 研習證明書實件">教師專業認證與獲獎證照展區</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <button type="button" class="footer-acc-trigger" aria-expanded="true" aria-controls="fpanel-safety">
+            <span>校園安全宣導</span>
+            <svg class="acc-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <ul id="fpanel-safety" class="footer-acc-panel">
+            <li><a href="#archive-explorer" data-filter-cat="05_主題書展書車與多元閱讀活動">《校園防護小偵探》法治暨安全教育學習單</a></li>
+            <li><a href="#site-footer" data-open-floorplan="luying">圖書館消防逃生、耐震書架與無障礙電梯動線</a></li>
+            <li><a href="#l5-audience" data-select-stage="mid">《新聞小偵探》假訊息辨識與網路防詐宣導</a></li>
+            <li><a href="https://drive.google.com/file/d/1HpEKZPP31BM9LrWQqFaXkKN71FF01_g_/view" target="_blank" rel="noopener noreferrer">數位載具護眼距離與家長陪伴規範 &#8599;</a></li>
+            <li><a href="#site-footer" data-open-modal="modal-a11y">全校資訊公開去識別化與創用 CC BY-NC-SA 聲明</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <button type="button" class="footer-acc-trigger" aria-expanded="true" aria-controls="fpanel-special">
+            <span>特色計畫平台</span>
+            <svg class="acc-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <ul id="fpanel-special" class="footer-acc-panel">
+            <li><a href="#archive-explorer" data-filter-cat="02_圖書館空間改造與蘆映書院">300 萬圖書館空間環境改善與蘆映書院</a></li>
+            <li><a href="https://www.readingfortomorrow.org/LightUpMssr/2025/achievementPage.php?school_id=054652" target="_blank" rel="noopener noreferrer">2025 點亮明日閱讀—永貞成果專頁 &#8599;</a></li>
+            <li><a href="https://pair-nknu.k12ea.gov.tw/" target="_blank" rel="noopener noreferrer">識字金銀島學習島嶼整合平台 &#8599;</a></li>
+            <li><a href="https://oidcebook.nlpi.edu.tw/" target="_blank" rel="noopener noreferrer">國資圖 × 教育雲雲端電子書平台 &#8599;</a></li>
+            <li><a href="#l3-hero" data-open-modal="modal-honors">陳沼濤基金會・誠品書車・7-ELEVEN 夥伴</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 中段雙據點矩陣：左右並列兩個校區／館室 -->
+      <div class="footer-campuses-grid" aria-label="雙據點館室聯絡與平面配置資訊">
+        <section class="campus-card" aria-labelledby="campus-1-title">
+          <div class="campus-head">
+            <span class="campus-badge">據點一 ‧ 新改建閱讀美學空間</span>
+            <h3 id="campus-1-title">永馨樓 1F「蘆映書院」（181 ㎡）</h3>
+          </div>
+          <ul class="campus-details">
+            <li><strong>館室地址：</strong>35155 苗栗縣頭份市永貞路一段 335 號（永馨樓一樓・近正門主校區動線）</li>
+            <li><strong>館室總機：</strong><a href="tel:037623290">037-623290</a> 分機 <code>725</code>（輔導室）／ <code>137</code>（閱讀推動團隊）</li>
+            <li><strong>緊急聯絡：</strong>037-623290 分機 <code>720</code>（教導處安全及緊急校務應變窗口）</li>
+            <li><strong>空間特色：</strong>主題書展舞台大屏、教師閱讀吧台、中控服務台、雙語繪本暨祕密基地共讀區</li>
+          </ul>
+          <div class="campus-actions">
+            <button type="button" class="btn btn-gold btn-sm" data-open-floorplan="luying">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+              <span>平面配置圖（含 3D 示意）</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="campus-card" aria-labelledby="campus-2-title">
+          <div class="campus-head">
+            <span class="campus-badge secondary">據點二 ‧ 典藏編目暨志工值勤</span>
+            <h3 id="campus-2-title">貞學樓 3F「靜思書軒暨原圖書閱覽室」（130 ㎡）</h3>
+          </div>
+          <ul class="campus-details">
+            <li><strong>館室地址：</strong>35155 苗栗縣頭份市永貞路一段 335 號（貞學樓三樓・側門天青門／田寮路 45 巷設電梯）</li>
+            <li><strong>館室總機：</strong><a href="tel:037623290">037-623290</a> 分機 <code>745</code>（圖書管理員 邱郅惟・借還編目與志工窗口）</li>
+            <li><strong>緊急聯絡：</strong>037-623290 分機 <code>710</code>（總務處無障礙電梯、消防及設施設備應變專線）</li>
+            <li><strong>空間特色：</strong>13,310 冊實體館藏、中國圖書分類法 800 類專區、小大使值勤櫃台與班級書庫調度</li>
+          </ul>
+          <div class="campus-actions">
+            <button type="button" class="btn btn-outline-light btn-sm" data-open-floorplan="zhixue">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+              <span>平面配置圖（含樓層動線）</span>
+            </button>
+          </div>
+        </section>
+      </div>
+
+      <!-- 最底部版權聲明與無障礙 AA 標章 -->
+      <div class="footer-bottom">
+        <div class="copyright-block">
+          <p>&copy; 2024–2026 苗栗縣頭份市永貞國民小學 數位閱讀成果網（蘆映書院）‧ 教導處與輔導室閱讀推動團隊維護</p>
+          <p class="copyright-sub">資料整合來源：E:\2024-2026閱讀教學 八大分類典藏總庫（6,745 筆去重實證檔案）／ 建議使用 Chrome、Edge、Firefox 或 Safari 最新版本瀏覽</p>
+        </div>
+
+        <div class="a11y-block" style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+          <button type="button" class="btn btn-outline-light btn-sm footer-top-btn" aria-label="捲動回到頁面最頂端">
+            &uarr; 回到頂端
+          </button>
+          <button type="button" class="a11y-badge-btn" data-open-modal="modal-a11y" aria-label="檢視網站無障礙 AA 設計規範說明">
+            <svg viewBox="0 0 120 42" width="120" height="42" role="img" aria-label="WCAG 2.1 AA 無障礙設計規範標章">
+              <rect x="1" y="1" width="118" height="40" rx="6" fill="#0F1F4E" stroke="#D97706" stroke-width="1.5"/>
+              <rect x="7" y="7" width="32" height="28" rx="4" fill="#D97706"/>
+              <text x="23" y="26" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF" font-family="sans-serif">AA</text>
+              <text x="46" y="18" font-size="9.5" font-weight="700" fill="#FFFFFF" font-family="sans-serif">無障礙設計規範</text>
+              <text x="46" y="31" font-size="8" fill="#CBD5E1" font-family="sans-serif">WCAG 2.1 Level AA</text>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" id="back-to-top" class="back-to-top-btn" hidden aria-label="回到網頁頂端">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+    <span>頂端</span>
+  </button>
+
+  <!-- ================= 互動功能彈窗群（Modals） ================= -->
+  <div id="modal-backdrop" class="modal-backdrop" hidden></div>
+
+  <!-- Modal 1: 圖書查詢系統 (OPAC) -->
+  <section id="modal-opac" class="app-modal" role="dialog" aria-modal="true" aria-labelledby="opac-title" hidden>
+    <div class="modal-header">
+      <div>
+        <span class="modal-kicker">YONGZHEN OPAC ‧ 實體暨策展書目檢索</span>
+        <h2 id="opac-title">永貞國小圖書查詢系統</h2>
+      </div>
+      <button type="button" class="modal-close" aria-label="關閉圖書查詢系統">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="opac-controls">
+        <label for="opac-query" class="sr-only">輸入書名、作者、索書號或引導問題關鍵字</label>
+        <input id="opac-query" type="search" placeholder="搜尋書名、作者或索書號（如：獅子、874.5、十年屋、陳沼濤）">
+        <select id="opac-stage-filter" aria-label="依年段篩選">
+          <option value="all">全部年段（45 筆精選館藏）</option>
+          <option value="low">低年級（一年級／二年級）</option>
+          <option value="mid">中年級（三年級／四年級）</option>
+          <option value="high">高年級（五年級／六年級）</option>
+        </select>
+        <select id="opac-theme-filter" aria-label="依主題書單篩選">
+          <option value="all">全部策展來源</option>
+          <option value="祕密基地書展">115-1 祕密基地書展</option>
+          <option value="40周年校慶書展">40 周年校慶活動書單</option>
+          <option value="陳沼濤基金會贈書">陳沼濤文教基金會贈書</option>
+        </select>
+      </div>
+      <p class="opac-summary" id="opac-summary" aria-live="polite"></p>
+      <div class="opac-results" id="opac-results"></div>
+    </div>
+  </section>
+
+  <!-- Modal 2: 聊書投稿 (MSSR Talk Book) -->
+  <section id="modal-talkbook" class="app-modal" role="dialog" aria-modal="true" aria-labelledby="talkbook-title" hidden>
+    <div class="modal-header">
+      <div>
+        <span class="modal-kicker">MSSR BOOK TALK ‧ 晨讀心得與好書推薦</span>
+        <h2 id="talkbook-title">永貞「聊書投稿」線上推薦單</h2>
+      </div>
+      <button type="button" class="modal-close" aria-label="關閉聊書投稿視窗">&times;</button>
+    </div>
+    <div class="modal-body two-col-modal">
+      <form id="talkbook-form" class="styled-form">
+        <div class="form-row-2">
+          <div>
+            <label for="tb-class">班級</label>
+            <input id="tb-class" type="text" required placeholder="例如：五甲 / 六乙">
+          </div>
+          <div>
+            <label for="tb-name">投稿人姓名／暱稱</label>
+            <input id="tb-name" type="text" required placeholder="例如：王同學／林老師">
+          </div>
+        </div>
+        <div>
+          <label for="tb-book">推薦好書書名</label>
+          <input id="tb-book" type="text" required placeholder="例如：《圖書館獅子》或《許願樹》">
+        </div>
+        <div>
+          <label for="tb-quote">我的聊書金句或推薦原因</label>
+          <textarea id="tb-quote" rows="4" required placeholder="分享這本書最吸引你的情節、學到的知識或想問同學的問題..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">送出聊書投稿</button>
+        <p id="tb-feedback" class="form-feedback" aria-live="polite"></p>
+      </form>
+      <div class="talkbook-feed">
+        <h3>近期親師生聊書牆</h3>
+        <div id="talkbook-list" class="talkbook-cards"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal 3: 志工排班 -->
+  <section id="modal-volunteer" class="app-modal" role="dialog" aria-modal="true" aria-labelledby="vol-modal-title" hidden>
+    <div class="modal-header">
+      <div>
+        <span class="modal-kicker">LIBRARY AMBASSADORS &amp; PARENTS</span>
+        <h2 id="vol-modal-title">圖書館家長志工與小大使排班系統</h2>
+      </div>
+      <button type="button" class="modal-close" aria-label="關閉志工排班視窗">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="vol-role-switch" role="tablist" aria-label="切換志工身分別">
+        <button type="button" role="tab" class="hub-tab is-active" aria-selected="true" data-vol-role="parent">家長志工週排班（09:00–11:30 / 13:00–15:00）</button>
+        <button type="button" role="tab" class="hub-tab" aria-selected="false" data-vol-role="student">圖書館小大使值勤（下課・午休理書）</button>
+      </div>
+      <div id="vol-schedule-wrap" class="vol-schedule-wrap"></div>
+      <form id="vol-signup-form" class="styled-form compact-form">
+        <h3>線上登記可服務時段</h3>
+        <div class="form-row-3">
+          <div>
+            <label for="vol-slot">選擇時段</label>
+            <select id="vol-slot">
+              <option value="週一上午 09:00–11:30">週一上午 09:00–11:30</option>
+              <option value="週一下午 13:00–15:00">週一下午 13:00–15:00</option>
+              <option value="週二上午 09:00–11:30">週二上午 09:00–11:30</option>
+              <option value="週三上午 09:00–11:30">週三上午 09:00–11:30（週三聽故事專場）</option>
+              <option value="週四上午 09:00–11:30">週四上午 09:00–11:30</option>
+              <option value="週五上午 09:00–11:30">週五上午 09:00–11:30</option>
+            </select>
+          </div>
+          <div>
+            <label for="vol-name">姓名（或班級小大使）</label>
+            <input id="vol-name" type="text" required placeholder="請輸入您的稱呼">
+          </div>
+          <div>
+            <label for="vol-task">希望支援項目</label>
+            <select id="vol-task">
+              <option value="櫃台借還書暨上架整書">櫃台借還書暨上架整書</option>
+              <option value="低年級進班說故事">低年級進班說故事</option>
+              <option value="主題書展闖關活動引導">主題書展闖關活動引導</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-gold btn-sm">登記此時段並寄送排班提示</button>
+        <p id="vol-feedback" class="form-feedback" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Modal 4: 雙據點平面配置圖 -->
+  <section id="modal-floorplan" class="app-modal modal-wide" role="dialog" aria-modal="true" aria-labelledby="fp-title" hidden>
+    <div class="modal-header">
+      <div>
+        <span class="modal-kicker">ARCHITECTURAL FLOOR PLAN ‧ 雙據點空間動線</span>
+        <h2 id="fp-title">永貞國小圖書館空間平面配置圖</h2>
+      </div>
+      <button type="button" class="modal-close" aria-label="關閉平面配置圖視窗">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="fp-switch" role="tablist" aria-label="選擇校區館室平面圖">
+        <button type="button" role="tab" class="hub-tab is-active" aria-selected="true" data-fp-campus="luying">永馨樓 1F「蘆映書院」平面圖 &amp; 3D 示意</button>
+        <button type="button" role="tab" class="hub-tab" aria-selected="false" data-fp-campus="zhixue">貞學樓 3F 靜思書軒暨原館動線配置</button>
+      </div>
+      <div id="fp-content"></div>
+    </div>
+  </section>
+
+  <!-- Modal 5: 榮譽典範與捐資芳名錄 -->
+  <section id="modal-honors" class="app-modal modal-wide" role="dialog" aria-modal="true" aria-labelledby="honors-title" hidden>
+    <div class="modal-header">
+      <div>
+        <span class="modal-kicker">HONOR ROLL &amp; DONORS ‧ 2024–2026</span>
+        <h2 id="honors-title">榮譽典範與捐資共讀芳名錄</h2>
+      </div>
+      <button type="button" class="modal-close" aria-label="關閉榮譽典範視窗">&times;</button>
+    </div>
+    <div class="modal-body" id="honors-modal-body"></div>
+  </section>
+
+  <!-- Modal 6: 2024–2026 八大典藏資料庫瀏覽器 -->
+  <section id="modal-archive" class="app-modal modal-wide" role="dialog" aria-modal="true" aria-labelledby="archive-modal-title" hidden>
+    <div class="modal-header">
+      <div>
+        <span class="modal-kicker">ARCHIVE REPOSITORY ‧ E:\2024-2026閱讀教學</span>
+        <h2 id="archive-modal-title">分類典藏檔案明細暨成果實據瀏覽</h2>
+      </div>
+      <button type="button" class="modal-close" aria-label="關閉典藏瀏覽視窗">&times;</button>
+    </div>
+    <div class="modal-body" id="archive-modal-body"></div>
+  </section>
+
+  <!-- Modal 7: 全站關鍵字搜尋結果 -->
+  <section id="modal-search" class="app-modal modal-wide" role="dialog" aria-modal="true" aria-labelledby="search-modal-title" hidden>
+    <div class="modal-header">
+      <div>
+        <span class="modal-kicker">GLOBAL SITE &amp; ARCHIVE SEARCH</span>
+        <h2 id="search-modal-title">全站關鍵字搜尋結果</h2>
+      </div>
+      <button type="button" class="modal-close" aria-label="關閉搜尋結果視窗">&times;</button>
+    </div>
+    <div class="modal-body" id="search-modal-body"></div>
+  </section>
+
+  <!-- Modal 8: 無障礙說明與授權聲明 -->
+  <section id="modal-a11y" class="app-modal" role="dialog" aria-modal="true" aria-labelledby="a11y-modal-title" hidden>
+    <div class="modal-header">
+      <div>
+        <span class="modal-kicker">ACCESSIBILITY &amp; GOVERNANCE</span>
+        <h2 id="a11y-modal-title">無障礙設計規範說明與公開授權</h2>
+      </div>
+      <button type="button" class="modal-close" aria-label="關閉無障礙說明">&times;</button>
+    </div>
+    <div class="modal-body prose-box">
+      <p>本成果網遵循 <strong>WCAG 2.1 Level AA</strong> 無障礙網頁開發理念設計，提供友善之教育資訊近用環境：</p>
+      <ul>
+        <li><strong>語意化地標架構：</strong>全頁以 <code>&lt;header&gt;</code>、<code>&lt;nav&gt;</code>、<code>&lt;main&gt;</code>、<code>&lt;footer&gt;</code> 區隔區塊，支援螢幕報讀軟體與鍵盤導覽。</li>
+        <li><strong>鍵盤導覽與快速定位：</strong>按 <kbd>Tab</kbd> 鍵於頁面頂部即可喚出「跳至上方導覽」、「跳至主要內容」與「跳至頁尾資訊」捷徑；任意彈窗皆可按 <kbd>Esc</kbd> 鍵關閉並返回原焦點。</li>
+        <li><strong>動態控制權還給使用者：</strong>主視覺輪播橫幅與榮譽典範跑馬燈均設有明確可操作之「暫停／播放」按鈕，並尊重系統 <code>prefers-reduced-motion</code> 設定。</li>
+        <li><strong>色彩對比與字級：</strong>深藍主色（<code>#1E3A8A</code>）、暖陽金點綴（<code>#D97706</code>）與淺灰白底色（<code>#F8FAFC</code>）經高對比調校，確保正文與按鈕清晰可辨。</li>
+        <li><strong>隱私與創用 CC 授權：</strong>本站展示之學生榜單採必要隱碼或公開榜單呈現，教師教案著作遵循創用 CC「姓名標示—非商業性—相同方式分享 3.0 臺灣」精神分享教育現場。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Modal 9: 圖片放大檢視 Lightbox -->
+  <section id="modal-lightbox" class="app-modal modal-lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" hidden>
+    <div class="modal-header">
+      <h2 id="lightbox-caption" class="lightbox-title">實照原件檢視</h2>
+      <button type="button" class="modal-close" aria-label="關閉圖片檢視">&times;</button>
+    </div>
+    <div class="modal-body lightbox-body">
+      <img id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="圖片載入預覽">
+    </div>
+  </section>
+
+  <script src="js/archive-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
