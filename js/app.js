@@ -411,16 +411,16 @@
         const isHi = highlightCatId === cat.id;
         return `
         <article class="archive-cat-card" id="cat-card-${escapeHtml(cat.code)}" style="${isHi ? "border-color:#D97706; box-shadow:0 0 0 3px rgba(217,119,6,0.2);" : ""}">
-          <img src="${escapeHtml(cat.thumb)}" alt="${escapeHtml(cat.title)} 典藏封面實照" loading="lazy">
+          <img src="${escapeHtml(cat.thumb)}" alt="${escapeHtml(cat.title)} 館藏專區封面實照" loading="lazy">
           <div class="archive-cat-body">
             <div class="archive-cat-code-row">
-              <span class="archive-code">類目 ${escapeHtml(cat.code)}</span>
+              <span class="archive-code">館藏分類 ${escapeHtml(cat.code)}</span>
               <span class="archive-count">${cat.totalFiles.toLocaleString("zh-TW")} 檔・${cat.mb} MB</span>
             </div>
             <h4>${escapeHtml(cat.title)}</h4>
             <p>${escapeHtml(cat.summary)}</p>
             <button type="button" class="btn btn-outline btn-sm" data-open-modal="modal-archive" data-archive-cat="${escapeHtml(cat.id)}">
-              檢視 ${cat.subfolders.length} 個次資料夾與明細
+              瀏覽 ${cat.subfolders.length} 項子目錄內容
             </button>
           </div>
         </article>
@@ -436,7 +436,7 @@
 
     const cat = ARCHIVE.categories.find((c) => c.id === catId) || ARCHIVE.categories[0];
     if (titleEl) {
-      titleEl.textContent = `[類目 ${cat.code}] ${cat.title}（共 ${cat.totalFiles.toLocaleString("zh-TW")} 檔）`;
+      titleEl.textContent = `[館藏 ${cat.code}] ${cat.title}（共 ${cat.totalFiles.toLocaleString("zh-TW")} 檔）`;
     }
 
     const tabsHtml = ARCHIVE.categories
@@ -449,8 +449,53 @@
       )
       .join("");
 
+    const fundedList = (ARCHIVE.fundedPlans || []).filter(
+      (p) => cat.code === "01" || p.catId === cat.id
+    );
+    const fundedSectionHtml = fundedList.length
+      ? `
+        <div style="margin-bottom:16px; background:#EFF6FF; border:1px solid #DBEAFE; border-left:4px solid #1E3A8A; border-radius:10px; padding:14px;">
+          <strong style="color:#1E3A8A; display:block; margin-bottom:8px;">
+            補助計畫一覽（僅列計畫名稱與核定額度，不公開計畫書本文與支用明細）
+          </strong>
+          <div class="vol-schedule-wrap" style="margin:0;">
+            <table class="vol-table">
+              <thead>
+                <tr><th>執行年度</th><th>補助計畫名稱</th><th>核定／執行額度</th></tr>
+              </thead>
+              <tbody>
+                ${fundedList
+                  .map(
+                    (p) =>
+                      `<tr><td>${escapeHtml(p.year)}</td><td><strong>${escapeHtml(p.name)}</strong></td><td><span class="chip chip-gold">${escapeHtml(p.quota)}</span></td></tr>`
+                  )
+                  .join("")}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      `
+      : "";
+
     const subsHtml = cat.subfolders
       .map((s) => {
+        if (s.planQuota) {
+          return `
+        <div class="subfolder-card">
+          <h4>📁 ${escapeHtml(s.name)}</h4>
+          <div class="chip-row">
+            <span class="chip chip-navy">典藏紀錄 ${s.files} 檔</span>
+            <span class="chip chip-gold">${escapeHtml(s.planQuota.quota)}</span>
+          </div>
+          <p style="margin:8px 0 4px; font-size:0.84rem; color:#1E3A8A; font-weight:700;">
+            計畫名稱：${escapeHtml(s.planQuota.name)}
+          </p>
+          <p style="margin:0; font-size:0.78rem; color:#475569;">
+            依規範僅公開「計畫名稱＋額度」，不對外揭露計畫書本文、申請表與核銷明細檔案。
+          </p>
+        </div>
+      `;
+        }
         const docsLi = s.sampleDocs
           .map((d) => `<li>📄 <strong>${escapeHtml(d.name)}</strong> <small>(${escapeHtml(d.date)})</small></li>`)
           .join("");
@@ -461,11 +506,11 @@
         <div class="subfolder-card">
           <h4>📁 ${escapeHtml(s.name)}</h4>
           <div class="chip-row">
-            <span class="chip chip-navy">總計 ${s.files} 檔（影像 ${s.images}／文件 ${s.docs}）</span>
+            <span class="chip chip-navy">總計 ${s.files} 檔（影像 ${s.images}／教學與紀錄 ${s.docs}）</span>
             <span class="chip chip-soft">${s.mb} MB</span>
           </div>
           <ul class="sample-file-list">
-            ${docsLi}${imgsLi || (!docsLi ? "<li>此目錄以影音紀錄或圖片序列為主（詳見類別 09 總清冊 CSV）</li>" : "")}
+            ${docsLi}${imgsLi || (!docsLi ? "<li>此館藏子目錄以活動現場影像與影音紀實為主（已納入全校盤點清冊）。</li>" : "")}
           </ul>
         </div>
       `;
@@ -473,15 +518,16 @@
       .join("");
 
     body.innerHTML = `
-      <div class="activity-filter-bar" role="tablist" aria-label="切換典藏主類目">${tabsHtml}</div>
+      <div class="activity-filter-bar" role="tablist" aria-label="切換圖書館典藏專區">${tabsHtml}</div>
       <div class="newbooks-banner">
         <img src="${escapeHtml(cat.thumb)}" alt="${escapeHtml(cat.title)}">
         <div>
-          <span class="chip chip-gold">實證路徑：E:\\2024-2026閱讀教學\\${escapeHtml(cat.id)}</span>
-          <h3>${escapeHtml(cat.title)}（影像 ${cat.mediaCount.toLocaleString("zh-TW")} 筆・文件 ${cat.docCount.toLocaleString("zh-TW")} 份・${cat.mb} MB）</h3>
+          <span class="chip chip-gold">典藏專區 ${escapeHtml(cat.code)} ‧ 共 ${cat.totalFiles.toLocaleString("zh-TW")} 筆資料</span>
+          <h3>${escapeHtml(cat.title)}（影像 ${cat.mediaCount.toLocaleString("zh-TW")} 筆・檔案 ${cat.docCount.toLocaleString("zh-TW")} 份・${cat.mb} MB）</h3>
           <p>${escapeHtml(cat.summary)}</p>
         </div>
       </div>
+      ${fundedSectionHtml}
       <div class="subfolders-grid">${subsHtml}</div>
     `;
 
@@ -570,8 +616,8 @@
         </div>
         <div>
           <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
-            <strong style="color:var(--brand-navy);">校本推薦書單與閱讀思考提問（取自實證活動書單）</strong>
-            <button type="button" class="btn btn-outline btn-sm" data-open-modal="modal-opac" data-opac-stage="${escapeHtml(stageKey)}">查看此年段全部館藏</button>
+            <strong style="color:var(--brand-navy);">圖書館適齡策展書單與共讀思考提問</strong>
+            <button type="button" class="btn btn-outline btn-sm" data-open-modal="modal-opac" data-opac-stage="${escapeHtml(stageKey)}">查詢本適讀年段館藏</button>
           </div>
           <div class="stage-books-grid">${booksHtml}</div>
         </div>
@@ -644,25 +690,25 @@
       return matchStage && matchTheme && matchQ;
     });
 
-    summary.textContent = `符合條件共 ${filtered.length} 本校內實體與策展選書（全校總館藏達 13,310 冊＋班級書庫 2,400 冊）`;
+    summary.textContent = `符合條件共 ${filtered.length} 筆精選書目（全校實體館藏達 13,310 冊＋班級書庫 2,400 冊）`;
     host.innerHTML = filtered.length
       ? filtered
           .map(
             (b) => `
         <article class="opac-item">
           <div class="chip-row">
-            <span class="chip chip-navy">${escapeHtml(b.grade)}・${escapeHtml(b.callNo)}</span>
+            <span class="chip chip-navy">${escapeHtml(b.grade)}・索書號 ${escapeHtml(b.callNo)}</span>
             <span class="chip chip-gold">${escapeHtml(b.status)}</span>
           </div>
           <h4>《${escapeHtml(b.title)}》</h4>
-          <p><strong>作者/來源：</strong>${escapeHtml(b.author)}</p>
-          <p><strong>典藏位置：</strong>${escapeHtml(b.location)}（${escapeHtml(b.theme)}）</p>
-          <p><strong>共讀提問：</strong>${escapeHtml(b.prompt)}</p>
+          <p><strong>著者／出版：</strong>${escapeHtml(b.author)}</p>
+          <p><strong>館藏位置：</strong>${escapeHtml(b.location)}（${escapeHtml(b.theme)}）</p>
+          <p><strong>共讀導讀提問：</strong>${escapeHtml(b.prompt)}</p>
         </article>
       `
           )
           .join("")
-      : `<p style="grid-column:1/-1; color:var(--ink-muted);">找不到相符書目，建議嘗試「獅子」、「十年屋」、「874.5」或點擊下方連結前往全縣館藏目錄。</p>`;
+      : `<p style="grid-column:1/-1; color:var(--ink-muted);">查無相符館藏書目，建議嘗試「獅子」、「十年屋」、「874.5」或點擊全縣圖書目錄系統。</p>`;
   }
 
   ["opac-query", "opac-stage-filter", "opac-theme-filter"].forEach((id) => {
@@ -755,18 +801,18 @@
 
     const extras = loadVolExtra();
     if (role === "parent") {
-      const extraRows = extras.map((e) => `<tr><td>${escapeHtml(e.slot)}</td><td>${escapeHtml(e.name)}（線上預登）</td><td>${escapeHtml(e.task)}</td><td>審核排班中</td></tr>`).join("");
+      const extraRows = extras.map((e) => `<tr><td>${escapeHtml(e.slot)}</td><td>${escapeHtml(e.name)}（線上預登）</td><td>${escapeHtml(e.task)}</td><td>排班確認中</td></tr>`).join("");
       host.innerHTML = `
         <table class="vol-table">
           <thead>
-            <tr><th>服務時段</th><th>值勤人員</th><th>服務項目（依據募招募單）</th><th>狀態</th></tr>
+            <tr><th>值勤時段</th><th>值勤志工</th><th>館務支援項目</th><th>排班狀態</th></tr>
           </thead>
           <tbody>
             <tr><td>週一上午 09:00–11:30</td><td>陳媽媽 故事志工</td><td>低年級晨間進班說故事</td><td>已排定</td></tr>
-            <tr><td>週二上午 09:00–11:30</td><td>林爸爸・張媽媽</td><td>櫃台借還書暨新書貼標整架</td><td>尚缺 1 名</td></tr>
-            <tr><td>週三上午 09:00–11:30</td><td>閱讀志工社群（2 名）</td><td>週三聽故事專場暨繪本導讀</td><td>已排定</td></tr>
-            <tr><td>週四下午 13:00–15:00</td><td>邱郅惟 圖管員協同</td><td>40 周年書展引導暨借閱統計</td><td>開放登記</td></tr>
-            <tr><td>週五上午 09:00–11:30</td><td>劉媽媽 志工</td><td>週末共讀借書潮協助歸架</td><td>開放登記</td></tr>
+            <tr><td>週二上午 09:00–11:30</td><td>林爸爸・張媽媽</td><td>櫃台借還書暨新書編目整架</td><td>尚缺 1 名</td></tr>
+            <tr><td>週三上午 09:00–11:30</td><td>故事志工社群（2 名）</td><td>週三聽故事專場暨繪本導讀</td><td>已排定</td></tr>
+            <tr><td>週四下午 13:00–15:00</td><td>邱郅惟 圖管員協同</td><td>主題書展導覽暨流通統計</td><td>開放登記</td></tr>
+            <tr><td>週五上午 09:00–11:30</td><td>劉媽媽 志工</td><td>週末共讀借書協助歸架</td><td>開放登記</td></tr>
             ${extraRows}
           </tbody>
         </table>
@@ -775,12 +821,12 @@
       host.innerHTML = `
         <table class="vol-table">
           <thead>
-            <tr><th>值勤分組</th><th>值勤時段</th><th>對應表單規範</th><th>主要職責</th></tr>
+            <tr><th>值勤組別</th><th>值勤時間</th><th>值勤日誌規範</th><th>館務職責</th></tr>
           </thead>
           <tbody>
-            <tr><td>中年級小大使（三、四年級）</td><td>第二節・午休 12:35–13:00</td><td>圖書館小大使值勤日誌－中年級.docx</td><td>繪本區與橋梁書整架、維持入館輕聲禮儀、協助低年級使用代書卡</td></tr>
-            <tr><td>高年級小大使（五、六年級）</td><td>第三節・午休 12:35–13:00</td><td>圖書館小大使值勤日誌－高年級.docx</td><td>中圖法 800 類上架稽核、條碼刷讀借還協助、主題書展闖關蓋章認證</td></tr>
-            <tr><td>小大使獎勵機制</td><td>每學期累計 12 次</td><td>圖推計畫暨敘獎規範</td><td>期末頒發服務獎狀、優先預借誠品/陳沼濤新上架好書</td></tr>
+            <tr><td>中年級圖書館小大使</td><td>下課・午休 12:35–13:00</td><td>圖書館小大使值勤日誌－中年級</td><td>繪本區與橋梁書整架、維持入館輕聲禮儀、協助使用代書卡</td></tr>
+            <tr><td>高年級圖書館小大使</td><td>下課・午休 12:35–13:00</td><td>圖書館小大使值勤日誌－高年級</td><td>中圖法 800 類上架稽核、條碼借還刷讀協助、書展闖關蓋章</td></tr>
+            <tr><td>小大使服務獎勵</td><td>每學期值勤滿 12 次</td><td>圖書館服務敘獎辦法</td><td>期末頒發服務獎狀、享有新上架精選圖書優先預約權</td></tr>
           </tbody>
         </table>
       `;
@@ -822,29 +868,29 @@
 
     if (campusKey === "luying") {
       body.innerHTML = `
-        <p style="margin-top:0;"><strong>據點一：永馨樓 1F「蘆映書院」（181 ㎡）</strong>｜結合教師閱讀吧台、中控服務台、教學大屏舞台與六人小組蜂巢討論區，打造全校跨領域美學閱讀核心。</p>
+        <p style="margin-top:0;"><strong>一館｜永馨樓 1F「蘆映書院」美學閱讀主館（181 ㎡）</strong>｜結合教師閱讀吧台、中控服務台、教學大屏舞台與六人小組蜂巢討論區，展現「學校圖書館空間環境改善計畫（額度 300 萬元）」成果。</p>
         <div class="fp-images-grid">
           <figure class="fp-figure">
             <img src="assets/images/blueprint-plan.jpg" alt="115年度永貞國小圖書館整修工程第5/32張平面配置圖">
-            <figcaption><strong>圖說 5/32｜新圖書館平面配置圖：</strong>清晰標註左側舞台教學區、理書區、中央服務櫃台、檢索／雜誌報架區、四組六人討論區及右側窗邊閱讀窩居。</figcaption>
+            <figcaption><strong>圖說 5/32｜新館平面配置圖：</strong>清晰標註左側舞台說書區、理書區、中央流通服務櫃台、館藏檢索／雜誌報架區、四組六人共讀討論區及右側窗邊閱讀窩居。</figcaption>
           </figure>
           <figure class="fp-figure">
             <img src="assets/images/blueprint-3d.jpg" alt="永貞國小新圖書館入口意象與木作造型窩居 3D 示意圖">
-            <figcaption><strong>圖說 31/32｜入口紅磚文化意象與閱讀窩居 3D 示意：</strong>融合頭份蘆竹湳紅磚牆花元素、造型還書箱及圓弧木質大小窩居，落實「祕密基地」幸福感。</figcaption>
+            <figcaption><strong>圖說 31/32｜入口紅磚文化意象與閱讀窩居 3D 示意：</strong>融合頭份蘆竹湳紅磚牆花元素、造型還書箱及圓弧木質大小窩居，落實「祕密基地」閱讀體驗。</figcaption>
           </figure>
         </div>
       `;
     } else {
       body.innerHTML = `
-        <p style="margin-top:0;"><strong>據點二：貞學樓 3F「靜思書軒暨原圖書閱覽室」（130 ㎡）</strong>｜承載全校 13,310 冊核心館藏、中圖法十大分類排架、志工借還作業及側門「天青門（田寮路 45 巷）」無障礙電梯送書動線。</p>
+        <p style="margin-top:0;"><strong>二館｜貞學樓 3F「靜思書軒暨原圖書閱覽室」（130 ㎡）</strong>｜承載全館 13,310 冊核心典藏、中圖法十大分類排架、志工借還作業及側門「天青門（田寮路 45 巷）」無障礙電梯送書動線。</p>
         <div class="fp-images-grid">
           <figure class="fp-figure">
             <img src="assets/images/blueprint-existing.jpg" alt="115年度永貞國小圖書館既有燈具與空間測繪配置圖">
-            <figcaption><strong>圖說 4/32｜校舍基準測繪與空間改善對照圖：</strong>記錄既有燈具、電扇、空調位置及結構承重柱距，作為採光照明照度升級（含無障礙動線標示）與安全書架耐震改善依據。</figcaption>
+            <figcaption><strong>圖說 4/32｜既有空間與安全測繪對照圖：</strong>記錄館室照明照度、空調位置及結構柱距，作為閱讀光環境升級與無障礙／防震書架改善依據。</figcaption>
           </figure>
           <figure class="fp-figure">
             <img src="assets/images/space-tour.jpg" alt="苗栗縣政府教育處率永貞團隊參訪標竿圖書館空間照片">
-            <figcaption><strong>縣府 7 萬元空間標竿參訪實景：</strong>教育處與徐秉鴻教師等校際團隊實地考察標竿館室之通透採光書牆與分齡高度動線，轉化為貞學與永馨雙據點優化方案。</figcaption>
+            <figcaption><strong>縣府標竿圖書館空間參訪實景（計畫額度 7 萬元）：</strong>實地考察標竿館室通透採光書牆與分齡書架動線，轉化為永貞雙館室空間優化設計。</figcaption>
           </figure>
         </div>
       `;
@@ -880,12 +926,13 @@
           </ul>
         </div>
         <div class="subfolder-card">
-          <h4>🤝 公益捐資與企業共讀芳名錄</h4>
+          <h4>🤝 公益捐資贈書與補助計畫（僅列名稱與額度）</h4>
           <ul class="sample-file-list">
             <li><strong>財團法人陳沼濤文教基金會：</strong>捐贈小兵文化系列等優質兒童閱讀書籍，充實全校 17 班共讀</li>
             <li><strong>7-ELEVEN 把愛找回來 × e 啟讀出未來：</strong>114 學年捐贈電子書閱讀器進駐永貞推動數位永續共讀</li>
             <li><strong>誠品文化藝術基金會：</strong>二度捐贈二手優質書籍並派遣「誠品行動書車」蒞校巡迴共讀</li>
-            <li><strong>教育部國教署／苗栗縣政府教育處：</strong>核定 300 萬圖書館空間改善、7 萬空間參訪與圖推教師計畫補助</li>
+            <li><strong>學校圖書館空間環境改善計畫：</strong>核定額度新台幣 300 萬元（含標竿參訪計畫 7 萬元）</li>
+            <li><strong>圖書採購充實館藏暨增置圖推教師計畫：</strong>採購額度 23 萬元／圖推教師 16.4 萬元／年（推動計畫 2 萬元／年）</li>
           </ul>
         </div>
       </div>
@@ -901,11 +948,11 @@
     if (!body) return;
 
     if (titleEl) {
-      titleEl.textContent = q ? `全站關鍵字搜尋：「${q}」` : "全站關鍵字快速索引";
+      titleEl.textContent = q ? `館藏暨閱讀成果搜尋：「${q}」` : "全館關鍵字快速索引";
     }
 
     if (!q) {
-      body.innerHTML = `<p>請輸入關鍵字（例如：<code>蘆映書院</code>、<code>明日閱讀</code>、<code>識字金銀島</code>、<code>子竹嚐肉</code>、<code>圖書館獅子</code>、<code>陳沼濤</code>），即可同步檢索書單、榮譽與 E:\\2024-2026閱讀教學 全分類檔案。</p>`;
+      body.innerHTML = `<p>請輸入關鍵字（例如：<code>蘆映書院</code>、<code>明日閱讀</code>、<code>識字金銀島</code>、<code>子竹嚐肉</code>、<code>圖書館獅子</code>、<code>陳沼濤</code>），即可同步檢索書目、榮譽典範與圖書館八大典藏專區。</p>`;
       openModal("modal-search");
       return;
     }
@@ -931,15 +978,15 @@
     body.innerHTML = `
       <div class="chip-row" style="margin-bottom:14px;">
         <span class="chip chip-navy">館藏書單符合 ${matchedBooks.length} 筆</span>
-        <span class="chip chip-gold">典藏類目符合 ${matchedArchives.length} 大類</span>
-        <span class="chip chip-soft">榮譽／捐資符合 ${matchedHonors.length} 則</span>
+        <span class="chip chip-gold">典藏專區符合 ${matchedArchives.length} 大類</span>
+        <span class="chip chip-soft">榮譽／贈書符合 ${matchedHonors.length} 則</span>
       </div>
-      ${matchedArchives.length ? `<h3 style="color:var(--brand-navy);">一、E:\\2024-2026閱讀教學 典藏檔案相符項目</h3><div class="subfolders-grid" style="margin-bottom:18px;">` + matchedArchives.map((m) => `
+      ${matchedArchives.length ? `<h3 style="color:var(--brand-navy);">一、圖書館閱讀典藏專區相符項目</h3><div class="subfolders-grid" style="margin-bottom:18px;">` + matchedArchives.map((m) => `
         <div class="subfolder-card">
-          <h4>[${escapeHtml(m.cat.code)}] ${escapeHtml(m.cat.title)}</h4>
+          <h4>[館藏 ${escapeHtml(m.cat.code)}] ${escapeHtml(m.cat.title)}</h4>
           <p style="font-size:0.82rem;">${escapeHtml(m.cat.summary)}</p>
           ${m.subs.length ? `<ul class="sample-file-list">${m.subs.map((s) => `<li>📁 ${escapeHtml(s.name)}（${s.files} 檔）</li>`).join("")}</ul>` : ""}
-          <button type="button" class="btn btn-primary btn-sm" style="margin-top:8px;" data-open-modal="modal-archive" data-archive-cat="${escapeHtml(m.cat.id)}">開啟此類檔案明細</button>
+          <button type="button" class="btn btn-primary btn-sm" style="margin-top:8px;" data-open-modal="modal-archive" data-archive-cat="${escapeHtml(m.cat.id)}">瀏覽專區與計畫額度</button>
         </div>
       `).join("") + `</div>` : ""}
       ${matchedBooks.length ? `<h3 style="color:var(--brand-navy);">二、館藏暨書展推薦書目</h3><div class="opac-results" style="margin-bottom:18px;">` + matchedBooks.slice(0, 8).map((b) => `
