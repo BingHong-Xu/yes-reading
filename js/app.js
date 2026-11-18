@@ -477,9 +477,39 @@
       `
       : "";
 
-    const subsHtml = cat.subfolders
+    const CATALOG = window.YONGZHEN_CATALOG || { stats: {}, items: [] };
+    const catCatalogItems = CATALOG.items.filter((it) => it.c === cat.code);
+    const catDocs = catCatalogItems.filter((it) => it.k === "d");
+    const catImgs = catCatalogItems.filter((it) => it.k === "g");
+    const catArch = catCatalogItems.filter((it) => it.k === "v" || it.k === "D" || it.k === "G");
+    const uid = `cb-${cat.code}-${Date.now().toString(36)}`;
+
+    const getExtBadgeHtml = (fn, kind) => {
+      if (kind === "v") return '<span class="ext-badge is-vid">影音 MP4</span>';
+      if (kind === "D" || kind === "G") return '<span class="ext-badge is-arch">校內原檔</span>';
+      const m = /\.([a-z0-9]+)$/i.exec(fn || "");
+      const ext = m ? m[1].toUpperCase() : "FILE";
+      const cls =
+        ext === "XLSX" || ext === "CSV"
+          ? "is-xlsx"
+          : ext === "DOCX" || ext === "ODT"
+          ? "is-docx"
+          : ext === "PPTX"
+          ? "is-pptx"
+          : "";
+      return `<span class="ext-badge ${cls}">${escapeHtml(ext)}</span>`;
+    };
+
+    const subsCardsHtml = cat.subfolders
       .map((s) => {
-        if (s.planQuota) {
+        const subKey = s.catalogSub || s.name;
+        const sItems = catCatalogItems.filter((it) => it.s === subKey);
+        const sDocs = sItems.filter((it) => it.k === "d");
+        const sImgs = sItems.filter((it) => it.k === "g");
+        const sVids = sItems.filter((it) => it.k === "v");
+        const sArchOthers = sItems.filter((it) => it.k === "D" || it.k === "G");
+
+        if (s.planQuota && sItems.length === 0) {
           return `
         <div class="subfolder-card">
           <h4>📁 ${escapeHtml(s.name)}</h4>
@@ -496,26 +526,273 @@
         </div>
       `;
         }
-        const docsLi = s.sampleDocs
-          .map((d) => `<li>📄 <strong>${escapeHtml(d.name)}</strong> <small>(${escapeHtml(d.date)})</small></li>`)
+
+        const quotaNotice = s.planQuota
+          ? `<div style="margin:6px 0 8px; padding:6px 10px; border-radius:6px; background:#fffbeb; border:1px solid #fde68a; font-size:0.78rem; color:#92400e;">
+              <strong>計畫名稱＋額度：</strong>${escapeHtml(s.planQuota.name)}（${escapeHtml(s.planQuota.quota)}）<br>
+              <span>僅公開去敏後之書單／活動紀錄影像，經費申請與核銷文件依法不予公開。</span>
+            </div>`
+          : "";
+
+        const docsLi = sDocs
+          .slice(0, 3)
+          .map(
+            (d) =>
+              `<li>📄 <a class="doc-quick-link" href="${escapeHtml(d.u)}" target="_blank" rel="noopener" download="${escapeHtml(d.n)}">${escapeHtml(d.n)}</a> <small>(${escapeHtml(d.d || "")}・${d.m} MB)</small></li>`
+          )
           .join("");
-        const imgsLi = s.sampleImgs
-          .map((m) => `<li>🖼️ ${escapeHtml(m.name)} <small>(${escapeHtml(m.date)})</small></li>`)
+
+        const thumbsHtml = sImgs.length
+          ? `<div class="sub-thumb-strip" data-sub-key="${escapeHtml(subKey)}">
+              ${sImgs
+                .slice(0, 4)
+                .map(
+                  (m, idx) =>
+                    `<button type="button" class="sub-thumb-btn" data-lb-sub="${escapeHtml(subKey)}" data-lb-idx="${idx}" title="${escapeHtml(m.n)}">
+                      <img src="${escapeHtml(m.u)}" alt="${escapeHtml(m.n)}" loading="lazy">
+                    </button>`
+                )
+                .join("")}
+            </div>`
+          : "";
+
+        const jumpBtns = [
+          sDocs.length
+            ? `<button type="button" class="sub-jump-btn" data-jump-tab="docs" data-jump-sub="${escapeHtml(subKey)}">📄 全部可開檔案 (${sDocs.length})</button>`
+            : "",
+          sImgs.length
+            ? `<button type="button" class="sub-jump-btn is-gold" data-jump-tab="imgs" data-jump-sub="${escapeHtml(subKey)}">🖼️ 相片藝廊 (${sImgs.length})</button>`
+            : "",
+          sVids.length || sArchOthers.length
+            ? `<button type="button" class="sub-jump-btn" data-jump-tab="arch" data-jump-sub="${escapeHtml(subKey)}">🎬 影音／原檔索引 (${sVids.length + sArchOthers.length})</button>`
+            : "",
+        ]
+          .filter(Boolean)
           .join("");
+
         return `
         <div class="subfolder-card">
           <h4>📁 ${escapeHtml(s.name)}</h4>
           <div class="chip-row">
-            <span class="chip chip-navy">總計 ${s.files} 檔（影像 ${s.images}／教學與紀錄 ${s.docs}）</span>
-            <span class="chip chip-soft">${s.mb} MB</span>
+            ${sDocs.length ? `<span class="chip chip-navy">線上可開檔 ${sDocs.length} 份</span>` : ""}
+            ${sImgs.length ? `<span class="chip chip-gold">藝廊相片 ${sImgs.length} 張</span>` : ""}
+            ${sVids.length ? `<span class="chip chip-soft">影音 ${sVids.length} 支</span>` : ""}
+            <span class="chip chip-soft">全校盤點 ${s.files} 檔</span>
           </div>
-          <ul class="sample-file-list">
-            ${docsLi}${imgsLi || (!docsLi ? "<li>此館藏子目錄以活動現場影像與影音紀實為主（已納入全校盤點清冊）。</li>" : "")}
-          </ul>
+          ${quotaNotice}
+          ${docsLi ? `<ul class="sample-file-list">${docsLi}</ul>` : ""}
+          ${thumbsHtml}
+          ${jumpBtns ? `<div class="sub-action-row">${jumpBtns}</div>` : ""}
         </div>
       `;
       })
       .join("");
+
+    const subSelectOpts = [
+      '<option value="">全部子資料夾（全類別）</option>',
+      ...Array.from(new Set(catCatalogItems.map((it) => it.s))).map(
+        (sn) => `<option value="${escapeHtml(sn)}">${escapeHtml(sn)}</option>`
+      ),
+    ].join("");
+
+    const subsHtml = `
+      <div class="cat-browser-wrap" id="${uid}">
+        <div class="cat-stats-banner">
+          <div class="cat-stats-pills">
+            <span class="cat-stat-pill">📄 線上可開啟／下載 <strong>${catDocs.length}</strong> 份</span>
+            <span class="cat-stat-pill">🖼️ 活動相片藝廊 <strong>${catImgs.length}</strong> 張</span>
+            <span class="cat-stat-pill">🎬 影音暨大型原檔索引 <strong>${catArch.length}</strong> 筆</span>
+          </div>
+          <p class="cat-privacy-note">已嚴格排除經費申請、核銷憑證、簽到名冊與師生個資；大型簡報與影片提供目錄查詢並典藏於校內備份磁碟。</p>
+        </div>
+        <div class="cat-toolbar">
+          <div class="cat-view-tabs" role="tablist">
+            <button type="button" class="cat-view-tab is-active" data-cview="subs">📁 子資料夾分類導覽</button>
+            <button type="button" class="cat-view-tab" data-cview="docs">📄 公開教學檔案 (${catDocs.length})</button>
+            <button type="button" class="cat-view-tab" data-cview="imgs">🖼️ 活動相片藝廊 (${catImgs.length})</button>
+            <button type="button" class="cat-view-tab" data-cview="arch">🎬 影音暨原檔索引 (${catArch.length})</button>
+          </div>
+          <div class="cat-controls-right" data-filter-bar hidden>
+            <select class="cat-sub-select" aria-label="篩選子資料夾">${subSelectOpts}</select>
+            <input type="search" class="cat-filter-input" placeholder="篩選本類別檔名或日期..." aria-label="篩選本類別檔名或日期">
+          </div>
+        </div>
+        <div data-panel="subs">
+          <div class="subfolders-grid">${subsCardsHtml}</div>
+        </div>
+        <div data-panel="list" hidden></div>
+      </div>
+    `;
+
+    // Interactive wiring runs immediately after modal DOM updates
+    setTimeout(() => {
+      const root = document.getElementById(uid);
+      if (!root) return;
+
+      const openGalleryLightbox = (list, startIdx) => {
+        if (window.__yzOpenGalleryLightbox) {
+          window.__yzOpenGalleryLightbox(list, startIdx);
+        }
+      };
+
+      const tabs = root.querySelectorAll(".cat-view-tab");
+      const filterBar = root.querySelector("[data-filter-bar]");
+      const subSel = root.querySelector(".cat-sub-select");
+      const kwInput = root.querySelector(".cat-filter-input");
+      const subsPanel = root.querySelector('[data-panel="subs"]');
+      const listPanel = root.querySelector('[data-panel="list"]');
+
+      let activeTab = "subs";
+      let pageSize = 24;
+
+      const renderListPanel = () => {
+        if (activeTab === "subs") {
+          subsPanel.hidden = false;
+          listPanel.hidden = true;
+          filterBar.hidden = true;
+          return;
+        }
+        subsPanel.hidden = true;
+        listPanel.hidden = false;
+        filterBar.hidden = false;
+
+        const subFilter = subSel.value;
+        const kw = kwInput.value.trim().toLowerCase();
+        const pool = activeTab === "docs" ? catDocs : activeTab === "imgs" ? catImgs : catArch;
+        const filtered = pool.filter((it) => {
+          if (subFilter && it.s !== subFilter) return false;
+          if (kw && !`${it.n} ${it.s} ${it.d}`.toLowerCase().includes(kw)) return false;
+          return true;
+        });
+
+        if (!filtered.length) {
+          listPanel.innerHTML = `<p class="cat-privacy-note" style="padding:18px; background:#f8fafc; border-radius:10px; text-align:center;">此篩選條件下尚無符合的項目，請切換「全部子資料夾」或清除關鍵字。</p>`;
+          return;
+        }
+
+        const shown = filtered.slice(0, pageSize);
+        if (activeTab === "imgs") {
+          listPanel.innerHTML = `
+            <div class="cat-gallery-grid">
+              ${shown
+                .map(
+                  (it, i) => `
+                <button type="button" class="cat-photo-card" data-gidx="${i}" title="點擊放大：${escapeHtml(it.n)}">
+                  <img src="${escapeHtml(it.u)}" alt="${escapeHtml(it.n)}" loading="lazy">
+                  <div class="cat-photo-cap">
+                    <strong>${escapeHtml(it.n)}</strong>
+                    <span>${escapeHtml(it.d || "活動紀錄")} ・ ${escapeHtml(it.s)}</span>
+                  </div>
+                </button>`
+                )
+                .join("")}
+            </div>
+            ${
+              filtered.length > pageSize
+                ? `<div class="cat-load-more-wrap"><button type="button" class="cat-load-more-btn" data-more>顯示更多相片（目前 ${shown.length} / ${filtered.length} 張）</button></div>`
+                : ""
+            }
+          `;
+          listPanel.querySelectorAll("[data-gidx]").forEach((btn) => {
+            btn.addEventListener("click", () => openGalleryLightbox(filtered, Number(btn.dataset.gidx)));
+          });
+        } else if (activeTab === "docs") {
+          listPanel.innerHTML = `
+            <div class="cat-doc-list">
+              ${shown
+                .map(
+                  (it) => `
+                <div class="cat-doc-row">
+                  <div class="cat-doc-main">
+                    <div class="cat-doc-title-line">
+                      ${getExtBadgeHtml(it.n, it.k)}
+                      <span class="cat-doc-name">${escapeHtml(it.n)}</span>
+                    </div>
+                    <div class="cat-doc-meta">📁 ${escapeHtml(it.s)} ・ 建檔／修改：${escapeHtml(it.d || "—")} ・ 容量：${it.m} MB</div>
+                  </div>
+                  <div class="cat-doc-actions">
+                    <a class="doc-act-btn" href="${escapeHtml(it.u)}" target="_blank" rel="noopener">線上開啟</a>
+                    <a class="doc-act-btn primary" href="${escapeHtml(it.u)}" download="${escapeHtml(it.n)}">下載檔案</a>
+                  </div>
+                </div>`
+                )
+                .join("")}
+            </div>
+            ${
+              filtered.length > pageSize
+                ? `<div class="cat-load-more-wrap"><button type="button" class="cat-load-more-btn" data-more>載入更多檔案（目前 ${shown.length} / ${filtered.length} 份）</button></div>`
+                : ""
+            }
+          `;
+        } else {
+          listPanel.innerHTML = `
+            <p class="cat-privacy-note" style="margin-bottom:10px;">此分頁索引未直接上傳至 GitHub Pages 之大型影音檔（合計 145 支影片）與超過單檔限制之高畫質原檔／未選入縮圖，皆完整備份於校內 <code>E:\\2024-2026閱讀教學\\${escapeHtml(cat.id)}\\</code>。</p>
+            <div class="cat-doc-list">
+              ${shown
+                .map(
+                  (it) => `
+                <div class="cat-doc-row">
+                  <div class="cat-doc-main">
+                    <div class="cat-doc-title-line">
+                      ${getExtBadgeHtml(it.n, it.k)}
+                      <span class="cat-doc-name">${escapeHtml(it.n)}</span>
+                    </div>
+                    <div class="cat-doc-meta">📁 ${escapeHtml(it.s)} ・ 拍攝／建檔：${escapeHtml(it.d || "—")} ・ 原檔大小：${it.m} MB（收錄於校內完整典藏硬碟）</div>
+                  </div>
+                </div>`
+                )
+                .join("")}
+            </div>
+            ${
+              filtered.length > pageSize
+                ? `<div class="cat-load-more-wrap"><button type="button" class="cat-load-more-btn" data-more>載入更多索引（目前 ${shown.length} / ${filtered.length} 筆）</button></div>`
+                : ""
+            }
+          `;
+        }
+
+        const moreBtn = listPanel.querySelector("[data-more]");
+        if (moreBtn) {
+          moreBtn.addEventListener("click", () => {
+            pageSize += 24;
+            renderListPanel();
+          });
+        }
+      };
+
+      const switchTab = (nextTab, preSub) => {
+        activeTab = nextTab;
+        pageSize = 24;
+        if (typeof preSub === "string") subSel.value = preSub;
+        tabs.forEach((t) => t.classList.toggle("is-active", t.dataset.cview === activeTab));
+        renderListPanel();
+      };
+
+      tabs.forEach((t) => {
+        t.addEventListener("click", () => switchTab(t.dataset.cview));
+      });
+      subSel.addEventListener("change", () => {
+        pageSize = 24;
+        renderListPanel();
+      });
+      kwInput.addEventListener("input", () => {
+        pageSize = 24;
+        renderListPanel();
+      });
+
+      root.querySelectorAll("[data-jump-tab]").forEach((btn) => {
+        btn.addEventListener("click", () => switchTab(btn.dataset.jumpTab, btn.dataset.jumpSub || ""));
+      });
+
+      root.querySelectorAll("[data-lb-sub]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const sk = btn.dataset.lbSub;
+          const idx = Number(btn.dataset.lbIdx || 0);
+          const list = catImgs.filter((it) => it.s === sk);
+          openGalleryLightbox(list, idx);
+        });
+      });
+    }, 0);
 
     body.innerHTML = `
       <div class="activity-filter-bar" role="tablist" aria-label="切換圖書館典藏專區">${tabsHtml}</div>
@@ -528,7 +805,7 @@
         </div>
       </div>
       ${fundedSectionHtml}
-      <div class="subfolders-grid">${subsHtml}</div>
+      <div class="subfolders-grid" style="display:block;">${subsHtml}</div>
     `;
 
     body.querySelectorAll("[data-switch-archive-cat]").forEach((btn) => {
@@ -961,6 +1238,15 @@
       `${b.title} ${b.author} ${b.callNo} ${b.grade} ${b.theme} ${b.prompt}`.toLowerCase().includes(qLower)
     );
 
+    const CATALOG = window.YONGZHEN_CATALOG || { stats: {}, items: [] };
+    const catNameMap = Object.fromEntries(ARCHIVE.categories.map((c) => [c.code, c.title]));
+    const matchedCatItems = CATALOG.items.filter((it) =>
+      `${it.n} ${it.s} ${it.d} ${catNameMap[it.c] || ""}`.toLowerCase().includes(qLower)
+    );
+    const matchedCatDocs = matchedCatItems.filter((it) => it.k === "d");
+    const matchedCatImgs = matchedCatItems.filter((it) => it.k === "g");
+    const matchedCatArch = matchedCatItems.filter((it) => it.k === "v" || it.k === "D" || it.k === "G");
+
     const matchedArchives = [];
     ARCHIVE.categories.forEach((c) => {
       const catHit = `${c.title} ${c.summary} ${c.highlights.join(" ")}`.toLowerCase().includes(qLower);
@@ -997,9 +1283,88 @@
         </article>
       `).join("") + `</div>` : ""}
       ${matchedHonors.length ? `<h3 style="color:var(--brand-navy);">三、榮譽典範與捐資紀錄</h3><ul class="sample-file-list">${matchedHonors.map((h) => `<li><strong>[${escapeHtml(h.tag)}]</strong> ${escapeHtml(h.text)}</li>`).join("")}</ul>` : ""}
-      ${!matchedBooks.length && !matchedArchives.length && !matchedHonors.length ? `<p>未找到完全相符項目，請嘗試較短關鍵字（如 <code>閱讀</code>、<code>書展</code>、<code>MSSR</code>、<code>圖書</code>）。</p>` : ""}
+      ${
+        matchedCatDocs.length
+          ? `<div class="search-cat-group">
+              <h3 style="color:var(--brand-navy);">四、公開教學檔案可直接開啟／下載（共 ${matchedCatDocs.length} 份，顯示前 20 筆）</h3>
+              <div class="cat-doc-list">
+                ${matchedCatDocs
+                  .slice(0, 20)
+                  .map(
+                    (it) => `
+                  <div class="cat-doc-row">
+                    <div class="cat-doc-main">
+                      <div class="cat-doc-title-line">
+                        <span class="ext-badge">檔案</span>
+                        <span class="cat-doc-name">${escapeHtml(it.n)}</span>
+                      </div>
+                      <div class="cat-doc-meta">分類 ${escapeHtml(it.c)}・${escapeHtml(it.s)}（${escapeHtml(it.d || "—")}・${it.m} MB）</div>
+                    </div>
+                    <div class="cat-doc-actions">
+                      <a class="doc-act-btn" href="${escapeHtml(it.u)}" target="_blank" rel="noopener">線上開啟</a>
+                      <a class="doc-act-btn primary" href="${escapeHtml(it.u)}" download="${escapeHtml(it.n)}">下載</a>
+                    </div>
+                  </div>`
+                  )
+                  .join("")}
+              </div>
+            </div>`
+          : ""
+      }
+      ${
+        matchedCatImgs.length
+          ? `<div class="search-cat-group">
+              <h3 style="color:var(--brand-navy);">五、相符活動相片藝廊（共 ${matchedCatImgs.length} 張，顯示前 12 張點擊放大）</h3>
+              <div class="cat-gallery-grid" id="yz-search-photo-grid">
+                ${matchedCatImgs
+                  .slice(0, 12)
+                  .map(
+                    (it, idx) => `
+                  <button type="button" class="cat-photo-card" data-sgidx="${idx}">
+                    <img src="${escapeHtml(it.u)}" alt="${escapeHtml(it.n)}" loading="lazy">
+                    <div class="cat-photo-cap"><strong>${escapeHtml(it.n)}</strong><span>${escapeHtml(it.s)}</span></div>
+                  </button>`
+                  )
+                  .join("")}
+              </div>
+            </div>`
+          : ""
+      }
+      ${
+        matchedCatArch.length
+          ? `<div class="search-cat-group">
+              <h3 style="color:var(--brand-navy);">六、影音與校內大檔完整清冊索引（共 ${matchedCatArch.length} 筆，顯示前 12 筆）</h3>
+              <div class="cat-doc-list">
+                ${matchedCatArch
+                  .slice(0, 12)
+                  .map(
+                    (it) => `
+                  <div class="cat-doc-row">
+                    <div class="cat-doc-main">
+                      <div class="cat-doc-title-line">
+                        <span class="ext-badge ${it.k === "v" ? "is-vid" : "is-arch"}">${it.k === "v" ? "影音 MP4" : "校內原檔"}</span>
+                        <span class="cat-doc-name">${escapeHtml(it.n)}</span>
+                      </div>
+                      <div class="cat-doc-meta">分類 ${escapeHtml(it.c)}・${escapeHtml(it.s)}（${escapeHtml(it.d || "—")}・${it.m} MB・備份於校內 E:\\2024-2026閱讀教學）</div>
+                    </div>
+                  </div>`
+                  )
+                  .join("")}
+              </div>
+            </div>`
+          : ""
+      }
+      ${!matchedBooks.length && !matchedArchives.length && !matchedHonors.length && !matchedCatItems.length ? `<p>未找到完全相符項目，請嘗試較短關鍵字（如 <code>閱讀</code>、<code>書展</code>、<code>MSSR</code>、<code>圖書</code>、<code>夢N</code>、<code>字</code>）。</p>` : ""}
     `;
     openModal("modal-search");
+    const spGrid = body.querySelector("#yz-search-photo-grid");
+    if (spGrid && window.__yzOpenGalleryLightbox) {
+      spGrid.querySelectorAll("[data-sgidx]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          window.__yzOpenGalleryLightbox(matchedCatImgs.slice(0, 12), Number(btn.dataset.sgidx || 0));
+        });
+      });
+    }
   }
 
   ["global-search-form", "mobile-search-form"].forEach((fid) => {
@@ -1123,10 +1488,119 @@
     syncTopBtn();
   }
 
+  /* ---------- 10B. 全站公開典藏藝廊與共用燈箱掛載 ---------- */
+  function initCatalogLightboxAndSummary() {
+    window.__yzOpenGalleryLightbox = (list, startIdx) => {
+      if (!list || !list.length) return;
+      let lb = document.getElementById("yz-gallery-lightbox");
+      if (!lb) {
+        lb = document.createElement("div");
+        lb.id = "yz-gallery-lightbox";
+        lb.className = "yz-gallery-modal";
+        lb.setAttribute("role", "dialog");
+        lb.setAttribute("aria-modal", "true");
+        lb.setAttribute("aria-label", "活動相片放大檢視");
+        lb.hidden = true;
+        lb.innerHTML = `
+          <div class="yz-gallery-dialog">
+            <div class="yz-gallery-top">
+              <span class="yz-gallery-counter" id="yz-lb-counter"></span>
+              <button type="button" class="yz-gallery-close" id="yz-lb-close">關閉 (ESC)</button>
+            </div>
+            <div class="yz-gallery-stage">
+              <button type="button" class="yz-gallery-nav prev" id="yz-lb-prev" aria-label="上一張相片">‹</button>
+              <img id="yz-lb-img" src="" alt="">
+              <button type="button" class="yz-gallery-nav next" id="yz-lb-next" aria-label="下一張相片">›</button>
+            </div>
+            <div class="yz-gallery-foot">
+              <span id="yz-lb-caption"></span>
+              <a id="yz-lb-dl" class="doc-act-btn primary" href="#" download>下載相片</a>
+            </div>
+          </div>
+        `;
+        document.body.appendChild(lb);
+      }
+
+      let idx = Math.max(0, Math.min(startIdx || 0, list.length - 1));
+      const imgEl = lb.querySelector("#yz-lb-img");
+      const capEl = lb.querySelector("#yz-lb-caption");
+      const cntEl = lb.querySelector("#yz-lb-counter");
+      const dlEl = lb.querySelector("#yz-lb-dl");
+      const prevBtn = lb.querySelector("#yz-lb-prev");
+      const nextBtn = lb.querySelector("#yz-lb-next");
+      const closeBtn = lb.querySelector("#yz-lb-close");
+
+      const renderSlide = () => {
+        const item = list[idx];
+        imgEl.src = item.u;
+        imgEl.alt = item.n;
+        cntEl.textContent = `${idx + 1} / ${list.length} ・ ${item.s}`;
+        capEl.textContent = `${item.n}（拍攝／建檔：${item.d || "—"}）`;
+        dlEl.href = item.u;
+        dlEl.download = item.n;
+        prevBtn.style.visibility = list.length > 1 ? "visible" : "hidden";
+        nextBtn.style.visibility = list.length > 1 ? "visible" : "hidden";
+      };
+      const closeLb = () => {
+        lb.hidden = true;
+        document.removeEventListener("keydown", onKey);
+      };
+      const onKey = (ev) => {
+        if (lb.hidden) return;
+        if (ev.key === "Escape") closeLb();
+        else if (ev.key === "ArrowLeft" && list.length > 1) {
+          idx = (idx - 1 + list.length) % list.length;
+          renderSlide();
+        } else if (ev.key === "ArrowRight" && list.length > 1) {
+          idx = (idx + 1) % list.length;
+          renderSlide();
+        }
+      };
+
+      prevBtn.onclick = () => {
+        idx = (idx - 1 + list.length) % list.length;
+        renderSlide();
+      };
+      nextBtn.onclick = () => {
+        idx = (idx + 1) % list.length;
+        renderSlide();
+      };
+      closeBtn.onclick = closeLb;
+      lb.onclick = (ev) => {
+        if (ev.target === lb) closeLb();
+      };
+      document.addEventListener("keydown", onKey);
+      renderSlide();
+      lb.hidden = false;
+    };
+
+    const archExplorer = document.getElementById("archive-explorer");
+    const catStats = (window.YONGZHEN_CATALOG && window.YONGZHEN_CATALOG.stats) || null;
+    if (archExplorer && catStats && !archExplorer.querySelector(".cat-stats-banner")) {
+      const banner = document.createElement("div");
+      banner.className = "cat-stats-banner";
+      banner.innerHTML = `
+        <div class="cat-stats-pills">
+          <span class="cat-stat-pill">📄 已上線公開教學檔案 <strong>${catStats.deployedDocs}</strong> 份（${catStats.deployedDocsMB} MB）</span>
+          <span class="cat-stat-pill">🖼️ 線上活動相片藝廊 <strong>${catStats.deployedPhotos.toLocaleString()}</strong> 張（${catStats.deployedPhotosMB} MB）</span>
+          <span class="cat-stat-pill">🎬 影音暨校內大檔索引 <strong>${catStats.archivedVideos + catStats.archivedDocsLarge + catStats.archivedPhotosMore}</strong> 筆（全庫 ${catStats.totalPublicIndexed.toLocaleString()} 筆公開檢索）</span>
+        </div>
+        <p class="cat-privacy-note">點選下方任一分類卡片即可瀏覽與下載公開 PDF／書單／教案，並開啟高畫質活動相片藝廊；經費計畫依規範僅揭露名稱與額度。</p>
+      `;
+      const grid = archExplorer.querySelector(".archive-grid");
+      if (grid) {
+        archExplorer.insertBefore(banner, grid);
+      } else {
+        archExplorer.prepend(banner);
+      }
+    }
+  }
+
   updateLibraryStatus();
   buildMobileMenu();
   renderNewBooksSpotlight();
   renderArchiveGrid();
+  initCatalogLightboxAndSummary();
   renderStageDetail("low");
   syncFooterAccordionMode();
 })();

@@ -1,0 +1,558 @@
+/* =========================================================
+   永貞國小數位閱讀成果網 — 線上公開典藏檔案瀏覽與相片藝廊樣式
+   ========================================================= */
+
+.cat-browser-wrap {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin-top: 18px;
+  border-top: 2px solid #e2e8f0;
+  padding-top: 16px;
+}
+
+.cat-stats-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: linear-gradient(135deg, #eff6ff 0%, #fefce8 100%);
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 14px;
+}
+
+.cat-stats-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cat-stat-pill {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  max-width: 100%;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #ffffff;
+  color: #1e3a8a;
+  border: 1px solid #cbd5e1;
+  overflow-wrap: anywhere;
+}
+
+.cat-stat-pill strong {
+  color: #b45309;
+  font-weight: 700;
+}
+
+.cat-privacy-note {
+  font-size: 0.78rem;
+  color: #475569;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Filter Toolbar inside Category Modal */
+.cat-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.cat-view-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cat-view-tab {
+  appearance: none;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #334155;
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  font-family: inherit;
+}
+
+.cat-view-tab:hover {
+  border-color: #1e3a8a;
+  color: #1e3a8a;
+  background: #eff6ff;
+}
+
+.cat-view-tab.is-active {
+  background: #1e3a8a;
+  border-color: #1e3a8a;
+  color: #ffffff;
+}
+
+.cat-controls-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex: 1 1 280px;
+  justify-content: flex-end;
+}
+
+.cat-sub-select,
+.cat-filter-input {
+  padding: 7px 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.84rem;
+  font-family: inherit;
+  color: #0f172a;
+  background: #ffffff;
+}
+
+.cat-sub-select {
+  max-width: 240px;
+}
+
+.cat-filter-input {
+  min-width: 180px;
+  flex: 1 1 180px;
+  max-width: 280px;
+}
+
+/* Quick links on Subfolder Cards */
+.sub-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.sub-jump-btn {
+  appearance: none;
+  border: 1px solid #1e3a8a;
+  background: #ffffff;
+  color: #1e3a8a;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+
+.sub-jump-btn:hover {
+  background: #1e3a8a;
+  color: #ffffff;
+}
+
+.sub-jump-btn.is-gold {
+  border-color: #b45309;
+  color: #92400e;
+  background: #fffbeb;
+}
+
+.sub-jump-btn.is-gold:hover {
+  background: #b45309;
+  color: #ffffff;
+}
+
+.sub-thumb-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.sub-thumb-btn {
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  cursor: pointer;
+  background: #f1f5f9;
+}
+
+.sub-thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.sub-thumb-btn:hover img {
+  transform: scale(1.06);
+}
+
+.doc-quick-link {
+  color: #1e3a8a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.doc-quick-link:hover {
+  text-decoration: underline;
+  color: #b45309;
+}
+
+/* File Rows List */
+.cat-doc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cat-doc-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cat-doc-row:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.06);
+}
+
+.cat-doc-main {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.cat-doc-title-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ext-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  background: #dbeafe;
+  color: #1e3a8a;
+  flex-shrink: 0;
+}
+
+.ext-badge.is-xlsx,
+.ext-badge.is-csv {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.ext-badge.is-docx,
+.ext-badge.is-odt {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.ext-badge.is-pptx {
+  background: #ffedd5;
+  color: #9a3412;
+}
+
+.ext-badge.is-vid {
+  background: #fae8ff;
+  color: #86198f;
+}
+
+.ext-badge.is-arch {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.cat-doc-name {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #0f172a;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.cat-doc-meta {
+  font-size: 0.78rem;
+  color: #64748b;
+  margin-top: 3px;
+  overflow-wrap: anywhere;
+}
+
+.cat-doc-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.doc-act-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 11px;
+  border-radius: 7px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #1e3a8a;
+  color: #1e3a8a;
+  background: #ffffff;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.doc-act-btn:hover {
+  background: #eff6ff;
+}
+
+.doc-act-btn.primary {
+  background: #1e3a8a;
+  color: #ffffff;
+}
+
+.doc-act-btn.primary:hover {
+  background: #172554;
+}
+
+/* Photo Gallery Grid */
+.cat-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+  gap: 10px;
+}
+
+.cat-photo-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.cat-photo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.1);
+  border-color: #1e3a8a;
+}
+
+.cat-photo-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  background: #f1f5f9;
+}
+
+.cat-photo-cap {
+  padding: 6px 8px;
+  font-size: 0.74rem;
+  color: #334155;
+  line-height: 1.35;
+}
+
+.cat-photo-cap strong {
+  display: block;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cat-load-more-wrap {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.cat-load-more-btn {
+  appearance: none;
+  background: #1e3a8a;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.cat-load-more-btn:hover {
+  background: #172554;
+}
+
+/* Search Result Resource Cards */
+.search-cat-group {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Dedicated Gallery Lightbox Overlay */
+.yz-gallery-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2600;
+  background: rgba(15, 23, 42, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.yz-gallery-modal[hidden] {
+  display: none !important;
+}
+
+.yz-gallery-dialog {
+  position: relative;
+  width: min(920px, 100%);
+  max-height: 92vh;
+  background: #0f172a;
+  color: #f8fafc;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.yz-gallery-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  background: rgba(15, 23, 42, 0.96);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.yz-gallery-counter {
+  font-size: 0.85rem;
+  color: #fcd34d;
+  font-weight: 600;
+}
+
+.yz-gallery-close {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  color: #ffffff;
+  border-radius: 7px;
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.yz-gallery-stage {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 240px;
+  max-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #020617;
+  padding: 10px;
+}
+
+.yz-gallery-stage img {
+  max-width: 100%;
+  max-height: 66vh;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.yz-gallery-nav {
+  appearance: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(15, 23, 42, 0.72);
+  color: #ffffff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yz-gallery-nav:hover {
+  background: #d97706;
+  border-color: #d97706;
+}
+
+.yz-gallery-nav.prev {
+  left: 12px;
+}
+
+.yz-gallery-nav.next {
+  right: 12px;
+}
+
+.yz-gallery-foot {
+  padding: 12px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: #e2e8f0;
+  background: #0f172a;
+}
+
+@media (max-width: 767px) {
+  .cat-controls-right {
+    justify-content: stretch;
+  }
+  .cat-sub-select,
+  .cat-filter-input {
+    max-width: none;
+    width: 100%;
+  }
+  .cat-doc-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cat-doc-actions {
+    justify-content: flex-end;
+  }
+  .cat-gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+    gap: 8px;
+  }
+  .sub-thumb-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

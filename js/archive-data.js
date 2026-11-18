@@ -1,4 +1,4 @@
-/* Auto-generated library showcase & sanitized grant quota summary from E:\2024-2026閱讀教學 */
+/* Auto-generated library showcase, live web assets & sanitized grant quota summary from E:\2024-2026閱讀教學 */
 window.YONGZHEN_ARCHIVE = {
   "overview": {
     "schoolName": "苗栗縣頭份市永貞國民小學",
@@ -14,7 +14,11 @@ window.YONGZHEN_ARCHIVE = {
     "studentCount": 351,
     "monthlyAvgBorrowPerStudent": 7,
     "semesterAccumulatedBorrow": 7428,
-    "mssrYears": 10
+    "mssrYears": 10,
+    "deployedDocs": 263,
+    "deployedPhotos": 2402,
+    "totalPublicIndexed": 6064,
+    "totalDeployedMB": 528.2
   },
   "fundedPlans": [
     {
@@ -83,12 +87,13 @@ window.YONGZHEN_ARCHIVE = {
           "docs": 60,
           "mb": 26.7,
           "sampleDocs": [],
-          "sampleImgs": [
-            {
-              "name": "2萬元閱讀推動核定名單.jpg",
-              "date": "2026-06-15"
-            }
-          ]
+          "sampleImgs": [],
+          "catalogSub": "國民中小學閱讀推動計畫（2 萬元／年・僅列名稱與額度）",
+          "webDocCount": 0,
+          "webImgCount": 0,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 0
         },
         {
           "name": "深耕閱讀與閱讀推動輔助（2 萬元計畫・僅列名稱與額度）",
@@ -101,7 +106,13 @@ window.YONGZHEN_ARCHIVE = {
           "docs": 45,
           "mb": 12.0,
           "sampleDocs": [],
-          "sampleImgs": []
+          "sampleImgs": [],
+          "catalogSub": "深耕閱讀與閱讀推動輔助（2 萬元計畫・僅列名稱與額度）",
+          "webDocCount": 0,
+          "webImgCount": 0,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 0
         },
         {
           "name": "增置圖書館閱讀推動教師計畫（16.4 萬元／學年）",
@@ -114,7 +125,13 @@ window.YONGZHEN_ARCHIVE = {
           "docs": 43,
           "mb": 65.0,
           "sampleDocs": [],
-          "sampleImgs": []
+          "sampleImgs": [],
+          "catalogSub": "增置圖書館閱讀推動教師計畫（16.4 萬元／學年）",
+          "webDocCount": 0,
+          "webImgCount": 0,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 0
         },
         {
           "name": "圖書館閱讀推動輔助資源（僅列計畫名稱與額度）",
@@ -127,7 +144,13 @@ window.YONGZHEN_ARCHIVE = {
           "docs": 41,
           "mb": 9.0,
           "sampleDocs": [],
-          "sampleImgs": []
+          "sampleImgs": [],
+          "catalogSub": "圖書館閱讀推動輔助資源（僅列計畫名稱與額度）",
+          "webDocCount": 0,
+          "webImgCount": 0,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 0
         },
         {
           "name": "圖書採購編目與數位閱讀設備",
@@ -138,48 +161,80 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 41.1,
           "sampleDocs": [
             {
-              "name": "缺索書號.docx",
-              "date": ""
+              "name": "114學年新生閱讀起步走-苗栗縣頭份市永貞國民小學-選書清單-20250618143120639.xlsx",
+              "date": "2025-06-18",
+              "url": "assets/docs/c01/d0010.xlsx",
+              "m": 0.01
             },
             {
-              "name": "缺索書號.pdf",
-              "date": ""
+              "name": "圖書增補書.xlsx",
+              "date": "2024-05-01",
+              "url": "assets/docs/c01/d0014.xlsx",
+              "m": 0.01
             },
             {
               "name": "永貞國小_前三碼索書號標籤資料.json",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c01/d0024.json",
+              "m": 0.02
             },
             {
-              "name": "簡章.docx",
-              "date": "2024-12-08"
+              "name": "捐贈學校分配數.pdf",
+              "date": "2025-09-10",
+              "url": "assets/docs/c01/d0047.pdf",
+              "m": 0.11
             },
             {
               "name": "圖書志工招募單 (永貞).pdf",
-              "date": "2024-09-12"
+              "date": "2024-09-12",
+              "url": "assets/docs/c01/d0102.pdf",
+              "m": 0.45
             },
             {
-              "name": "1140908-函-捐贈電子書閱讀器「2025年e啟讀出未來－苗栗縣」專案計畫.pdf",
-              "date": "2025-09-08"
+              "name": "閱讀器帳號與密碼.pdf",
+              "date": "2025-09-01",
+              "url": "assets/docs/c01/d0155.pdf",
+              "m": 1.57
             }
           ],
           "sampleImgs": [
             {
-              "name": "圖書志工招募.jpg",
-              "date": "2024-09-19"
-            },
-            {
               "name": "428126.jpg",
-              "date": "2024-05-01"
+              "date": "2024-05-01",
+              "url": "assets/gallery/c01/g0001.jpg"
             },
             {
               "name": "428127.jpg",
-              "date": "2024-05-01"
+              "date": "2024-05-01",
+              "url": "assets/gallery/c01/g0002.jpg"
+            },
+            {
+              "name": "428133.jpg",
+              "date": "2024-05-01",
+              "url": "assets/gallery/c01/g0003.jpg"
+            },
+            {
+              "name": "428134.jpg",
+              "date": "2024-05-01",
+              "url": "assets/gallery/c01/g0004.jpg"
             },
             {
               "name": "4461.jpg",
-              "date": "2024-05-01"
+              "date": "2024-05-01",
+              "url": "assets/gallery/c01/g0005.jpg"
+            },
+            {
+              "name": "圖書志工招募.jpg",
+              "date": "2024-09-19",
+              "url": "assets/gallery/c01/g0006.jpg"
             }
-          ]
+          ],
+          "catalogSub": "圖書採購編目與數位閱讀設備",
+          "webDocCount": 6,
+          "webImgCount": 6,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 0
         },
         {
           "name": "閱讀訪視與績優評選(永貞)",
@@ -190,48 +245,72 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 251.0,
           "sampleDocs": [
             {
-              "name": "113年閱讀訪視評分表1017(修正版).doc",
-              "date": "2024-05-01"
-            },
-            {
-              "name": "113年閱讀訪視評分表.doc",
-              "date": "2024-05-01"
-            },
-            {
               "name": "苗栗縣頭份市永貞國民小學112學年度第1學期圖書課表.docx",
-              "date": "2023-09-01"
+              "date": "2023-09-01",
+              "url": "assets/docs/c01/d0021.docx",
+              "m": 0.02
             },
             {
-              "name": "113E0002223-01.PDF",
-              "date": "2024-10-14"
+              "name": "音樂領域.docx",
+              "date": "2024-10-14",
+              "url": "assets/docs/c01/d0147.docx",
+              "m": 2.45
             },
             {
-              "name": "113佐證資料.pdf",
-              "date": "2024-10-15"
-            },
-            {
-              "name": "113年酷英英聽王比賽獲獎名單.pdf",
-              "date": "2024-05-01"
+              "name": "訪視歡迎海報.pdf",
+              "date": "2024-10-15",
+              "url": "assets/docs/c01/d0158.pdf",
+              "m": 0.38
             }
           ],
           "sampleImgs": [
             {
-              "name": "閱讀教育績優評選_推動歷程佐證_001.jpg",
-              "date": "2026-01-01"
+              "name": "書櫃採購.jpg",
+              "date": "2024-09-19",
+              "url": "assets/gallery/c01/g0007.jpg"
+            },
+            {
+              "name": "推廣線上借閱書籍.jpg",
+              "date": "2024-10-03",
+              "url": "assets/gallery/c01/g0008.jpg"
+            },
+            {
+              "name": "訪視歡迎海報.jpg",
+              "date": "2024-10-15",
+              "url": "assets/gallery/c01/g0009.jpg"
+            },
+            {
+              "name": "函覆發文截圖(電子發文).jpg",
+              "date": "2025-01-02",
+              "url": "assets/gallery/c01/g0010.jpg"
             },
             {
               "name": "閱讀教育績優評選_推動歷程佐證_006.jpg",
-              "date": "2025-04-24"
+              "date": "2025-04-24",
+              "url": "assets/gallery/c01/g0011.jpg"
             },
             {
               "name": "閱讀教育績優評選_推動歷程佐證_007.jpg",
-              "date": "2025-04-24"
+              "date": "2025-04-24",
+              "url": "assets/gallery/c01/g0012.jpg"
             },
             {
               "name": "閱讀教育績優評選_推動歷程佐證_008.jpg",
-              "date": "2025-04-24"
+              "date": "2025-04-24",
+              "url": "assets/gallery/c01/g0013.jpg"
+            },
+            {
+              "name": "閱讀教育績優評選_推動歷程佐證_009.jpg",
+              "date": "2025-04-24",
+              "url": "assets/gallery/c01/g0014.jpg"
             }
-          ]
+          ],
+          "catalogSub": "閱讀訪視與績優評選(永貞)",
+          "webDocCount": 3,
+          "webImgCount": 12,
+          "vidCount": 0,
+          "archDocCount": 1,
+          "archImgCount": 0
         },
         {
           "name": "圖書館行政課表與志工小大使",
@@ -242,36 +321,43 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 30.4,
           "sampleDocs": [
             {
-              "name": "115-1課表.pdf",
-              "date": "2026-09-01"
+              "name": "【 苗栗縣永貞國小 】圖書館小大使值勤日誌－中年級.pdf",
+              "date": "2026-08-01",
+              "url": "assets/docs/c01/d0076.pdf",
+              "m": 0.19
+            },
+            {
+              "name": "【 苗栗縣永貞國小 】圖書館小大使值勤日誌－高年級.pdf",
+              "date": "2026-08-01",
+              "url": "assets/docs/c01/d0078.pdf",
+              "m": 0.2
             },
             {
               "name": "115-1閱讀課.pdf",
-              "date": "2026-09-01"
-            },
-            {
-              "name": "115-1閱讀課.xls",
-              "date": "2026-09-01"
-            },
-            {
-              "name": "115年-苗栗縣立國中小聯合採購(永貞國小).xlsx",
-              "date": "2026-09-01"
-            },
-            {
-              "name": "115年-苗栗縣立國中小聯合採購(永貞國小)OK522本.xlsx",
-              "date": "2026-09-01"
+              "date": "2026-09-01",
+              "url": "assets/docs/c01/d0173.pdf",
+              "m": 3.53
             },
             {
               "name": "【 苗栗縣永貞國小 】圖書館小大使值勤日誌－中年級.docx",
-              "date": "2026-08-01"
+              "date": "2026-08-01",
+              "url": "assets/docs/c01/d0259.docx",
+              "m": 1.91
+            },
+            {
+              "name": "【 苗栗縣永貞國小 】圖書館小大使值勤日誌－高年級.docx",
+              "date": "2026-08-01",
+              "url": "assets/docs/c01/d0260.docx",
+              "m": 2.04
             }
           ],
-          "sampleImgs": [
-            {
-              "name": "愛的書庫敘獎公文批核軌跡.jpg",
-              "date": "2024-10-07"
-            }
-          ]
+          "sampleImgs": [],
+          "catalogSub": "圖書館行政課表與志工小大使",
+          "webDocCount": 5,
+          "webImgCount": 0,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 0
         }
       ]
     },
@@ -302,25 +388,62 @@ window.YONGZHEN_ARCHIVE = {
           "images": 202,
           "docs": 29,
           "mb": 81.1,
-          "sampleDocs": [],
+          "sampleDocs": [
+            {
+              "name": "實際參訪時間表.docx",
+              "date": "2026-05-03",
+              "url": "assets/docs/c02/d0023.docx",
+              "m": 0.02
+            }
+          ],
           "sampleImgs": [
             {
               "name": "永貞國小輔導室_圖書館參訪活動布條2.jpg",
-              "date": "2026-05-26"
+              "date": "2026-05-26",
+              "url": "assets/gallery/c02/g0056.jpg"
             },
             {
-              "name": "LINE_ALBUM_202665苗栗縣圖書館參訪活動_260609_28.jpg",
-              "date": "2026-06-09"
+              "name": "LINE_ALBUM_202665苗栗縣圖書館參訪活動_260609_100.jpg",
+              "date": "2026-06-09",
+              "url": "assets/gallery/c02/g0057.jpg"
             },
             {
-              "name": "LINE_ALBUM_202665苗栗縣圖書館參訪活動_260609_188.jpg",
-              "date": "2026-06-09"
+              "name": "LINE_ALBUM_202665苗栗縣圖書館參訪活動_260609_102.jpg",
+              "date": "2026-06-09",
+              "url": "assets/gallery/c02/g0058.jpg"
             },
             {
-              "name": "984005.jpg",
-              "date": "2026-06-17"
+              "name": "LINE_ALBUM_202665苗栗縣圖書館參訪活動_260609_105.jpg",
+              "date": "2026-06-09",
+              "url": "assets/gallery/c02/g0059.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_202665苗栗縣圖書館參訪活動_260609_107.jpg",
+              "date": "2026-06-09",
+              "url": "assets/gallery/c02/g0060.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_202665苗栗縣圖書館參訪活動_260609_11.jpg",
+              "date": "2026-06-09",
+              "url": "assets/gallery/c02/g0061.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_202665苗栗縣圖書館參訪活動_260609_112.jpg",
+              "date": "2026-06-09",
+              "url": "assets/gallery/c02/g0062.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_202665苗栗縣圖書館參訪活動_260609_114.jpg",
+              "date": "2026-06-09",
+              "url": "assets/gallery/c02/g0063.jpg"
             }
-          ]
+          ],
+          "catalogSub": "縣府圖書館空間改善參訪(7萬)",
+          "webDocCount": 1,
+          "webImgCount": 78,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 124
         },
         {
           "name": "新館建築施工圖說（32 張設計圖・預算文件不公開）",
@@ -333,24 +456,13 @@ window.YONGZHEN_ARCHIVE = {
           "docs": 18,
           "mb": 66.9,
           "sampleDocs": [],
-          "sampleImgs": [
-            {
-              "name": "115年永貞國小圖書館整修工程-施工圖書1012_頁面_01.jpg",
-              "date": "2026-09-01"
-            },
-            {
-              "name": "115年永貞國小圖書館整修工程-施工圖書1012_頁面_02.jpg",
-              "date": "2026-09-01"
-            },
-            {
-              "name": "115年永貞國小圖書館整修工程-施工圖書1012_頁面_03.jpg",
-              "date": "2026-09-01"
-            },
-            {
-              "name": "115年永貞國小圖書館整修工程-施工圖書1012_頁面_04.jpg",
-              "date": "2026-09-01"
-            }
-          ]
+          "sampleImgs": [],
+          "catalogSub": "新館建築施工圖說（32 張設計圖・預算文件不公開）",
+          "webDocCount": 0,
+          "webImgCount": 0,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 0
         },
         {
           "name": "空間規劃攝影與手繪草圖",
@@ -363,21 +475,51 @@ window.YONGZHEN_ARCHIVE = {
           "sampleImgs": [
             {
               "name": "LINE_ALBUM_0821參考照片_260825_1.jpg",
-              "date": "2026-08-25"
+              "date": "2026-08-25",
+              "url": "assets/gallery/c02/g0026.jpg"
             },
             {
               "name": "LINE_ALBUM_0821參考照片_260825_10.jpg",
-              "date": "2026-08-25"
+              "date": "2026-08-25",
+              "url": "assets/gallery/c02/g0027.jpg"
             },
             {
               "name": "LINE_ALBUM_0821參考照片_260825_11.jpg",
-              "date": "2026-08-25"
+              "date": "2026-08-25",
+              "url": "assets/gallery/c02/g0028.jpg"
             },
             {
               "name": "LINE_ALBUM_0821參考照片_260825_12.jpg",
-              "date": "2026-08-25"
+              "date": "2026-08-25",
+              "url": "assets/gallery/c02/g0029.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_0821參考照片_260825_13.jpg",
+              "date": "2026-08-25",
+              "url": "assets/gallery/c02/g0030.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_0821參考照片_260825_14.jpg",
+              "date": "2026-08-25",
+              "url": "assets/gallery/c02/g0031.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_0821參考照片_260825_15.jpg",
+              "date": "2026-08-25",
+              "url": "assets/gallery/c02/g0032.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_0821參考照片_260825_16.jpg",
+              "date": "2026-08-25",
+              "url": "assets/gallery/c02/g0033.jpg"
             }
-          ]
+          ],
+          "catalogSub": "空間規劃攝影與手繪草圖",
+          "webDocCount": 0,
+          "webImgCount": 30,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 0
         },
         {
           "name": "圖書館命名_蘆映書院與祕密基地",
@@ -388,48 +530,97 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 363.4,
           "sampleDocs": [
             {
-              "name": "Say YES To the Next 40.pdf",
-              "date": ""
+              "name": "命名活動入選.xlsx",
+              "date": "2026-08-01",
+              "url": "assets/docs/c02/d0027.xlsx",
+              "m": 0.03
             },
             {
-              "name": "命名名稱與理念合理性，篩選前20名。.docx",
-              "date": ""
+              "name": "N-115-1圖書館命名活動書單.docx",
+              "date": "2026-09-01",
+              "url": "assets/docs/c02/d0031.docx",
+              "m": 0.03
+            },
+            {
+              "name": "115-1-1圖書館命名活動書單.docx",
+              "date": "2026-09-01",
+              "url": "assets/docs/c02/d0033.docx",
+              "m": 0.03
+            },
+            {
+              "name": "圖書館命名匿名投票.pdf",
+              "date": "2026-08-01",
+              "url": "assets/docs/c02/d0036.pdf",
+              "m": 0.05
+            },
+            {
+              "name": "N-圖書館命名活動書單.pdf",
+              "date": "2026-08-01",
+              "url": "assets/docs/c02/d0105.pdf",
+              "m": 0.52
+            },
+            {
+              "name": "「書中自有祕密基地」命名挑戰賽.pdf",
+              "date": "2026-08-01",
+              "url": "assets/docs/c02/d0124.pdf",
+              "m": 1.01
             },
             {
               "name": "請依照命名名稱與理念合理性，篩選前20名。.docx",
-              "date": ""
+              "date": "",
+              "url": "assets/docs/c02/d0150.docx",
+              "m": 2.98
             },
             {
-              "name": "閱讀角 (4).pdf",
-              "date": ""
-            },
-            {
-              "name": "閱讀角 (5).pdf",
-              "date": ""
-            },
-            {
-              "name": "閱讀角 (6).pdf",
-              "date": ""
+              "name": "命名名稱與理念合理性，篩選前20名。.docx",
+              "date": "",
+              "url": "assets/docs/c02/d0153.docx",
+              "m": 3.22
             }
           ],
           "sampleImgs": [
             {
               "name": "未命名.jpg",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/gallery/c02/g0019.jpg"
             },
             {
               "name": "未命名.png",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/gallery/c02/g0020.jpg"
             },
             {
               "name": "A永貞時光機.png",
-              "date": "2026-11-02"
+              "date": "2026-11-02",
+              "url": "assets/gallery/c02/g0021.jpg"
             },
             {
               "name": "B永貞小達人.png",
-              "date": "2026-11-02"
+              "date": "2026-11-02",
+              "url": "assets/gallery/c02/g0022.jpg"
+            },
+            {
+              "name": "C2永貞未來誌.png",
+              "date": "2026-11-02",
+              "url": "assets/gallery/c02/g0023.jpg"
+            },
+            {
+              "name": "C永貞未來誌.png",
+              "date": "2026-11-02",
+              "url": "assets/gallery/c02/g0024.jpg"
+            },
+            {
+              "name": "IMG_1563.JPG",
+              "date": "2026-11-16",
+              "url": "assets/gallery/c02/g0025.jpg"
             }
-          ]
+          ],
+          "catalogSub": "圖書館命名_蘆映書院與祕密基地",
+          "webDocCount": 19,
+          "webImgCount": 7,
+          "vidCount": 2,
+          "archDocCount": 0,
+          "archImgCount": 0
         },
         {
           "name": "學校圖書館空間環境改善計畫（300 萬元補助案）",
@@ -442,7 +633,13 @@ window.YONGZHEN_ARCHIVE = {
           "docs": 25,
           "mb": 141.9,
           "sampleDocs": [],
-          "sampleImgs": []
+          "sampleImgs": [],
+          "catalogSub": "學校圖書館空間環境改善計畫（300 萬元補助案）",
+          "webDocCount": 0,
+          "webImgCount": 0,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 0
         }
       ]
     },
@@ -473,22 +670,52 @@ window.YONGZHEN_ARCHIVE = {
           "sampleDocs": [],
           "sampleImgs": [
             {
-              "name": "reading_mssr_quiet.jpg",
-              "date": "2026-10-20"
+              "name": "S__68296750_0.jpg",
+              "date": "2025-10-23",
+              "url": "assets/gallery/c03/g0164.jpg"
             },
             {
-              "name": "reading_mssr_storyteller.jpg",
-              "date": "2026-10-20"
+              "name": "883465.jpg",
+              "date": "2025-12-09",
+              "url": "assets/gallery/c03/g0165.jpg"
             },
             {
-              "name": "LINE_ALBUM_114上學期MSSR晨讀紀錄_260421_49.jpg",
-              "date": "2026-04-21"
+              "name": "883467.jpg",
+              "date": "2025-12-09",
+              "url": "assets/gallery/c03/g0166.jpg"
             },
             {
-              "name": "883473.jpg",
-              "date": "2025-12-09"
+              "name": "883474.jpg",
+              "date": "2025-12-09",
+              "url": "assets/gallery/c03/g0167.jpg"
+            },
+            {
+              "name": "883481.jpg",
+              "date": "2025-12-09",
+              "url": "assets/gallery/c03/g0168.jpg"
+            },
+            {
+              "name": "883497.jpg",
+              "date": "2025-12-09",
+              "url": "assets/gallery/c03/g0169.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_114上學期MSSR晨讀紀錄_251210_16.jpg",
+              "date": "2025-12-10",
+              "url": "assets/gallery/c03/g0170.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_114上學期MSSR晨讀紀錄_251210_3.jpg",
+              "date": "2025-12-10",
+              "url": "assets/gallery/c03/g0171.jpg"
             }
-          ]
+          ],
+          "catalogSub": "晨讀現場照片與影片",
+          "webDocCount": 0,
+          "webImgCount": 75,
+          "vidCount": 7,
+          "archDocCount": 0,
+          "archImgCount": 118
         },
         {
           "name": "MSSR 晨讀運動計畫額度（3 萬元）暨行政陪讀規劃",
@@ -500,8 +727,39 @@ window.YONGZHEN_ARCHIVE = {
           "images": 0,
           "docs": 48,
           "mb": 12.3,
-          "sampleDocs": [],
-          "sampleImgs": []
+          "sampleDocs": [
+            {
+              "name": "(空白)明日閱讀2.0跨領域主題閱讀紀錄單_0225.docx",
+              "date": "2025-06-24",
+              "url": "assets/docs/c03/d0017.docx",
+              "m": 0.01
+            },
+            {
+              "name": "(彙整版) 明日閱讀2.0-核心共讀書籍 【小學中年級】推薦表單.xlsx",
+              "date": "2025-03-02",
+              "url": "assets/docs/c03/d0039.xlsx",
+              "m": 0.08
+            },
+            {
+              "name": "(修訂主題) 明日閱讀2.0-核心共讀書籍 【小學低年級】推薦表單.xlsx",
+              "date": "2025-02-15",
+              "url": "assets/docs/c03/d0041.xlsx",
+              "m": 0.08
+            },
+            {
+              "name": "書籍廣度_3領域12類_更新 (1).pdf",
+              "date": "2025-02-12",
+              "url": "assets/docs/c03/d0104.pdf",
+              "m": 0.5
+            }
+          ],
+          "sampleImgs": [],
+          "catalogSub": "計畫申辦與合作意向書",
+          "webDocCount": 4,
+          "webImgCount": 0,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 0
         },
         {
           "name": "專家諮商輔導與成果報告",
@@ -513,47 +771,65 @@ window.YONGZHEN_ARCHIVE = {
           "sampleDocs": [
             {
               "name": "2026明日閱讀週＿議程與交通資訊(07.06)final.pdf",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c03/d0121.pdf",
+              "m": 0.92
             },
             {
               "name": "英文明日閱讀推動之網站資源使用方式.docx",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "51苗栗縣永貞國小期末報告.docx",
-              "date": "2025-11-12"
-            },
-            {
-              "name": "永貞國小-專家諮詢對話紀錄表.docx",
-              "date": "2026-06-25"
-            },
-            {
-              "name": "永貞國小-專家諮詢對話紀錄表.pdf",
-              "date": "2026-06-25"
-            },
-            {
-              "name": "永貞國小-114計畫學校期末報告書.docx",
-              "date": "2026-06-25"
+              "date": "2026-01-01",
+              "url": "assets/docs/c03/d0135.docx",
+              "m": 1.52
             }
           ],
           "sampleImgs": [
             {
               "name": "IMG_7644.JPG",
-              "date": "2026-04-14"
+              "date": "2026-04-14",
+              "url": "assets/gallery/c03/g0134.jpg"
             },
             {
               "name": "IMG_7646.JPG",
-              "date": "2026-04-14"
+              "date": "2026-04-14",
+              "url": "assets/gallery/c03/g0135.jpg"
             },
             {
               "name": "IMG_7649.JPG",
-              "date": "2026-04-14"
+              "date": "2026-04-14",
+              "url": "assets/gallery/c03/g0136.jpg"
             },
             {
-              "name": "永貞國小-專家諮詢簽到表(0414).JPG",
-              "date": "2026-06-25"
+              "name": "LINE_ALBUM_1150414專家諮詢_260417_1.jpg",
+              "date": "2026-04-17",
+              "url": "assets/gallery/c03/g0137.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_1150414專家諮詢_260417_10.jpg",
+              "date": "2026-04-17",
+              "url": "assets/gallery/c03/g0138.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_1150414專家諮詢_260417_11.jpg",
+              "date": "2026-04-17",
+              "url": "assets/gallery/c03/g0139.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_1150414專家諮詢_260417_12.jpg",
+              "date": "2026-04-17",
+              "url": "assets/gallery/c03/g0140.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_1150414專家諮詢_260417_13.jpg",
+              "date": "2026-04-17",
+              "url": "assets/gallery/c03/g0141.jpg"
             }
-          ]
+          ],
+          "catalogSub": "專家諮商輔導與成果報告",
+          "webDocCount": 2,
+          "webImgCount": 28,
+          "vidCount": 0,
+          "archDocCount": 3,
+          "archImgCount": 0
         },
         {
           "name": "明日閱讀推薦認證與海報",
@@ -564,48 +840,66 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 772.7,
           "sampleDocs": [
             {
-              "name": "115學年度「推動國民中小學晨讀運動－身教式閱讀與聊書計畫」之「2026明日閱讀日－線上博覽會」活動函.pdf",
-              "date": "2026-09-01"
+              "name": "明日閱讀等級認證—「家長認證」推薦方式.odt",
+              "date": "2026-01-01",
+              "url": "assets/docs/c03/d0015.odt",
+              "m": 0.01
+            },
+            {
+              "name": "明日閱讀日上傳簡介.docx",
+              "date": "2025-10-22",
+              "url": "assets/docs/c03/d0019.docx",
+              "m": 0.01
+            },
+            {
+              "name": "檢送「社團法人中華明日閱讀協會」辦理「115學年度明日閱讀等級認證」活動辦法，懇請協助轉知所屬中小學，鼓勵學校、教師及家長踴躍報名參加，請查照.pdf",
+              "date": "2026-09-01",
+              "url": "assets/docs/c03/d0106.pdf",
+              "m": 0.55
             },
             {
               "name": "「115學年度推動國民中小學晨讀運動－身教式閱讀與聊書計畫」明日閱讀2.0教師共備社群第一次研習活動，請准予參與本計畫「明日閱讀2.0」函.pdf",
-              "date": "2026-09-01"
+              "date": "2026-09-01",
+              "url": "assets/docs/c03/d0109.pdf",
+              "m": 0.58
             },
             {
               "name": "社團法人中華明日閱讀協會辦理2026「明日閱讀年度推薦學校」活動函.pdf",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c03/d0111.pdf",
+              "m": 0.67
+            },
+            {
+              "name": "115學年度「推動國民中小學晨讀運動－身教式閱讀與聊書計畫」之「2026明日閱讀日－線上博覽會」活動函.pdf",
+              "date": "2026-09-01",
+              "url": "assets/docs/c03/d0112.pdf",
+              "m": 0.68
             },
             {
               "name": "115圖推海報 (1).pdf",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "115圖推海報.pdf",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "明日閱讀等級認證—「家長認證」推薦方式.odt",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c03/d0179.pdf",
+              "m": 0.39
             }
           ],
           "sampleImgs": [
             {
               "name": "114年度推薦學校獎狀.jpg",
-              "date": "2025-09-01"
+              "date": "2025-09-01",
+              "url": "assets/gallery/c03/g0162.jpg"
             },
             {
-              "name": "100x100.png",
-              "date": "2025-11-17"
-            },
-            {
-              "name": "600X600.png",
-              "date": "2025-11-17"
-            },
-            {
-              "name": "800x800.png",
-              "date": "2025-11-17"
+              "name": "Original.png",
+              "date": "2025-11-17",
+              "url": "assets/gallery/c03/g0163.jpg"
             }
-          ]
+          ],
+          "catalogSub": "明日閱讀推薦認證與海報",
+          "webDocCount": 7,
+          "webImgCount": 2,
+          "vidCount": 2,
+          "archDocCount": 0,
+          "archImgCount": 0
         }
       ]
     },
@@ -636,22 +930,52 @@ window.YONGZHEN_ARCHIVE = {
           "sampleDocs": [],
           "sampleImgs": [
             {
-              "name": "LINE_ALBUM_113-1低年級聽故事活動_241129_1.jpg",
-              "date": "2024-11-29"
+              "name": "PXL_20241112_234420736.PORTRAIT.jpg",
+              "date": "2024-11-12",
+              "url": "assets/gallery/c04/g0351.jpg"
             },
             {
-              "name": "LINE_ALBUM_113-1低年級聽故事活動_241129_101.jpg",
-              "date": "2024-11-29"
+              "name": "PXL_20241112_234710181.MP.jpg",
+              "date": "2024-11-12",
+              "url": "assets/gallery/c04/g0352.jpg"
             },
             {
-              "name": "LINE_ALBUM_113-1低年級聽故事活動_241129_105.jpg",
-              "date": "2024-11-29"
+              "name": "PXL_20241112_234731755.MP.jpg",
+              "date": "2024-11-12",
+              "url": "assets/gallery/c04/g0353.jpg"
             },
             {
-              "name": "LINE_ALBUM_113-1低年級聽故事活動_241129_109.jpg",
-              "date": "2024-11-29"
+              "name": "PXL_20241112_234809346.jpg",
+              "date": "2024-11-12",
+              "url": "assets/gallery/c04/g0354.jpg"
+            },
+            {
+              "name": "PXL_20241112_234828416.jpg",
+              "date": "2024-11-12",
+              "url": "assets/gallery/c04/g0355.jpg"
+            },
+            {
+              "name": "PXL_20241112_234917843.PORTRAIT.ORIGINAL.jpg",
+              "date": "2024-11-12",
+              "url": "assets/gallery/c04/g0356.jpg"
+            },
+            {
+              "name": "PXL_20241112_235014709.PORTRAIT.jpg",
+              "date": "2024-11-12",
+              "url": "assets/gallery/c04/g0357.jpg"
+            },
+            {
+              "name": "PXL_20241112_235049986.PORTRAIT.ORIGINAL.jpg",
+              "date": "2024-11-12",
+              "url": "assets/gallery/c04/g0358.jpg"
             }
-          ]
+          ],
+          "catalogSub": "週三聽故事_113學年度",
+          "webDocCount": 0,
+          "webImgCount": 486,
+          "vidCount": 46,
+          "archDocCount": 0,
+          "archImgCount": 764
         },
         {
           "name": "週三聽故事_114學年度",
@@ -663,22 +987,52 @@ window.YONGZHEN_ARCHIVE = {
           "sampleDocs": [],
           "sampleImgs": [
             {
-              "name": "LINE_ALBUM_2025924一年級整理房間_有氧舞蹈_251001_50.jpg",
-              "date": "2025-09-24"
+              "name": "LINE_ALBUM_2025924一年級整理房間_有氧舞蹈_251001_1.jpg",
+              "date": "2025-09-24",
+              "url": "assets/gallery/c04/g0837.jpg"
             },
             {
-              "name": "LINE_ALBUM_2025924一年級整理房間_有氧舞蹈_251001_37.jpg",
-              "date": "2025-09-24"
+              "name": "LINE_ALBUM_2025924一年級整理房間_有氧舞蹈_251001_12.jpg",
+              "date": "2025-09-24",
+              "url": "assets/gallery/c04/g0838.jpg"
             },
             {
-              "name": "LINE_ALBUM_2025924一年級整理房間_有氧舞蹈_251001_44.jpg",
-              "date": "2025-09-24"
+              "name": "LINE_ALBUM_2025924一年級整理房間_有氧舞蹈_251001_14.jpg",
+              "date": "2025-09-24",
+              "url": "assets/gallery/c04/g0839.jpg"
             },
             {
-              "name": "LINE_ALBUM_2025924一年級整理房間_有氧舞蹈_251001_36.jpg",
-              "date": "2025-09-24"
+              "name": "LINE_ALBUM_2025924一年級整理房間_有氧舞蹈_251001_17.jpg",
+              "date": "2025-09-24",
+              "url": "assets/gallery/c04/g0840.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_2025924一年級整理房間_有氧舞蹈_251001_19.jpg",
+              "date": "2025-09-24",
+              "url": "assets/gallery/c04/g0841.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_2025924一年級整理房間_有氧舞蹈_251001_21.jpg",
+              "date": "2025-09-24",
+              "url": "assets/gallery/c04/g0842.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_2025924一年級整理房間_有氧舞蹈_251001_23.jpg",
+              "date": "2025-09-24",
+              "url": "assets/gallery/c04/g0843.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_2025924一年級整理房間_有氧舞蹈_251001_26.jpg",
+              "date": "2025-09-24",
+              "url": "assets/gallery/c04/g0844.jpg"
             }
-          ]
+          ],
+          "catalogSub": "週三聽故事_114學年度",
+          "webDocCount": 0,
+          "webImgCount": 244,
+          "vidCount": 28,
+          "archDocCount": 0,
+          "archImgCount": 384
         },
         {
           "name": "學生朝會好書推薦與說書",
@@ -690,22 +1044,52 @@ window.YONGZHEN_ARCHIVE = {
           "sampleDocs": [],
           "sampleImgs": [
             {
-              "name": "LINE_ALBUM_好書推薦_251023_23.jpg",
-              "date": "2025-10-23"
+              "name": "885588_0.jpg",
+              "date": "2024-11-19",
+              "url": "assets/gallery/c04/g0239.jpg"
             },
             {
-              "name": "LINE_ALBUM_好書推薦_251023_5.jpg",
-              "date": "2025-10-23"
+              "name": "885591_0.jpg",
+              "date": "2024-11-19",
+              "url": "assets/gallery/c04/g0240.jpg"
             },
             {
-              "name": "PXL_20250311_002407058.jpg",
-              "date": "2025-03-11"
+              "name": "885593_0.jpg",
+              "date": "2024-11-19",
+              "url": "assets/gallery/c04/g0241.jpg"
             },
             {
-              "name": "LINE_ALBUM_114.10.21好書推薦_251023_22.jpg",
-              "date": "2025-10-23"
+              "name": "PXL_20250311_001925500.jpg",
+              "date": "2025-03-11",
+              "url": "assets/gallery/c04/g0242.jpg"
+            },
+            {
+              "name": "PXL_20250311_001930962.jpg",
+              "date": "2025-03-11",
+              "url": "assets/gallery/c04/g0243.jpg"
+            },
+            {
+              "name": "PXL_20250311_002013032.jpg",
+              "date": "2025-03-11",
+              "url": "assets/gallery/c04/g0244.jpg"
+            },
+            {
+              "name": "PXL_20250311_002029783.jpg",
+              "date": "2025-03-11",
+              "url": "assets/gallery/c04/g0245.jpg"
+            },
+            {
+              "name": "PXL_20250311_002059604.MP.jpg",
+              "date": "2025-03-11",
+              "url": "assets/gallery/c04/g0246.jpg"
             }
-          ]
+          ],
+          "catalogSub": "學生朝會好書推薦與說書",
+          "webDocCount": 0,
+          "webImgCount": 111,
+          "vidCount": 12,
+          "archDocCount": 0,
+          "archImgCount": 176
         },
         {
           "name": "明日說書人競賽(2025-2026)",
@@ -716,48 +1100,25 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 2491.2,
           "sampleDocs": [
             {
-              "name": "568785_113EK00357_1_09104301048.pdf",
-              "date": "2024-10-01"
-            },
-            {
-              "name": "568785_113EK00357_2_09104301048.pdf",
-              "date": "2024-10-01"
-            },
-            {
-              "name": "113E0003288-01.PDF",
-              "date": "2024-10-01"
-            },
-            {
-              "name": "1037799_0100913_114E0119034-01.pdf",
-              "date": "2025-05-16"
-            },
-            {
-              "name": "1037799_0100913_114E1077613-01.pdf",
-              "date": "2025-05-16"
-            },
-            {
-              "name": "1037799_0100913_114E1077614-01.pdf",
-              "date": "2025-05-16"
+              "name": "2025明日說書人參賽及得獎獎狀掃描.pdf",
+              "date": "2025-01-01",
+              "url": "assets/docs/c04/d0159.pdf",
+              "m": 2.3
             }
           ],
           "sampleImgs": [
             {
               "name": "2026明日說書人比賽.jpg",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "2025說書人得獎名單.jpg",
-              "date": "2025-01-01"
-            },
-            {
-              "name": "學生照_苗栗縣永貞國小_王湘婷.jpg",
-              "date": "2025-10-14"
-            },
-            {
-              "name": "學生照_苗栗縣永貞國小_白羽菲.jpg",
-              "date": "2025-10-14"
+              "date": "2026-01-01",
+              "url": "assets/gallery/c04/g0350.jpg"
             }
-          ]
+          ],
+          "catalogSub": "明日說書人競賽(2025-2026)",
+          "webDocCount": 1,
+          "webImgCount": 1,
+          "vidCount": 45,
+          "archDocCount": 0,
+          "archImgCount": 0
         }
       ]
     },
@@ -787,48 +1148,102 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 474.8,
           "sampleDocs": [
             {
-              "name": "2026drawing-authorization.pdf",
-              "date": "2026-01-01"
+              "name": "115學年新生閱讀起步走-可選書單-20260901213606739.xlsx",
+              "date": "2026-09-01",
+              "url": "assets/docs/c05/d0013.xlsx",
+              "m": 0.01
+            },
+            {
+              "name": "橫式信封.docx",
+              "date": "2025-06-03",
+              "url": "assets/docs/c05/d0020.docx",
+              "m": 0.02
+            },
+            {
+              "name": "寫信格式(低年級).docx",
+              "date": "2025-09-01",
+              "url": "assets/docs/c05/d0057.docx",
+              "m": 0.14
+            },
+            {
+              "name": "寫信格式1(低年級).docx",
+              "date": "2025-09-01",
+              "url": "assets/docs/c05/d0066.docx",
+              "m": 0.16
             },
             {
               "name": "2026drawing-canvas.pdf",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c05/d0080.pdf",
+              "m": 0.21
             },
             {
-              "name": "114永貞國小主題閱讀活動.pdf",
-              "date": "2026-08-01"
-            },
-            {
-              "name": "115學年新生閱讀起步走-可選書單-20260901213606739.xlsx",
-              "date": "2026-09-01"
+              "name": "40 周年校慶任務.pdf",
+              "date": "2026-08-01",
+              "url": "assets/docs/c05/d0110.pdf",
+              "m": 0.66
             },
             {
               "name": "新生閱讀起步走-學校操作+(202605)v.3.pdf",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c05/d0148.pdf",
+              "m": 1.17
             },
             {
-              "name": "115-1-1「書中自有祕密基地」主題書展.pdf",
-              "date": "2026-09-01"
+              "name": "搶救剩食大作戰學習單掃描.pdf",
+              "date": "2025-10-21",
+              "url": "assets/docs/c05/d0154.pdf",
+              "m": 1.66
             }
           ],
           "sampleImgs": [
             {
-              "name": "114永貞國小主題閱讀活動.png",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "115-1-1.png",
-              "date": "2026-09-01"
-            },
-            {
-              "name": "PXL_20250903_022423162.PORTRAIT.jpg",
-              "date": "2025-09-03"
-            },
-            {
               "name": "20250319_014626317_iOS.jpg",
-              "date": "2025-03-19"
+              "date": "2025-03-19",
+              "url": "assets/gallery/c05/g1081.jpg"
+            },
+            {
+              "name": "20250521_100520.jpg",
+              "date": "2025-05-21",
+              "url": "assets/gallery/c05/g1082.jpg"
+            },
+            {
+              "name": "761751_0.jpg",
+              "date": "2025-06-04",
+              "url": "assets/gallery/c05/g1083.jpg"
+            },
+            {
+              "name": "114-1六甲.jpg",
+              "date": "2025-09-01",
+              "url": "assets/gallery/c05/g1084.jpg"
+            },
+            {
+              "name": "聖誕節活動海報.jpg",
+              "date": "2025-09-01",
+              "url": "assets/gallery/c05/g1085.jpg"
+            },
+            {
+              "name": "照片背景照 (1).png",
+              "date": "2025-10-20",
+              "url": "assets/gallery/c05/g1086.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_20251021統一超商御飯糰30週年慶_251022_1.jpg",
+              "date": "2025-10-21",
+              "url": "assets/gallery/c05/g1087.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_20251021統一超商御飯糰30週年慶_251022_12.jpg",
+              "date": "2025-10-21",
+              "url": "assets/gallery/c05/g1088.jpg"
             }
-          ]
+          ],
+          "catalogSub": "主題書展與圖書館節慶活動(萬聖_聖誕_元宵)",
+          "webDocCount": 15,
+          "webImgCount": 232,
+          "vidCount": 1,
+          "archDocCount": 0,
+          "archImgCount": 364
         },
         {
           "name": "誠品與縣府行動書車",
@@ -839,48 +1254,90 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 90.6,
           "sampleDocs": [
             {
-              "name": "20250612092036720.pdf",
-              "date": "2025-06-12"
-            },
-            {
               "name": "圖書借閱單.xlsx",
-              "date": "2025-06-04"
-            },
-            {
-              "name": "誠品基金會-肖像權授權同意書_不限_代理人.pdf",
-              "date": "2025-06-04"
-            },
-            {
-              "name": "誠品行動圖書館介紹(2025).pdf",
-              "date": "2025-01-01"
+              "date": "2025-06-04",
+              "url": "assets/docs/c05/d0028.xlsx",
+              "m": 0.03
             },
             {
               "name": "誠品行動圖書館介紹(2025活動宣傳用).pdf",
-              "date": "2025-01-01"
+              "date": "2025-01-01",
+              "url": "assets/docs/c05/d0097.pdf",
+              "m": 0.37
+            },
+            {
+              "name": "誠品行動圖書館介紹(2025).pdf",
+              "date": "2025-01-01",
+              "url": "assets/docs/c05/d0103.pdf",
+              "m": 0.49
+            },
+            {
+              "name": "Back to School Puzzle Worksheet (1).pdf",
+              "date": "2025-06-15",
+              "url": "assets/docs/c05/d0139.pdf",
+              "m": 0.32
             },
             {
               "name": "誠品行動圖書館(書車) 車體相關操作說明.pdf",
-              "date": "2025-06-04"
+              "date": "2025-06-04",
+              "url": "assets/docs/c05/d0142.pdf",
+              "m": 1.25
+            },
+            {
+              "name": "行動圖書館停駐使用說明_2025.pdf",
+              "date": "2025-01-01",
+              "url": "assets/docs/c05/d0152.pdf",
+              "m": 1.7
             }
           ],
           "sampleImgs": [
             {
-              "name": "20261013書車活動宣導品.jpg",
-              "date": "2026-10-13"
+              "name": "行動圖書館停駐事項.png",
+              "date": "2025-02-10",
+              "url": "assets/gallery/c05/g1425.jpg"
             },
             {
               "name": "20250611_093341.jpg",
-              "date": "2025-06-18"
+              "date": "2025-06-18",
+              "url": "assets/gallery/c05/g1426.jpg"
             },
             {
-              "name": "20250611_093734.jpg",
-              "date": "2025-06-18"
+              "name": "20250618_094931.jpg",
+              "date": "2025-06-18",
+              "url": "assets/gallery/c05/g1427.jpg"
             },
             {
-              "name": "20250611_094540_Original.JPG",
-              "date": "2025-06-11"
+              "name": "LINE_ALBUM_2025年6月誠品行動書車_250624_100.jpg",
+              "date": "2025-06-24",
+              "url": "assets/gallery/c05/g1428.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_2025年6月誠品行動書車_250624_102.jpg",
+              "date": "2025-06-24",
+              "url": "assets/gallery/c05/g1429.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_2025年6月誠品行動書車_250624_105.jpg",
+              "date": "2025-06-24",
+              "url": "assets/gallery/c05/g1430.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_2025年6月誠品行動書車_250624_108.jpg",
+              "date": "2025-06-24",
+              "url": "assets/gallery/c05/g1431.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_2025年6月誠品行動書車_250624_11.jpg",
+              "date": "2025-06-24",
+              "url": "assets/gallery/c05/g1432.jpg"
             }
-          ]
+          ],
+          "catalogSub": "誠品與縣府行動書車",
+          "webDocCount": 6,
+          "webImgCount": 71,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 113
         },
         {
           "name": "五甲公共圖書館參訪與學習單掃描",
@@ -892,35 +1349,65 @@ window.YONGZHEN_ARCHIVE = {
           "sampleDocs": [
             {
               "name": "閱讀角 (2).pdf",
-              "date": ""
+              "date": "",
+              "url": "assets/docs/c05/d0175.pdf",
+              "m": 3.59
             },
             {
               "name": "20261030145621995.pdf",
-              "date": "2026-10-30"
-            },
-            {
-              "name": "20261106084108262.pdf",
-              "date": "2026-11-06"
+              "date": "2026-10-30",
+              "url": "assets/docs/c05/d0190.pdf",
+              "m": 2.98
             }
           ],
           "sampleImgs": [
             {
               "name": "五甲班級歷程_日常教學與班級活動_087.jpg",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "五甲班級歷程_日常教學與班級活動_088.jpg",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/gallery/c05/g1313.jpg"
             },
             {
               "name": "五甲班級歷程_日常教學與班級活動_093.jpg",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/gallery/c05/g1314.jpg"
             },
             {
-              "name": "五甲班級歷程_日常教學與班級活動_094.jpg",
-              "date": "2026-01-01"
+              "name": "五甲班級歷程_日常教學與班級活動_095.jpg",
+              "date": "2026-01-01",
+              "url": "assets/gallery/c05/g1315.jpg"
+            },
+            {
+              "name": "五甲班級歷程_日常教學與班級活動_096.jpg",
+              "date": "2026-01-01",
+              "url": "assets/gallery/c05/g1316.jpg"
+            },
+            {
+              "name": "五甲班級歷程_日常教學與班級活動_098.jpg",
+              "date": "2026-01-01",
+              "url": "assets/gallery/c05/g1317.jpg"
+            },
+            {
+              "name": "五甲班級歷程_日常教學與班級活動_100.jpg",
+              "date": "2026-01-01",
+              "url": "assets/gallery/c05/g1318.jpg"
+            },
+            {
+              "name": "五甲班級歷程_日常教學與班級活動_102.jpg",
+              "date": "2026-01-01",
+              "url": "assets/gallery/c05/g1319.jpg"
+            },
+            {
+              "name": "五甲班級歷程_日常教學與班級活動_104.jpg",
+              "date": "2026-01-01",
+              "url": "assets/gallery/c05/g1320.jpg"
             }
-          ]
+          ],
+          "catalogSub": "五甲公共圖書館參訪與學習單掃描",
+          "webDocCount": 2,
+          "webImgCount": 55,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 43
         },
         {
           "name": "與作家有約與企業贈書共讀(7-11_陳沼濤_誠品)",
@@ -931,36 +1418,60 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 11.2,
           "sampleDocs": [
             {
-              "name": "20261016075009401.pdf",
-              "date": "2026-10-16"
-            },
-            {
-              "name": "永貞國小成果報告.docx",
-              "date": "2026-04-15"
-            },
-            {
-              "name": "01- 115 財團法人陳沼濤文教基金會贈書建議書單.xlsx",
-              "date": "2026-11-03"
+              "name": "各校人數有異動請自行填上實際人數(含所有類別班級學生).docx",
+              "date": "2026-11-12",
+              "url": "assets/docs/c05/d0011.docx",
+              "m": 0.01
             }
           ],
           "sampleImgs": [
             {
-              "name": "990867.jpg",
-              "date": "2026-06-26"
+              "name": "886508.jpg",
+              "date": "2025-12-14",
+              "url": "assets/gallery/c05/g1370.jpg"
             },
             {
-              "name": "886521_0.jpg",
-              "date": "2025-12-14"
+              "name": "886509.jpg",
+              "date": "2025-12-14",
+              "url": "assets/gallery/c05/g1371.jpg"
             },
             {
               "name": "886512_0.jpg",
-              "date": "2025-12-14"
+              "date": "2025-12-14",
+              "url": "assets/gallery/c05/g1372.jpg"
             },
             {
-              "name": "927230_0.jpg",
-              "date": "2026-04-15"
+              "name": "886513_0.jpg",
+              "date": "2025-12-14",
+              "url": "assets/gallery/c05/g1373.jpg"
+            },
+            {
+              "name": "886514_0.jpg",
+              "date": "2025-12-14",
+              "url": "assets/gallery/c05/g1374.jpg"
+            },
+            {
+              "name": "886521_0.jpg",
+              "date": "2025-12-14",
+              "url": "assets/gallery/c05/g1375.jpg"
+            },
+            {
+              "name": "886522_0.jpg",
+              "date": "2025-12-14",
+              "url": "assets/gallery/c05/g1376.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_2026318與作家有約_260421_1.jpg",
+              "date": "2026-03-18",
+              "url": "assets/gallery/c05/g1377.jpg"
             }
-          ]
+          ],
+          "catalogSub": "與作家有約與企業贈書共讀(7-11_陳沼濤_誠品)",
+          "webDocCount": 1,
+          "webImgCount": 55,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 19
         },
         {
           "name": "圖書室規範海報與命名書單",
@@ -971,36 +1482,25 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 30.4,
           "sampleDocs": [
             {
-              "name": "Gemini_Generated_Image_5bthtj5bthtj5bth.jfif",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "Gemini_Generated_Image_fqvecrfqvecrfqve.jfif",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "Gemini_Generated_Image_lbkqp7lbkqp7lbkq (1).jfif",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "Gemini_Generated_Image_lbkqp7lbkqp7lbkq.jfif",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "Gemini_Generated_Image_vf2y0fvf2y0fvf2y (1).jfif",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "Gemini_Generated_Image_vf2y0fvf2y0fvf2y.jfif",
-              "date": "2026-01-01"
+              "name": "Gemini_Generated_Image_vf2y0fvf2y0fvf2y (1).pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c05/d0177.pdf",
+              "m": 1.97
             }
           ],
           "sampleImgs": [
             {
               "name": "Gemini_Generated_Image_covvtscovvtscovv.jpeg",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/gallery/c05/g1368.jpg"
             }
-          ]
+          ],
+          "catalogSub": "圖書室規範海報與命名書單",
+          "webDocCount": 1,
+          "webImgCount": 1,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 0
         },
         {
           "name": "圖書館利用教育與十大分類教材",
@@ -1011,36 +1511,67 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 110.9,
           "sampleDocs": [
             {
-              "name": "Library_Magic_Adventure.pdf",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "Library_Treasure_Adventure.pdf",
-              "date": "2026-01-01"
+              "name": "中文圖書十大分類圖卡.docx",
+              "date": "2025-09-01",
+              "url": "assets/docs/c05/d0170.docx",
+              "m": 6.43
             },
             {
               "name": "Library_Treasure_Hunt_Flashcards.pdf",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c05/d0181.pdf",
+              "m": 1.24
+            },
+            {
+              "name": "魔法圖書館分類卡.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c05/d0182.pdf",
+              "m": 0.99
             },
             {
               "name": "Library_Treasure_Map.pdf",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c05/d0186.pdf",
+              "m": 1.47
+            },
+            {
+              "name": "Library_Magic_Adventure.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c05/d0188.pdf",
+              "m": 1.52
             },
             {
               "name": "圖書王國的彩色門牌.pdf",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c05/d0192.pdf",
+              "m": 2.21
+            },
+            {
+              "name": "Library_Treasure_Adventure.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c05/d0193.pdf",
+              "m": 2.23
             },
             {
               "name": "圖書館尋寶大冒險_10把神奇鑰匙帶你認識圖書十大分類.pdf",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c05/d0194.pdf",
+              "m": 2.17
             }
           ],
           "sampleImgs": [
             {
               "name": "圖書館特派員：圖書的十大分類.webp",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/gallery/c05/g1369.jpg"
             }
-          ]
+          ],
+          "catalogSub": "圖書館利用教育與十大分類教材",
+          "webDocCount": 8,
+          "webImgCount": 1,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 0
         }
       ]
     },
@@ -1070,48 +1601,102 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 2192.3,
           "sampleDocs": [
             {
-              "name": "20260316-教師組-『嚐』試多『肉』的『常樂』之道—STREAM議題融入校本課程之探究.pdf",
-              "date": "2026-03-16"
+              "name": "純教案-20260322-東南亞組-【國際教育】紅磚牆外的世界窗.docx",
+              "date": "2026-03-22",
+              "url": "assets/docs/c06/d0029.docx",
+              "m": 0.03
             },
             {
-              "name": "子竹嚐肉（知足常樂）的跨域尋儒美感歷程-E.pdf",
-              "date": "2026-08-01"
+              "name": "20260322-東南亞組-【國際教育】紅磚牆外的世界窗.docx",
+              "date": "2026-03-22",
+              "url": "assets/docs/c06/d0034.docx",
+              "m": 0.04
             },
             {
-              "name": "20260117-子竹嚐肉（知足常樂）的跨域尋儒思辨歷程.docx",
-              "date": "2026-01-17"
+              "name": "子竹嚐肉（知足常樂）的跨域尋儒美感歷程-C.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0051.pdf",
+              "m": 0.13
             },
             {
-              "name": "20260202-子竹嚐肉（知足常樂）的跨域尋儒美感歷程.docx",
-              "date": "2026-02-02"
+              "name": "子竹嚐肉（知足常樂）的跨域尋儒美感歷程-C-.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0059.pdf",
+              "m": 0.14
             },
             {
-              "name": "20260204-子竹嚐肉（知足常樂）的跨域尋儒美感歷程.docx",
-              "date": "2026-02-04"
+              "name": "子竹嚐肉（知足常樂）的跨域尋儒美感歷程-B-.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0065.pdf",
+              "m": 0.16
             },
             {
-              "name": "20260208-子竹嚐肉（知足常樂）的跨域尋儒美感歷程.docx",
-              "date": "2026-02-08"
+              "name": "課程架構-子竹嚐肉（知足常樂）的跨域尋儒美感歷程.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0071.pdf",
+              "m": 0.18
+            },
+            {
+              "name": "子竹嚐肉（知足常樂）的跨域尋儒美感歷程-B.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0077.pdf",
+              "m": 0.2
+            },
+            {
+              "name": "20260924_美感轉譯的知足常樂實驗室_苗栗縣115年度生命教育教案(去個資版).pdf",
+              "date": "2026-09-24",
+              "url": "assets/docs/c06/d0123.pdf",
+              "m": 1.01
             }
           ],
           "sampleImgs": [
             {
-              "name": "IMG_0401.JPG",
-              "date": "2025-12-26"
+              "name": "因材網素養教案_教學實踐歷程_023.jpg",
+              "date": "2024-10-29",
+              "url": "assets/gallery/c06/g1807.jpg"
             },
             {
-              "name": "IMG_0418.jpg",
-              "date": "2025-12-26"
+              "name": "因材網素養教案_教學實踐歷程_026.jpg",
+              "date": "2024-10-29",
+              "url": "assets/gallery/c06/g1808.jpg"
             },
             {
-              "name": "IMG_0593.jpg",
-              "date": "2025-12-26"
+              "name": "因材網素養教案_教學實踐歷程_028.jpg",
+              "date": "2024-10-29",
+              "url": "assets/gallery/c06/g1809.jpg"
             },
             {
-              "name": "IMG_0608.jpg",
-              "date": "2025-12-26"
+              "name": "因材網素養教案_教學實踐歷程_031.jpg",
+              "date": "2024-10-29",
+              "url": "assets/gallery/c06/g1810.jpg"
+            },
+            {
+              "name": "因材網素養教案_教學實踐歷程_033.jpg",
+              "date": "2024-10-29",
+              "url": "assets/gallery/c06/g1811.jpg"
+            },
+            {
+              "name": "因材網素養教案_教學實踐歷程_036.jpg",
+              "date": "2024-10-29",
+              "url": "assets/gallery/c06/g1812.jpg"
+            },
+            {
+              "name": "因材網素養教案_教學實踐歷程_038.jpg",
+              "date": "2024-10-29",
+              "url": "assets/gallery/c06/g1813.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_五年級蘆竹湳導覽_250113_29.jpg",
+              "date": "2025-01-13",
+              "url": "assets/gallery/c06/g1814.jpg"
             }
-          ]
+          ],
+          "catalogSub": "跨域經典閱讀教案_子竹嚐肉與紅磚牆外的世界窗",
+          "webDocCount": 24,
+          "webImgCount": 154,
+          "vidCount": 1,
+          "archDocCount": 5,
+          "archImgCount": 242
         },
         {
           "name": "夢N台中場_從讀到寫國語A班",
@@ -1120,34 +1705,55 @@ window.YONGZHEN_ARCHIVE = {
           "images": 409,
           "docs": 2,
           "mb": 765.9,
-          "sampleDocs": [
-            {
-              "name": "2026臺中場-徐秉鴻-定稿.pdf",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "2026臺中場-徐秉鴻-定稿.pdf",
-              "date": "2026-01-01"
-            }
-          ],
+          "sampleDocs": [],
           "sampleImgs": [
             {
               "name": "國語文素養研習_2026台中夢A班_001.jpg",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "國語文素養研習_2026台中夢A班_002.jpg",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "國語文素養研習_2026台中夢A班_003.jpg",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/gallery/c06/g1644.jpg"
             },
             {
               "name": "國語文素養研習_2026台中夢A班_004.jpg",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/gallery/c06/g1645.jpg"
+            },
+            {
+              "name": "國語文素養研習_2026台中夢A班_006.jpg",
+              "date": "2026-01-01",
+              "url": "assets/gallery/c06/g1646.jpg"
+            },
+            {
+              "name": "國語文素養研習_2026台中夢A班_009.jpg",
+              "date": "2026-01-01",
+              "url": "assets/gallery/c06/g1647.jpg"
+            },
+            {
+              "name": "國語文素養研習_2026台中夢A班_011.jpg",
+              "date": "2026-01-01",
+              "url": "assets/gallery/c06/g1648.jpg"
+            },
+            {
+              "name": "國語文素養研習_2026台中夢A班_014.jpg",
+              "date": "2026-01-01",
+              "url": "assets/gallery/c06/g1649.jpg"
+            },
+            {
+              "name": "國語文素養研習_2026台中夢A班_016.jpg",
+              "date": "2026-01-01",
+              "url": "assets/gallery/c06/g1650.jpg"
+            },
+            {
+              "name": "國語文素養研習_2026台中夢A班_019.jpg",
+              "date": "2026-01-01",
+              "url": "assets/gallery/c06/g1651.jpg"
             }
-          ]
+          ],
+          "catalogSub": "夢N台中場_從讀到寫國語A班",
+          "webDocCount": 0,
+          "webImgCount": 159,
+          "vidCount": 0,
+          "archDocCount": 1,
+          "archImgCount": 250
         },
         {
           "name": "AI繪本創作與科普閱讀(2025)",
@@ -1158,48 +1764,102 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 66.6,
           "sampleDocs": [
             {
-              "name": "《誰才是主角？》.txt",
-              "date": "2025-04-16"
-            },
-            {
-              "name": "小樂的跳繩冒險.txt",
-              "date": "2025-04-16"
-            },
-            {
-              "name": "小熊的網路安全冒險.txt",
-              "date": "2025-04-16"
-            },
-            {
-              "name": "小紅帽與白雪公主的奇幻冒險.txt",
-              "date": "2025-04-16"
-            },
-            {
               "name": "小老虎阿虎的飲食轉變.txt",
-              "date": "2025-04-16"
+              "date": "2025-04-16",
+              "url": "assets/docs/c06/d0001.txt",
+              "m": 0.0
+            },
+            {
+              "name": "清明節的由來.txt",
+              "date": "2025-04-16",
+              "url": "assets/docs/c06/d0002.txt",
+              "m": 0.0
             },
             {
               "name": "探索福岡：美食與歷史之旅.txt",
-              "date": "2025-04-16"
+              "date": "2025-04-16",
+              "url": "assets/docs/c06/d0003.txt",
+              "m": 0.0
+            },
+            {
+              "name": "《誰才是主角？》.txt",
+              "date": "2025-04-16",
+              "url": "assets/docs/c06/d0004.txt",
+              "m": 0.0
+            },
+            {
+              "name": "小樂的跳繩冒險.txt",
+              "date": "2025-04-16",
+              "url": "assets/docs/c06/d0005.txt",
+              "m": 0.0
+            },
+            {
+              "name": "貓公主與她的侍從.txt",
+              "date": "2025-04-16",
+              "url": "assets/docs/c06/d0006.txt",
+              "m": 0.0
+            },
+            {
+              "name": "小熊的網路安全冒險.txt",
+              "date": "2025-04-16",
+              "url": "assets/docs/c06/d0007.txt",
+              "m": 0.0
+            },
+            {
+              "name": "小紅帽與白雪公主的奇幻冒險.txt",
+              "date": "2025-04-16",
+              "url": "assets/docs/c06/d0008.txt",
+              "m": 0.0
             }
           ],
           "sampleImgs": [
             {
               "name": "01-06_科普明日閱讀_ChatGPT Image 2025年4月16日 下午03_26_35.jpg",
-              "date": "2025-04-16"
-            },
-            {
-              "name": "01-06_科普明日閱讀_ChatGPT Image 2025年4月16日 下午03_26_35.png",
-              "date": "2025-04-16"
-            },
-            {
-              "name": "01-06_科普明日閱讀_ChatGPT Image 2025年4月16日 下午03_34_46.jpg",
-              "date": "2025-04-16"
+              "date": "2025-04-16",
+              "url": "assets/gallery/c06/g1496.jpg"
             },
             {
               "name": "01-06_科普明日閱讀_ChatGPT Image 2025年4月16日 下午03_34_46.png",
-              "date": "2025-04-16"
+              "date": "2025-04-16",
+              "url": "assets/gallery/c06/g1497.jpg"
+            },
+            {
+              "name": "01-06_科普明日閱讀_ChatGPT Image 2025年4月16日 下午03_36_32.png",
+              "date": "2025-04-16",
+              "url": "assets/gallery/c06/g1498.jpg"
+            },
+            {
+              "name": "Scene 1.jpg",
+              "date": "2025-04-16",
+              "url": "assets/gallery/c06/g1499.jpg"
+            },
+            {
+              "name": "Scene 1.jpg",
+              "date": "2025-04-16",
+              "url": "assets/gallery/c06/g1500.jpg"
+            },
+            {
+              "name": "Scene 1.jpg",
+              "date": "2025-04-16",
+              "url": "assets/gallery/c06/g1501.jpg"
+            },
+            {
+              "name": "Scene 10.jpg",
+              "date": "2025-04-16",
+              "url": "assets/gallery/c06/g1502.jpg"
+            },
+            {
+              "name": "Scene 10.jpg",
+              "date": "2025-04-16",
+              "url": "assets/gallery/c06/g1503.jpg"
             }
-          ]
+          ],
+          "catalogSub": "AI繪本創作與科普閱讀(2025)",
+          "webDocCount": 8,
+          "webImgCount": 64,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 102
         },
         {
           "name": "國語日報讀報與新聞小偵探",
@@ -1210,48 +1870,102 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 89.0,
           "sampleDocs": [
             {
-              "name": "115-1閱讀課.pdf",
-              "date": "2026-09-01"
+              "name": "劇本學習單.docx",
+              "date": "2025-09-01",
+              "url": "assets/docs/c06/d0018.docx",
+              "m": 0.01
+            },
+            {
+              "name": "空氣中的超級情報網－學習單.docx",
+              "date": "2025-09-01",
+              "url": "assets/docs/c06/d0035.docx",
+              "m": 0.04
             },
             {
               "name": "N新聞小偵探：中年級讀報學習策略教學簡報.pptx",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0037.pptx",
+              "m": 0.06
             },
             {
-              "name": "公告115年1-9月國語日報獲刊+.pdf",
-              "date": "2026-09-01"
+              "name": "閱讀紀錄.docx",
+              "date": "2025-09-01",
+              "url": "assets/docs/c06/d0038.docx",
+              "m": 0.07
+            },
+            {
+              "name": "113年度1140120.pdf",
+              "date": "2025-01-20",
+              "url": "assets/docs/c06/d0090.pdf",
+              "m": 0.27
+            },
+            {
+              "name": "閱讀心得單.pdf",
+              "date": "2025-09-01",
+              "url": "assets/docs/c06/d0096.pdf",
+              "m": 0.36
             },
             {
               "name": "新聞小偵探：中年級讀報學習策略教學簡報.pptx",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0098.pptx",
+              "m": 0.38
             },
             {
-              "name": "20260914085720712.pdf",
-              "date": "2026-09-14"
-            },
-            {
-              "name": "20260914091636690.pdf",
-              "date": "2026-09-14"
+              "name": "未來少年植物情報網掃描.pdf",
+              "date": "2025-09-01",
+              "url": "assets/docs/c06/d0134.pdf",
+              "m": 0.67
             }
           ],
           "sampleImgs": [
             {
-              "name": "115-1閱讀課_頁面_1.jpg",
-              "date": "2026-09-01"
-            },
-            {
-              "name": "115-1閱讀課_頁面_2.jpg",
-              "date": "2026-09-01"
-            },
-            {
               "name": "894588.jpg",
-              "date": "2026-03-11"
+              "date": "2026-03-11",
+              "url": "assets/gallery/c06/g1589.jpg"
+            },
+            {
+              "name": "94754239-35A1-4580-977E-DEF8D2BA0FC3.jpg",
+              "date": "2026-03-11",
+              "url": "assets/gallery/c06/g1590.jpg"
             },
             {
               "name": "F0EF90D4-0E4F-4312-AEBF-44975E5E2526.jpg",
-              "date": "2026-03-11"
+              "date": "2026-03-11",
+              "url": "assets/gallery/c06/g1591.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_2026311國語日報投稿實作研習_260421_1.jpg",
+              "date": "2026-03-11",
+              "url": "assets/gallery/c06/g1592.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_2026311國語日報投稿實作研習_260421_10.jpg",
+              "date": "2026-03-11",
+              "url": "assets/gallery/c06/g1593.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_2026311國語日報投稿實作研習_260421_11.jpg",
+              "date": "2026-03-11",
+              "url": "assets/gallery/c06/g1594.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_2026311國語日報投稿實作研習_260421_12.jpg",
+              "date": "2026-03-11",
+              "url": "assets/gallery/c06/g1595.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_2026311國語日報投稿實作研習_260421_13.jpg",
+              "date": "2026-03-11",
+              "url": "assets/gallery/c06/g1596.jpg"
             }
-          ]
+          ],
+          "catalogSub": "國語日報讀報與新聞小偵探",
+          "webDocCount": 11,
+          "webImgCount": 55,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 2
         },
         {
           "name": "語文課程計畫與英文閱讀",
@@ -1263,30 +1977,60 @@ window.YONGZHEN_ARCHIVE = {
           "sampleDocs": [
             {
               "name": "113 課程計畫_五年級國語.docx",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0042.docx",
+              "m": 0.08
             },
             {
-              "name": "05-01_113課程計畫_113 課程計畫_五年級國語.pdf",
-              "date": "2024-09-01"
+              "name": "05-01_113課程計畫_113三年級英語領域課程計畫.docx",
+              "date": "2024-09-01",
+              "url": "assets/docs/c06/d0043.docx",
+              "m": 0.1
             },
             {
-              "name": "05-01_113課程計畫_113 課程計畫_五年級英語.docx",
-              "date": "2024-09-01"
+              "name": "115課程計畫_五年級國語.docx",
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0044.docx",
+              "m": 0.1
             },
             {
-              "name": "05-01_113課程計畫_113 課程計畫_五年級英語.pdf",
-              "date": "2024-09-01"
+              "name": "05-02_114課程計畫_114學年度永貞國小三年級英語領域課程計畫.docx",
+              "date": "2025-09-01",
+              "url": "assets/docs/c06/d0045.docx",
+              "m": 0.1
             },
             {
-              "name": "05-01_113課程計畫_113(二) 國語課程計畫.pdf",
-              "date": "2024-09-01"
+              "name": "05-02_114課程計畫_114 四年級 英語課程計畫.docx",
+              "date": "2025-09-01",
+              "url": "assets/docs/c06/d0046.docx",
+              "m": 0.1
             },
             {
-              "name": "113三年級國語課程計畫.doc",
-              "date": "2026-01-01"
+              "name": "114課程計畫_五年級國語.docx",
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0048.docx",
+              "m": 0.11
+            },
+            {
+              "name": "115課程計畫_六年級國語.docx",
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0052.docx",
+              "m": 0.13
+            },
+            {
+              "name": "114課程計畫_六年級國語.docx",
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0053.docx",
+              "m": 0.13
             }
           ],
-          "sampleImgs": []
+          "sampleImgs": [],
+          "catalogSub": "語文課程計畫與英文閱讀",
+          "webDocCount": 48,
+          "webImgCount": 0,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 0
         },
         {
           "name": "作文文狀元與夢花文學獎",
@@ -1297,48 +2041,102 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 225.6,
           "sampleDocs": [
             {
-              "name": "04-02_作文文狀元_竹南國中六級分作文教學法最後大整理0924.pptx",
-              "date": "2026-01-01"
+              "name": "獎狀.pdf",
+              "date": "2024-10-08",
+              "url": "assets/docs/c06/d0101.pdf",
+              "m": 0.4
             },
             {
-              "name": "04-02_作文文狀元_讀報寫作-假日禁足令.pdf",
-              "date": "2026-01-01"
+              "name": "04-02_作文文狀元_讀報寫作-臺北遊記.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0125.pdf",
+              "m": 1.06
+            },
+            {
+              "name": "04-02_作文文狀元_讀報寫作-被收服的嗶嗶鳥.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0128.pdf",
+              "m": 0.84
             },
             {
               "name": "04-02_作文文狀元_讀報寫作-外婆的眼.pdf",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0129.pdf",
+              "m": 0.66
+            },
+            {
+              "name": "04-02_作文文狀元_讀報寫作-變身公主之旅.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0130.pdf",
+              "m": 1.08
+            },
+            {
+              "name": "04-02_作文文狀元_讀報寫作-假日禁足令.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0132.pdf",
+              "m": 0.65
             },
             {
               "name": "04-02_作文文狀元_讀報寫作-尋找一平方公尺.pdf",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0137.pdf",
+              "m": 1.08
             },
             {
               "name": "04-02_作文文狀元_讀報寫作-我的電競選手夢.pdf.pdf",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "04-02_作文文狀元_讀報寫作-脫線鬼請走開.pdf",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0140.pdf",
+              "m": 1.12
             }
           ],
           "sampleImgs": [
             {
+              "name": "113-1毒品危害防制作文比賽.jpg",
+              "date": "2024-09-01",
+              "url": "assets/gallery/c06/g1560.jpg"
+            },
+            {
+              "name": "3904790431_2025年苗栗縣第28屆夢花文學獎-小夢花兒童詩優選-鍾姿涵同學.png",
+              "date": "2025-01-01",
+              "url": "assets/gallery/c06/g1561.jpg"
+            },
+            {
+              "name": "1750126887033.jpg",
+              "date": "2025-06-17",
+              "url": "assets/gallery/c06/g1562.jpg"
+            },
+            {
               "name": "04-02_作文文狀元_114年文狀元頒獎典禮（狀元江沂潔、秀才饒恩慈）.jpg",
-              "date": "2025-09-01"
+              "date": "2025-09-01",
+              "url": "assets/gallery/c06/g1563.jpg"
             },
             {
               "name": "04-02_作文文狀元_114年文狀元頒獎典禮（狀元江沂潔、秀才饒恩慈）_9238.jpg",
-              "date": "2025-09-01"
+              "date": "2025-09-01",
+              "url": "assets/gallery/c06/g1564.jpg"
             },
             {
               "name": "04-02_作文文狀元_114年文狀元頒獎典禮（狀元江沂潔、秀才饒恩慈）_9240.jpg",
-              "date": "2025-09-01"
+              "date": "2025-09-01",
+              "url": "assets/gallery/c06/g1565.jpg"
             },
             {
               "name": "04-02_作文文狀元_114年文狀元頒獎典禮（狀元江沂潔、秀才饒恩慈）_9241.jpg",
-              "date": "2025-09-01"
+              "date": "2025-09-01",
+              "url": "assets/gallery/c06/g1566.jpg"
+            },
+            {
+              "name": "04-02_作文文狀元_114年文狀元頒獎典禮（狀元江沂潔、秀才饒恩慈）_9242.jpg",
+              "date": "2025-09-01",
+              "url": "assets/gallery/c06/g1567.jpg"
             }
-          ]
+          ],
+          "catalogSub": "作文文狀元與夢花文學獎",
+          "webDocCount": 11,
+          "webImgCount": 29,
+          "vidCount": 0,
+          "archDocCount": 1,
+          "archImgCount": 0
         },
         {
           "name": "彈性閱讀文本繪本與學習單掃描",
@@ -1349,48 +2147,76 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 523.8,
           "sampleDocs": [
             {
-              "name": "YES601-永貞六甲多元智能×SDGs永續學習地圖.pdf",
-              "date": ""
-            },
-            {
-              "name": "【NoBGM成果】2026畢業成果展.pdf",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "草地的紅色警報：校園偵探與神祕土堆.pdf",
-              "date": ""
-            },
-            {
-              "name": "敘事萬花筒-我的家鄉曼陀羅.pdf",
-              "date": "2026-01-01"
+              "name": "20261109【失控的野火——大自然的清道夫還是毀滅者？】文本.pdf",
+              "date": "2026-11-09",
+              "url": "assets/docs/c06/d0094.pdf",
+              "m": 0.33
             },
             {
               "name": "教案名稱（學習主題） 我的名字有故事.pdf",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0122.pdf",
+              "m": 0.96
+            },
+            {
+              "name": "敘事萬花筒-我的家鄉曼陀羅.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c06/d0172.pdf",
+              "m": 6.14
+            },
+            {
+              "name": "20261030084255158.pdf",
+              "date": "2026-10-30",
+              "url": "assets/docs/c06/d0191.pdf",
+              "m": 2.93
+            },
+            {
+              "name": "20261109121646165.pdf",
+              "date": "2026-11-09",
+              "url": "assets/docs/c06/d0197.pdf",
+              "m": 3.72
+            },
+            {
+              "name": "YES601-永貞六甲多元智能×SDGs永續學習地圖.pdf",
+              "date": "",
+              "url": "assets/docs/c06/d0202.pdf",
+              "m": 4.04
             },
             {
               "name": "20261109【失控的野火——大自然的清道夫還是毀滅者？】文本.docx",
-              "date": "2026-11-09"
+              "date": "2026-11-09",
+              "url": "assets/docs/c06/d0263.docx",
+              "m": 4.86
             }
           ],
           "sampleImgs": [
             {
-              "name": "ChatGPT Image 2026年9月28日 下午01_23_56.png",
-              "date": "2026-09-28"
-            },
-            {
               "name": "「子。竹。嚐。肉」課程探索.png",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/gallery/c06/g1803.jpg"
             },
             {
               "name": "Gemini_Generated_Image_crcyf1crcyf1crcy - 複製.jpeg",
-              "date": "2026-08-29"
+              "date": "2026-08-29",
+              "url": "assets/gallery/c06/g1804.jpg"
             },
             {
               "name": "Gemini_Generated_Image_lmoj8zlmoj8zlmoj - 複製.jpeg",
-              "date": "2026-08-29"
+              "date": "2026-08-29",
+              "url": "assets/gallery/c06/g1805.jpg"
+            },
+            {
+              "name": "ChatGPT Image 2026年9月28日 下午01_23_56.png",
+              "date": "2026-09-28",
+              "url": "assets/gallery/c06/g1806.jpg"
             }
-          ]
+          ],
+          "catalogSub": "彈性閱讀文本繪本與學習單掃描",
+          "webDocCount": 7,
+          "webImgCount": 4,
+          "vidCount": 0,
+          "archDocCount": 2,
+          "archImgCount": 0
         }
       ]
     },
@@ -1421,22 +2247,52 @@ window.YONGZHEN_ARCHIVE = {
           "sampleDocs": [],
           "sampleImgs": [
             {
-              "name": "LINE_ALBUM_專題演講一 (0930-1100)_261003_16.jpg",
-              "date": "2026-10-03"
+              "name": "LINE_ALBUM_114臺灣教育科技展_識字金銀島_251127_1.jpg",
+              "date": "2025-11-27",
+              "url": "assets/gallery/c07/g1974.jpg"
             },
             {
-              "name": "LINE_ALBUM_微型工作坊(三) (1330-1430)_261003_4.jpg",
-              "date": "2026-10-03"
+              "name": "LINE_ALBUM_114臺灣教育科技展_識字金銀島_251127_12.jpg",
+              "date": "2025-11-27",
+              "url": "assets/gallery/c07/g1975.jpg"
             },
             {
-              "name": "LINE_ALBUM_論文發表C (1110-1210)_261003_5.jpg",
-              "date": "2026-10-03"
+              "name": "LINE_ALBUM_114臺灣教育科技展_識字金銀島_251127_14.jpg",
+              "date": "2025-11-27",
+              "url": "assets/gallery/c07/g1976.jpg"
             },
             {
-              "name": "LINE_ALBUM_微型工作坊(三) (1330-1430)_261003_1.jpg",
-              "date": "2026-10-03"
+              "name": "LINE_ALBUM_114臺灣教育科技展_識字金銀島_251127_17.jpg",
+              "date": "2025-11-27",
+              "url": "assets/gallery/c07/g1977.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_114臺灣教育科技展_識字金銀島_251127_19.jpg",
+              "date": "2025-11-27",
+              "url": "assets/gallery/c07/g1978.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_114臺灣教育科技展_識字金銀島_251127_21.jpg",
+              "date": "2025-11-27",
+              "url": "assets/gallery/c07/g1979.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_114臺灣教育科技展_識字金銀島_251127_4.jpg",
+              "date": "2025-11-27",
+              "url": "assets/gallery/c07/g1980.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_114臺灣教育科技展_識字金銀島_251127_7.jpg",
+              "date": "2025-11-27",
+              "url": "assets/gallery/c07/g1981.jpg"
             }
-          ]
+          ],
+          "catalogSub": "2026第十六屆閱讀評量與教學研討會_現場暨籌備影像(00歸檔)",
+          "webDocCount": 0,
+          "webImgCount": 333,
+          "vidCount": 1,
+          "archDocCount": 0,
+          "archImgCount": 532
         },
         {
           "name": "2025自主學習節_識字金銀島論文發表",
@@ -1448,47 +2304,89 @@ window.YONGZHEN_ARCHIVE = {
           "sampleDocs": [
             {
               "name": "資瞭來源說明.csv",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c07/d0009.csv",
+              "m": 0.0
             },
             {
-              "name": "質性資料說明與摘要.xlsx",
-              "date": "2026-01-01"
+              "name": "附件三、論文格式範例.odt",
+              "date": "2026-01-01",
+              "url": "assets/docs/c07/d0012.odt",
+              "m": 0.01
             },
             {
               "name": "選例說明.csv",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/docs/c07/d0016.csv",
+              "m": 0.01
             },
             {
-              "name": "20261012093711411.pdf",
-              "date": "2026-10-12"
+              "name": "教師指派任務(熱門任務清單).xlsx",
+              "date": "2026-01-01",
+              "url": "assets/docs/c07/d0022.xlsx",
+              "m": 0.02
             },
             {
-              "name": "2026自主學習節暨AI賦能教與學研討會—公開授權書.pdf",
-              "date": "2026-01-01"
+              "name": "【全文】自主學習節-探究「識字金銀島」平台對國小五年級適性學習成效與行為分析之影響.docx",
+              "date": "2026-01-01",
+              "url": "assets/docs/c07/d0025.docx",
+              "m": 0.02
             },
             {
-              "name": "113六丙-個人施測紀錄下載.pdf",
-              "date": "2026-01-01"
+              "name": "20260425-論文摘要-徐秉鴻-『識字金銀島』平台應用於國小高年級差異化識字教學之初探.docx",
+              "date": "2026-04-25",
+              "url": "assets/docs/c07/d0032.docx",
+              "m": 0.03
             }
           ],
           "sampleImgs": [
             {
-              "name": "@【601】113-1-期初.png",
-              "date": "2024-09-01"
+              "name": "【601】113-1-期初.png",
+              "date": "2024-09-01",
+              "url": "assets/gallery/c07/g1961.jpg"
             },
             {
-              "name": "@【601】113-2-期初.png",
-              "date": "2025-02-01"
+              "name": "【603】113-1-期初.png",
+              "date": "2024-09-01",
+              "url": "assets/gallery/c07/g1962.jpg"
             },
             {
-              "name": "@【601】113-2-期末.png",
-              "date": "2025-02-01"
+              "name": "【601】113-2-期初.png",
+              "date": "2025-02-01",
+              "url": "assets/gallery/c07/g1963.jpg"
             },
             {
-              "name": "@【601】114-1-期初.png",
-              "date": "2025-09-01"
+              "name": "【601】113-2-期末.png",
+              "date": "2025-02-01",
+              "url": "assets/gallery/c07/g1964.jpg"
+            },
+            {
+              "name": "【601】114-1-期初.png",
+              "date": "2025-09-01",
+              "url": "assets/gallery/c07/g1965.jpg"
+            },
+            {
+              "name": "【601】114-2-期初.png",
+              "date": "2026-02-01",
+              "url": "assets/gallery/c07/g1966.jpg"
+            },
+            {
+              "name": "【601】114-2-期末.png",
+              "date": "2026-02-01",
+              "url": "assets/gallery/c07/g1967.jpg"
+            },
+            {
+              "name": "【602】114-2-期初.png",
+              "date": "2026-02-01",
+              "url": "assets/gallery/c07/g1968.jpg"
             }
-          ]
+          ],
+          "catalogSub": "2025自主學習節_識字金銀島論文發表",
+          "webDocCount": 6,
+          "webImgCount": 13,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 0
         },
         {
           "name": "2026第十六屆閱讀評量與教學研討會_論文與海報",
@@ -1499,36 +2397,67 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 90.7,
           "sampleDocs": [
             {
-              "name": "1954540_A095L0000Q_1151007603A_doc4_Attach2.pdf",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "224-徐秉鴻、蔡執仲－ 應用「識字金銀島」平台於國小高年級識字適性教學之成效.pdf",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "印-徐秉鴻、蔡執仲－ 應用「識字金銀島」平台於國小高年級識字適性教學之成效.pdf",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "20260506-論文摘要-徐秉鴻-應用「識字金銀島」平台於國小高年級識字適性教學之成效.docx",
-              "date": "2026-05-06"
-            },
-            {
-              "name": "20260514-論文摘要-徐秉鴻-應用「識字金銀島」平台於國小高年級識字適性教學之成效.docx",
-              "date": "2026-05-14"
+              "name": "20260723-應用「識字金銀島」平台於國小高年級識字適性教學之成效.docx",
+              "date": "2026-07-23",
+              "url": "assets/docs/c07/d0026.docx",
+              "m": 0.02
             },
             {
               "name": "20260514-論文摘要-徐秉鴻-應用「識字金銀島」平台於國小高年級識字適性教學之成效.pdf",
-              "date": "2026-05-14"
+              "date": "2026-05-14",
+              "url": "assets/docs/c07/d0040.pdf",
+              "m": 0.08
+            },
+            {
+              "name": "20260912-摘要-徐秉鴻、蔡執仲－ 應用「識字金銀島」平台於國小高年級識字適性教學之成效.pdf",
+              "date": "2026-09-12",
+              "url": "assets/docs/c07/d0049.pdf",
+              "m": 0.11
+            },
+            {
+              "name": "定稿送出-20251019 自主學習節-探究「識字金銀島」平台對國小五年級適性學習成效與行為分析之影響.pdf",
+              "date": "2025-10-19",
+              "url": "assets/docs/c07/d0050.pdf",
+              "m": 0.12
+            },
+            {
+              "name": "2025自主學習節研討會_論文發表證明_探究「識字金銀島」平台對國小五年級適性學習成效與行為分析之影響.pdf",
+              "date": "2025-01-01",
+              "url": "assets/docs/c07/d0093.pdf",
+              "m": 0.32
+            },
+            {
+              "name": "20260723-徐秉鴻、蔡執仲－ 應用「識字金銀島」平台於國小高年級識字適性教學之成效.pdf",
+              "date": "2026-07-23",
+              "url": "assets/docs/c07/d0100.pdf",
+              "m": 0.4
+            },
+            {
+              "name": "20261005093224155.pdf",
+              "date": "2026-10-05",
+              "url": "assets/docs/c07/d0133.pdf",
+              "m": 0.24
+            },
+            {
+              "name": "識字量證書.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c07/d0146.pdf",
+              "m": 1.43
             }
           ],
           "sampleImgs": [
             {
               "name": "1954540_A095L0000Q_1151007603A_doc4_Attach1.jpg",
-              "date": "2026-01-01"
+              "date": "2026-01-01",
+              "url": "assets/gallery/c07/g2307.jpg"
             }
-          ]
+          ],
+          "catalogSub": "2026第十六屆閱讀評量與教學研討會_論文與海報",
+          "webDocCount": 13,
+          "webImgCount": 1,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 0
         },
         {
           "name": "AI數位閱讀研究與閱讀推手方案",
@@ -1539,31 +2468,55 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 77.3,
           "sampleDocs": [
             {
-              "name": "12月成長測驗施測日程表.doc",
-              "date": ""
-            },
-            {
-              "name": "2058738_0247755_2026自主學習節苗栗縣場次詳細版本1103.xlsx",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "2058738_0247755_2026自主學習節苗栗縣總表1103.pdf",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "徐秉鴻、蔡執仲(2026)。自主學習節暨AI賦能教與學研討會-海報投稿格式.pdf.pdf",
-              "date": "2026-01-01"
-            },
-            {
-              "name": "為什麼小學生課外閱讀會覺得「太難」？從兒童識字量說起.pdf",
-              "date": ""
+              "name": "永貞國小_徐秉鴻_教育部閱讀推手甄選方案.docx",
+              "date": "2026-01-01",
+              "url": "assets/docs/c07/d0030.docx",
+              "m": 0.03
             },
             {
               "name": "閱讀教學微學分學程-應修科目及學分表.pdf",
-              "date": ""
+              "date": "",
+              "url": "assets/docs/c07/d0061.pdf",
+              "m": 0.15
+            },
+            {
+              "name": "為什麼小學生課外閱讀會覺得「太難」？從兒童識字量說起.pdf",
+              "date": "",
+              "url": "assets/docs/c07/d0088.pdf",
+              "m": 0.27
+            },
+            {
+              "name": "閱讀教學微學分學程介紹.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c07/d0099.pdf",
+              "m": 0.4
+            },
+            {
+              "name": "閱讀推手甄選方案指南.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c07/d0108.pdf",
+              "m": 0.57
+            },
+            {
+              "name": "AI_Powered_Reading_Mastery.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c07/d0189.pdf",
+              "m": 1.78
+            },
+            {
+              "name": "徐秉鴻、蔡執仲(2026)。自主學習節暨AI賦能教與學研討會-海報投稿格式.pdf.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c07/d0204.pdf",
+              "m": 13.45
             }
           ],
-          "sampleImgs": []
+          "sampleImgs": [],
+          "catalogSub": "AI數位閱讀研究與閱讀推手方案",
+          "webDocCount": 7,
+          "webImgCount": 0,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 0
         },
         {
           "name": "識字金銀島施測數據與英雄榜",
@@ -1575,31 +2528,59 @@ window.YONGZHEN_ARCHIVE = {
           "sampleDocs": [
             {
               "name": "1151003-第十六屆「閱讀評量與教學」理論與實務研討會.pdf",
-              "date": "2026-10-03"
-            },
-            {
-              "name": "【已簽署】2025 自主學習節暨數位學習行為與成效分析研討會—公開授權書.pdf",
-              "date": "2025-01-01"
+              "date": "2026-10-03",
+              "url": "assets/docs/c07/d0092.pdf",
+              "m": 0.28
             }
           ],
           "sampleImgs": [
             {
-              "name": "3961310170_114-2學習島嶼【老師感謝狀】.png",
-              "date": "2026-02-01"
+              "name": "3961318485_🏆 113-1「學習島嶼識字英雄榜」積分前20名.png",
+              "date": "2024-09-01",
+              "url": "assets/gallery/c07/g2308.jpg"
             },
             {
-              "name": "3961311978_✨114-2 「老師感謝狀」名單.png",
-              "date": "2026-02-01"
-            },
-            {
-              "name": "3961312248_✨114-2「識字英雄榜全國前20名」.png",
-              "date": "2026-02-01"
+              "name": "3961318878_🎖️113-1「持續學習獎」.png",
+              "date": "2024-09-01",
+              "url": "assets/gallery/c07/g2309.jpg"
             },
             {
               "name": "3961316206_🏆 114-1「識字英雄榜積分前20名」.png",
-              "date": "2025-09-01"
+              "date": "2025-09-01",
+              "url": "assets/gallery/c07/g2310.jpg"
+            },
+            {
+              "name": "3961310170_114-2學習島嶼【老師感謝狀】.png",
+              "date": "2026-02-01",
+              "url": "assets/gallery/c07/g2311.jpg"
+            },
+            {
+              "name": "3961312248_✨114-2「識字英雄榜全國前20名」.png",
+              "date": "2026-02-01",
+              "url": "assets/gallery/c07/g2312.jpg"
+            },
+            {
+              "name": "item-124-1.png",
+              "date": "2026-08-29",
+              "url": "assets/gallery/c07/g2313.jpg"
+            },
+            {
+              "name": "item-125-1.png",
+              "date": "2026-08-29",
+              "url": "assets/gallery/c07/g2314.jpg"
+            },
+            {
+              "name": "item-126-1.png",
+              "date": "2026-08-29",
+              "url": "assets/gallery/c07/g2315.jpg"
             }
-          ]
+          ],
+          "catalogSub": "識字金銀島施測數據與英雄榜",
+          "webDocCount": 1,
+          "webImgCount": 9,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 0
         }
       ]
     },
@@ -1629,48 +2610,60 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 177.0,
           "sampleDocs": [
             {
-              "name": "20260824140101064.pdf",
-              "date": "2026-08-24"
-            },
-            {
               "name": "沛潔.pptx",
-              "date": "2025-09-01"
-            },
-            {
-              "name": "1810454_0135540_115E0162093-01.pdf",
-              "date": "2026-07-02"
-            },
-            {
-              "name": "1810454_0135540_115E1110294-01.pdf",
-              "date": "2026-07-02"
-            },
-            {
-              "name": "1810454_0135540_115E1110295-01.pdf",
-              "date": "2026-07-02"
-            },
-            {
-              "name": "115E0002350-01.PDF",
-              "date": "2026-07-02"
+              "date": "2025-09-01",
+              "url": "assets/docs/c08/d0245.pptx",
+              "m": 9.82
             }
           ],
           "sampleImgs": [
             {
-              "name": "LINE_ALBUM_20251029差異化閱讀理解策略研習_260421_33.jpg",
-              "date": "2025-10-29"
+              "name": "LINE_ALBUM_20251029差異化閱讀理解策略研習_260421_1.jpg",
+              "date": "2025-10-29",
+              "url": "assets/gallery/c08/g2348.jpg"
             },
             {
-              "name": "LINE_ALBUM_20251029差異化閱讀理解策略研習_260421_26.jpg",
-              "date": "2025-10-29"
+              "name": "LINE_ALBUM_20251029差異化閱讀理解策略研習_260421_10.jpg",
+              "date": "2025-10-29",
+              "url": "assets/gallery/c08/g2349.jpg"
             },
             {
-              "name": "LINE_ALBUM_20251126寫作融入資訊教學研習_260421_10.jpg",
-              "date": "2025-11-26"
+              "name": "LINE_ALBUM_20251029差異化閱讀理解策略研習_260421_11.jpg",
+              "date": "2025-10-29",
+              "url": "assets/gallery/c08/g2350.jpg"
             },
             {
-              "name": "LINE_ALBUM_20251029差異化閱讀理解策略研習_260421_25.jpg",
-              "date": "2025-10-29"
+              "name": "LINE_ALBUM_20251029差異化閱讀理解策略研習_260421_12.jpg",
+              "date": "2025-10-29",
+              "url": "assets/gallery/c08/g2351.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_20251029差異化閱讀理解策略研習_260421_13.jpg",
+              "date": "2025-10-29",
+              "url": "assets/gallery/c08/g2352.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_20251029差異化閱讀理解策略研習_260421_14.jpg",
+              "date": "2025-10-29",
+              "url": "assets/gallery/c08/g2353.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_20251029差異化閱讀理解策略研習_260421_15.jpg",
+              "date": "2025-10-29",
+              "url": "assets/gallery/c08/g2354.jpg"
+            },
+            {
+              "name": "LINE_ALBUM_20251029差異化閱讀理解策略研習_260421_16.jpg",
+              "date": "2025-10-29",
+              "url": "assets/gallery/c08/g2355.jpg"
             }
-          ]
+          ],
+          "catalogSub": "校內閱讀理解與寫作增能研習",
+          "webDocCount": 1,
+          "webImgCount": 55,
+          "vidCount": 0,
+          "archDocCount": 1,
+          "archImgCount": 3
         },
         {
           "name": "圖推教師與明日閱讀證書獎狀(2024-2026)",
@@ -1681,48 +2674,102 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 93.6,
           "sampleDocs": [
             {
+              "name": "K歌王獎狀-四年甲班.pdf",
+              "date": "2025-09-01",
+              "url": "assets/docs/c08/d0205.pdf",
+              "m": 0.22
+            },
+            {
               "name": "113【中央大學明日閱讀MSSR研習證明】.pdf",
-              "date": "2026-10-05"
+              "date": "2026-10-05",
+              "url": "assets/docs/c08/d0206.pdf",
+              "m": 0.24
             },
             {
-              "name": "114年度全國圖書教師磨課師課程(進階)修習證明_11409-18.pdf",
-              "date": "2026-10-05"
+              "name": "113上-英語線上學習績優學校.pdf",
+              "date": "2025-09-01",
+              "url": "assets/docs/c08/d0207.pdf",
+              "m": 0.27
             },
             {
-              "name": "115年度圖書教師國中初階研習證明書(非同步課程)_序號_28.pdf",
-              "date": "2026-10-05"
+              "name": "113國小初階研習證明書_非同步_11402B_10.pdf",
+              "date": "2026-08-01",
+              "url": "assets/docs/c08/d0208.pdf",
+              "m": 0.34
             },
             {
-              "name": "115年度圖書教師國小初階研習證明書_11508_序號47.pdf",
-              "date": "2026-10-05"
-            },
-            {
-              "name": "2023【方金雅、徐秉鴻_實踐取向的師資生閱讀理解教學社群之運作】.pdf",
-              "date": "2026-10-05"
+              "name": "114國小進階研習證明書_非同步_11407A_1.pdf",
+              "date": "2026-08-01",
+              "url": "assets/docs/c08/d0209.pdf",
+              "m": 0.37
             },
             {
               "name": "2023【第十三屆閱讀評量與教學研討會】研習證明.pdf",
-              "date": "2026-10-05"
+              "date": "2026-10-05",
+              "url": "assets/docs/c08/d0210.pdf",
+              "m": 0.41
+            },
+            {
+              "name": "2023【方金雅、徐秉鴻_實踐取向的師資生閱讀理解教學社群之運作】.pdf",
+              "date": "2026-10-05",
+              "url": "assets/docs/c08/d0211.pdf",
+              "m": 0.44
+            },
+            {
+              "name": "2026明日英文聽讀教師認證.pdf",
+              "date": "2026-10-05",
+              "url": "assets/docs/c08/d0212.pdf",
+              "m": 0.45
             }
           ],
           "sampleImgs": [
             {
+              "name": "2025【第十五屆閱讀評量與教學研討會】發表證明.jpg",
+              "date": "2025-01-01",
+              "url": "assets/gallery/c08/g2317.jpg"
+            },
+            {
+              "name": "3994245317_114學年度-明日英文聽讀教師認證.png",
+              "date": "2025-09-01",
+              "url": "assets/gallery/c08/g2318.jpg"
+            },
+            {
+              "name": "115夢N實踐家發表證明.jpg",
+              "date": "2026-01-01",
+              "url": "assets/gallery/c08/g2319.jpg"
+            },
+            {
+              "name": "4025644308_學習島嶼-識字英雄榜【持續獎30人次(114-2 7人／114-1 8人／113-2 6人／113-.jpg",
+              "date": "2026-02-01",
+              "url": "assets/gallery/c08/g2320.jpg"
+            },
+            {
               "name": "P_20260820_165743 - 紀吉如.jpg",
-              "date": "2026-08-20"
+              "date": "2026-08-20",
+              "url": "assets/gallery/c08/g2321.jpg"
             },
             {
               "name": "113【中央大學明日閱讀MSSR研習證明】.jpg",
-              "date": "2026-10-05"
+              "date": "2026-10-05",
+              "url": "assets/gallery/c08/g2322.jpg"
             },
             {
               "name": "115夢N實踐家_0001.png",
-              "date": "2026-10-05"
+              "date": "2026-10-05",
+              "url": "assets/gallery/c08/g2323.jpg"
             },
             {
               "name": "115夢N實踐家_0002.png",
-              "date": "2026-10-05"
+              "date": "2026-10-05",
+              "url": "assets/gallery/c08/g2324.jpg"
             }
-          ]
+          ],
+          "catalogSub": "圖推教師與明日閱讀證書獎狀(2024-2026)",
+          "webDocCount": 14,
+          "webImgCount": 31,
+          "vidCount": 0,
+          "archDocCount": 0,
+          "archImgCount": 0
         },
         {
           "name": "115圖書館閱讀推動教師培訓教材(初階與AI推廣)",
@@ -1733,31 +2780,61 @@ window.YONGZHEN_ARCHIVE = {
           "mb": 1224.8,
           "sampleDocs": [
             {
-              "name": "01知識設計師(一).pdf",
-              "date": "2027-09-01"
+              "name": "14AI助理師.pdf",
+              "date": "2027-09-01",
+              "url": "assets/docs/c08/d0213.pdf",
+              "m": 0.51
             },
             {
-              "name": "02知識設計師(二).pdf",
-              "date": "2027-09-01"
+              "name": "12評量規劃師.pdf",
+              "date": "2027-09-01",
+              "url": "assets/docs/c08/d0215.pdf",
+              "m": 0.55
             },
             {
-              "name": "03視覺傳播師(一).pdf",
-              "date": "2027-09-01"
+              "name": "18AI素養.pdf",
+              "date": "2027-09-01",
+              "url": "assets/docs/c08/d0219.pdf",
+              "m": 0.78
             },
             {
-              "name": "04視覺傳播師(二).pdf",
-              "date": "2027-09-01"
+              "name": "08AI圖書工作助理.pdf",
+              "date": "2027-09-01",
+              "url": "assets/docs/c08/d0220.pdf",
+              "m": 0.8
             },
             {
-              "name": "05閱讀推廣師(一).pdf",
-              "date": "2027-09-01"
+              "name": "15課程整合運用 1.pdf",
+              "date": "2027-09-01",
+              "url": "assets/docs/c08/d0221.pdf",
+              "m": 1.12
+            },
+            {
+              "name": "16課程整合運用 2.pdf",
+              "date": "2027-09-01",
+              "url": "assets/docs/c08/d0222.pdf",
+              "m": 1.16
+            },
+            {
+              "name": "1-8-2圖書館閱讀推廣.pdf",
+              "date": "2026-01-01",
+              "url": "assets/docs/c08/d0223.pdf",
+              "m": 1.18
             },
             {
               "name": "06閱讀推廣師(二).pdf",
-              "date": "2027-09-01"
+              "date": "2027-09-01",
+              "url": "assets/docs/c08/d0224.pdf",
+              "m": 1.23
             }
           ],
-          "sampleImgs": []
+          "sampleImgs": [],
+          "catalogSub": "115圖書館閱讀推動教師培訓教材(初階與AI推廣)",
+          "webDocCount": 31,
+          "webImgCount": 0,
+          "vidCount": 0,
+          "archDocCount": 4,
+          "archImgCount": 0
         }
       ]
     }
