@@ -2208,7 +2208,7 @@ window.YONGZHEN_ARCHIVE = {
       "code": "07",
       "title": "識字金銀島實證與閱讀研討發表",
       "summary": "收錄 2025 自主學習節論文發表證明、2026 第十六屆閱讀評量與教學研討會實況（866 檔）、高年級識字適性教學研究與全國學習島嶼英雄榜獎勵。",
-      "thumb": "assets/images/literacy-test.jpg",
+      "thumb": "assets/images/hero-sharing.jpg",
       "totalFiles": 1000,
       "mediaCount": 900,
       "docCount": 100,
