@@ -86,7 +86,7 @@
 
     if (isWeekday && isOpenHours) {
       pill.classList.remove("is-closed");
-      label.textContent = "今日開館中：07:45–16:00（蘆映書院 1F・貞學樓 3F 靜思書軒）";
+      label.textContent = "今日開館中：07:45–16:00（永馨樓 1F・蘆映書院）";
     } else {
       pill.classList.add("is-closed");
       label.textContent = "休館時段（線上查詢全時開放）｜正常開館：週一至週五 07:45–16:00";
@@ -821,7 +821,7 @@
       image: "assets/images/hero-mssr.jpg",
       imageAlt: "永貞國小低年級學生進行晨讀 MSSR 與繪本共讀現場",
       goals: [
-        "認識新舊館舍配置，養成靜音進館、使用代書卡與準時歸還的圖書禮儀。",
+        "認識永馨樓 1F「蘆映書院」六大分區配置，養成靜音進館、使用代書卡與準時歸還的圖書禮儀。",
         "透過繪本《圖書館獅子》《沒有名字的貓》理解故事起承轉合與因果關係。",
         "搭配《圖書王國的彩色門牌》十大分類圖卡遊戲，完成 40 周年校慶「小雞過生日」「爺爺一定有辦法」延伸學習單。"
       ]
@@ -1088,7 +1088,7 @@
             <tr><td>週一上午 09:00–11:30</td><td>陳媽媽 故事志工</td><td>低年級晨間進班說故事</td><td>已排定</td></tr>
             <tr><td>週二上午 09:00–11:30</td><td>林爸爸・張媽媽</td><td>櫃台借還書暨新書編目整架</td><td>尚缺 1 名</td></tr>
             <tr><td>週三上午 09:00–11:30</td><td>故事志工社群（2 名）</td><td>週三聽故事專場暨繪本導讀</td><td>已排定</td></tr>
-            <tr><td>週四下午 13:00–15:00</td><td>邱郅惟 圖管員協同</td><td>主題書展導覽暨流通統計</td><td>開放登記</td></tr>
+            <tr><td>週四下午 13:00–15:00</td><td>圖推教師團隊協同</td><td>主題書展導覽暨流通統計</td><td>開放登記</td></tr>
             <tr><td>週五上午 09:00–11:30</td><td>劉媽媽 志工</td><td>週末共讀借書協助歸架</td><td>開放登記</td></tr>
             ${extraRows}
           </tbody>
@@ -1129,49 +1129,69 @@
       } catch { /* ignore */ }
       renderVolunteerSchedule("parent");
       volForm.reset();
-      document.getElementById("vol-feedback").textContent = `已登記 ${slot}（${name}）！請保持暢通聯繫圖書管理員 邱郅惟 037-623290*745。`;
+      document.getElementById("vol-feedback").textContent = `已登記 ${slot}（${name}）！請洽館務總機 037-623290 分機 740（閱讀策展窗口）／ 741（圖推教師團隊）。`;
     });
   }
 
-  // 雙據點平面配置圖
+  // 永馨樓 1F「蘆映書院」平面圖與 3D 空間示意
+  const FP_GALLERY_SLIDES = [
+    { u: "assets/images/blueprint-plan.jpg", n: "圖號 05/32｜永馨樓 1F 蘆映書院平面配置圖", s: "永馨樓 1F 蘆映書院平面圖", d: "115年度圖書館空間改善工程" },
+    { u: "assets/images/blueprint-plan2.jpg", n: "圖號 09/32｜平面配置圖(二) 家具與設備詳圖", s: "永馨樓 1F 蘆映書院平面圖", d: "115年度圖書館空間改善工程" },
+    { u: "assets/images/blueprint-lighting.jpg", n: "圖號 08/32｜新設燈具配置暨照度分析圖（696 Lux）", s: "永馨樓 1F 蘆映書院照度設計", d: "115年度圖書館空間改善工程" },
+    { u: "assets/images/blueprint-3d.jpg", n: "圖號 31/32｜入口意象(一)(二) ＆ 造型窩居意象(一)(二)", s: "永馨樓 1F 蘆映書院 3D 示意", d: "115年度圖書館空間改善工程" },
+    { u: "assets/images/blueprint-3d-full.jpg", n: "圖號 32/32｜室內 3D 全景示意圖(一)～(四)", s: "永馨樓 1F 蘆映書院 3D 示意", d: "115年度圖書館空間改善工程" }
+  ];
+
   function renderFloorplan(campusKey) {
     const body = document.getElementById("fp-content");
     if (!body) return;
+    const mode = campusKey === "3d" ? "3d" : "luying";
     document.querySelectorAll("[data-fp-campus]").forEach((b) => {
-      const active = b.dataset.fpCampus === campusKey;
+      const active = b.dataset.fpCampus === mode;
       b.classList.toggle("is-active", active);
       b.setAttribute("aria-selected", String(active));
     });
 
-    if (campusKey === "luying") {
+    if (mode === "luying") {
       body.innerHTML = `
-        <p style="margin-top:0;"><strong>一館｜永馨樓 1F「蘆映書院」美學閱讀主館（181 ㎡）</strong>｜結合教師閱讀吧台、中控服務台、教學大屏舞台與六人小組蜂巢討論區，展現「學校圖書館空間環境改善計畫（額度 300 萬元）」成果。</p>
+        <p style="margin-top:0;"><strong>永馨樓 1F「蘆映書院」｜平面配置與照度設計（約 50 坪｜17,437 × 8,289 mm）</strong>｜規劃舞台區（架高地板＋造型白板推拉門 2 樘）、共學討論區（移動式造型桌 24 張＋討論椅 32 張）、理書區、圖書區（高櫃 11 座＋矮櫃 31 座＋大／小窩居）、窗邊閱讀吧檯與檢索服務櫃台。</p>
         <div class="fp-images-grid">
           <figure class="fp-figure">
-            <img src="assets/images/blueprint-plan.jpg" alt="115年度永貞國小圖書館整修工程第5/32張平面配置圖">
-            <figcaption><strong>圖說 5/32｜新館平面配置圖：</strong>清晰標註左側舞台說書區、理書區、中央流通服務櫃台、館藏檢索／雜誌報架區、四組六人共讀討論區及右側窗邊閱讀窩居。</figcaption>
+            <img src="assets/images/blueprint-plan.jpg" alt="115年度永貞國小圖書館空間改善工程圖號 05/32 平面配置圖" data-fp-zoom="0" style="cursor:zoom-in;">
+            <figcaption><strong>圖號 05/32｜平面配置圖（點擊放大）：</strong>完整標示 17,437 × 8,289 mm 全室尺度、舞台區、討論區、理書區、服務櫃台、檢索區、雜誌書報架、圖書區與窗邊閱讀區動線。</figcaption>
           </figure>
           <figure class="fp-figure">
-            <img src="assets/images/blueprint-3d.jpg" alt="永貞國小新圖書館入口意象與木作造型窩居 3D 示意圖">
-            <figcaption><strong>圖說 31/32｜入口紅磚文化意象與閱讀窩居 3D 示意：</strong>融合頭份蘆竹湳紅磚牆花元素、造型還書箱及圓弧木質大小窩居，落實「祕密基地」閱讀體驗。</figcaption>
+            <img src="assets/images/blueprint-plan2.jpg" alt="115年度永貞國小圖書館空間改善工程圖號 09/32 平面配置圖(二)" data-fp-zoom="1" style="cursor:zoom-in;">
+            <figcaption><strong>圖號 09/32｜平面配置圖(二) 設備配置（點擊放大）：</strong>標註 50 坪 PVC 地磚、24 張造型桌／32 張討論椅、系統高低書櫃（42 座以上）、大／小窩居、防焰捲簾 18 組與監視／電信設備櫃。</figcaption>
+          </figure>
+          <figure class="fp-figure" style="grid-column: 1 / -1;">
+            <img src="assets/images/blueprint-lighting.jpg" alt="115年度永貞國小圖書館空間改善工程圖號 08/32 新設燈具配置與照度分析圖" data-fp-zoom="2" style="cursor:zoom-in;">
+            <figcaption><strong>圖號 08/32｜照明燈具暨照度分析圖（平均照度 696 Lux ‧ 點擊放大）：</strong>整合藤編造型吊燈（5 盞）、吸頂式筒燈（35 盞）、聚光軌道燈（6 盞）、LED 崁燈（9 盞）與 7 組吊扇，確保學童舒適護眼閱覽亮度。</figcaption>
           </figure>
         </div>
       `;
     } else {
       body.innerHTML = `
-        <p style="margin-top:0;"><strong>二館｜貞學樓 3F「靜思書軒暨原圖書閱覽室」（130 ㎡）</strong>｜承載全館 13,310 冊核心典藏、中圖法十大分類排架、志工借還作業及側門「天青門（田寮路 45 巷）」無障礙電梯送書動線。</p>
+        <p style="margin-top:0;"><strong>永馨樓 1F「蘆映書院」｜入口意象、造型窩居與全域 3D 空間示意（圖號 31/32 ＆ 32/32）</strong>｜融合頭份紅磚文化牆面、山屋窗景主題書櫃、內崁還書箱與溫暖木質窩居（註：工程初期草圖看板曾暫標「蘆竹」，經師生命名投票正式定名為「蘆映書院」）。</p>
         <div class="fp-images-grid">
           <figure class="fp-figure">
-            <img src="assets/images/blueprint-existing.jpg" alt="115年度永貞國小圖書館既有燈具與空間測繪配置圖">
-            <figcaption><strong>圖說 4/32｜既有空間與安全測繪對照圖：</strong>記錄館室照明照度、空調位置及結構柱距，作為閱讀光環境升級與無障礙／防震書架改善依據。</figcaption>
+            <img src="assets/images/blueprint-3d.jpg" alt="圖號 31/32 入口意象與大小窩居 3D 示意圖" data-fp-zoom="3" style="cursor:zoom-in;">
+            <figcaption><strong>圖號 31/32｜入口意象(一)(二)＆窩居意象(一)(二)（點擊放大）：</strong>展現門口木作主題書窗與獨立還書箱設計、以及內部圓弧黃框大／小窩居閱讀角落與螺旋造型矮凳。</figcaption>
           </figure>
           <figure class="fp-figure">
-            <img src="assets/images/space-tour.jpg" alt="苗栗縣政府教育處率永貞團隊參訪標竿圖書館空間照片">
-            <figcaption><strong>縣府標竿圖書館空間參訪實景（計畫額度 7 萬元）：</strong>實地考察標竿館室通透採光書牆與分齡書架動線，轉化為永貞雙館室空間優化設計。</figcaption>
+            <img src="assets/images/blueprint-3d-full.jpg" alt="圖號 32/32 永馨樓 1F 蘆映書院室內 3D 全景示意圖(一)至(四)" data-fp-zoom="4" style="cursor:zoom-in;">
+            <figcaption><strong>圖號 32/32｜室內 3D 全景示意圖(一)～(四)（點擊放大）：</strong>呈現 L 型服務櫃台（含 LED 線型燈條）、六組靈活拼合討論桌群、藤編吊燈與環繞式高／矮系統開放書架空間視角。</figcaption>
           </figure>
         </div>
       `;
     }
+    body.querySelectorAll("[data-fp-zoom]").forEach((imgEl) => {
+      imgEl.addEventListener("click", () => {
+        if (window.__yzOpenGalleryLightbox) {
+          window.__yzOpenGalleryLightbox(FP_GALLERY_SLIDES, Number(imgEl.dataset.fpZoom || 0));
+        }
+      });
+    });
   }
 
   document.querySelectorAll("[data-fp-campus]").forEach((btn) => {
