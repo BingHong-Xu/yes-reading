@@ -198,7 +198,14 @@
   display: block;
 }
 
+.hw-camera-box [hidden],
+.hw-cam-controls [hidden],
+.hw-submit-bar [hidden] {
+  display: none !important;
+}
+
 .hw-camera-placeholder {
+  width: 100%;
   text-align: center;
   color: #cbd5e1;
   padding: 18px;
