@@ -1053,18 +1053,8 @@
     });
   }
 
-  // 志工排班系統
-  const VOL_KEY = "yz_volunteer_slots_v1";
-  const DEFAULT_VOL_EXTRA = [];
+  // 志工招募與服務時段資訊（不公開志工個人名單）
   let activeVolRole = "parent";
-
-  function loadVolExtra() {
-    try {
-      return JSON.parse(localStorage.getItem(VOL_KEY) || "[]") || DEFAULT_VOL_EXTRA;
-    } catch {
-      return DEFAULT_VOL_EXTRA;
-    }
-  }
 
   function renderVolunteerSchedule(role) {
     activeVolRole = role;
@@ -1076,21 +1066,16 @@
       b.setAttribute("aria-selected", String(active));
     });
 
-    const extras = loadVolExtra();
     if (role === "parent") {
-      const extraRows = extras.map((e) => `<tr><td>${escapeHtml(e.slot)}</td><td>${escapeHtml(e.name)}（線上預登）</td><td>${escapeHtml(e.task)}</td><td>排班確認中</td></tr>`).join("");
       host.innerHTML = `
         <table class="vol-table">
           <thead>
-            <tr><th>值勤時段</th><th>值勤志工</th><th>館務支援項目</th><th>排班狀態</th></tr>
+            <tr><th>招募值勤時段</th><th>服務組別與需求人數</th><th>館務支援項目</th><th>招募狀態</th></tr>
           </thead>
           <tbody>
-            <tr><td>週一上午 09:00–11:30</td><td>陳媽媽 故事志工</td><td>低年級晨間進班說故事</td><td>已排定</td></tr>
-            <tr><td>週二上午 09:00–11:30</td><td>林爸爸・張媽媽</td><td>櫃台借還書暨新書編目整架</td><td>尚缺 1 名</td></tr>
-            <tr><td>週三上午 09:00–11:30</td><td>故事志工社群（2 名）</td><td>週三聽故事專場暨繪本導讀</td><td>已排定</td></tr>
-            <tr><td>週四下午 13:00–15:00</td><td>圖推教師團隊協同</td><td>主題書展導覽暨流通統計</td><td>開放登記</td></tr>
-            <tr><td>週五上午 09:00–11:30</td><td>劉媽媽 志工</td><td>週末共讀借書協助歸架</td><td>開放登記</td></tr>
-            ${extraRows}
+            <tr><td>週一至週五 09:00–11:30</td><td>上午故事暨流通組（每時段 1–2 名）</td><td>低年級晨間進班說故事、櫃台借還暨新書整架</td><td>開放報名</td></tr>
+            <tr><td>週三上午 09:00–11:30</td><td>週三聽故事專場組（每場 2 名）</td><td>週三繪本導讀、大螢幕說書活動現場協同</td><td>歡迎加入</td></tr>
+            <tr><td>週一至週五 13:00–15:00</td><td>下午策展暨整理組（每時段 1–2 名）</td><td>主題書展闖關引導、還書上架與空間維護</td><td>開放報名</td></tr>
           </tbody>
         </table>
       `;
@@ -1122,14 +1107,9 @@
       const name = document.getElementById("vol-name").value.trim();
       const task = document.getElementById("vol-task").value;
       if (!name) return;
-      const rows = loadVolExtra();
-      rows.push({ slot, name, task });
-      try {
-        localStorage.setItem(VOL_KEY, JSON.stringify(rows));
-      } catch { /* ignore */ }
       renderVolunteerSchedule("parent");
       volForm.reset();
-      document.getElementById("vol-feedback").textContent = `已登記 ${slot}（${name}）！請洽館務總機 037-623290 分機 740（閱讀策展窗口）／ 741（圖推教師團隊）。`;
+      document.getElementById("vol-feedback").textContent = `已登記您的服務意願（${slot}／${task}）！為保護個人隱私，本系統不公開張貼志工名單，請來電 037-623290 分機 740（閱讀策展窗口）／ 741（圖推教師團隊）完成最終確認。`;
     });
   }
 

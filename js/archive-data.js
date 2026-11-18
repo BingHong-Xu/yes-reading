@@ -15,10 +15,10 @@ window.YONGZHEN_ARCHIVE = {
     "monthlyAvgBorrowPerStudent": 7,
     "semesterAccumulatedBorrow": 7428,
     "mssrYears": 10,
-    "deployedDocs": 263,
-    "deployedPhotos": 2402,
-    "totalPublicIndexed": 6064,
-    "totalDeployedMB": 528.2
+    "deployedDocs": 259,
+    "deployedPhotos": 2367,
+    "totalPublicIndexed": 6006,
+    "totalDeployedMB": 522.9
   },
   "fundedPlans": [
     {
@@ -64,7 +64,7 @@ window.YONGZHEN_ARCHIVE = {
       "code": "01",
       "title": "館務推動、編目與補助額度總覽",
       "summary": "彙整全校閱讀課表、中圖法編目與 13,310 冊館藏建置、e 啟讀出未來電子書載具、圖書館小大使值勤日誌；各項經費補助案依規範僅揭示計畫名稱與額度。",
-      "thumb": "assets/images/volunteer-poster.jpg",
+      "thumb": "assets/images/space-tour.jpg",
       "totalFiles": 277,
       "mediaCount": 24,
       "docCount": 253,
@@ -183,18 +183,6 @@ window.YONGZHEN_ARCHIVE = {
               "date": "2025-09-10",
               "url": "assets/docs/c01/d0047.pdf",
               "m": 0.11
-            },
-            {
-              "name": "圖書志工招募單 (永貞).pdf",
-              "date": "2024-09-12",
-              "url": "assets/docs/c01/d0102.pdf",
-              "m": 0.45
-            },
-            {
-              "name": "閱讀器帳號與密碼.pdf",
-              "date": "2025-09-01",
-              "url": "assets/docs/c01/d0155.pdf",
-              "m": 1.57
             }
           ],
           "sampleImgs": [
@@ -222,16 +210,11 @@ window.YONGZHEN_ARCHIVE = {
               "name": "4461.jpg",
               "date": "2024-05-01",
               "url": "assets/gallery/c01/g0005.jpg"
-            },
-            {
-              "name": "圖書志工招募.jpg",
-              "date": "2024-09-19",
-              "url": "assets/gallery/c01/g0006.jpg"
             }
           ],
           "catalogSub": "圖書採購編目與數位閱讀設備",
-          "webDocCount": 6,
-          "webImgCount": 6,
+          "webDocCount": 4,
+          "webImgCount": 5,
           "vidCount": 0,
           "archDocCount": 0,
           "archImgCount": 0
@@ -280,11 +263,6 @@ window.YONGZHEN_ARCHIVE = {
               "url": "assets/gallery/c01/g0009.jpg"
             },
             {
-              "name": "函覆發文截圖(電子發文).jpg",
-              "date": "2025-01-02",
-              "url": "assets/gallery/c01/g0010.jpg"
-            },
-            {
               "name": "閱讀教育績優評選_推動歷程佐證_006.jpg",
               "date": "2025-04-24",
               "url": "assets/gallery/c01/g0011.jpg"
@@ -303,11 +281,16 @@ window.YONGZHEN_ARCHIVE = {
               "name": "閱讀教育績優評選_推動歷程佐證_009.jpg",
               "date": "2025-04-24",
               "url": "assets/gallery/c01/g0014.jpg"
+            },
+            {
+              "name": "S__58540044.jpg",
+              "date": "2025-09-01",
+              "url": "assets/gallery/c01/g0015.jpg"
             }
           ],
           "catalogSub": "閱讀訪視與績優評選(永貞)",
           "webDocCount": 3,
-          "webImgCount": 12,
+          "webImgCount": 11,
           "vidCount": 0,
           "archDocCount": 1,
           "archImgCount": 0
@@ -1116,7 +1099,7 @@ window.YONGZHEN_ARCHIVE = {
           "catalogSub": "明日說書人競賽(2025-2026)",
           "webDocCount": 1,
           "webImgCount": 1,
-          "vidCount": 45,
+          "vidCount": 42,
           "archDocCount": 0,
           "archImgCount": 0
         }
@@ -2106,34 +2089,34 @@ window.YONGZHEN_ARCHIVE = {
               "url": "assets/gallery/c06/g1562.jpg"
             },
             {
-              "name": "04-02_作文文狀元_114年文狀元頒獎典禮（狀元江沂潔、秀才饒恩慈）.jpg",
+              "name": "狀元獎-江怡潔.jpg",
               "date": "2025-09-01",
-              "url": "assets/gallery/c06/g1563.jpg"
+              "url": "assets/gallery/c06/g1570.jpg"
             },
             {
-              "name": "04-02_作文文狀元_114年文狀元頒獎典禮（狀元江沂潔、秀才饒恩慈）_9238.jpg",
-              "date": "2025-09-01",
-              "url": "assets/gallery/c06/g1564.jpg"
+              "name": "IMG_1222.jpg",
+              "date": "2025-10-21",
+              "url": "assets/gallery/c06/g1572.jpg"
             },
             {
-              "name": "04-02_作文文狀元_114年文狀元頒獎典禮（狀元江沂潔、秀才饒恩慈）_9240.jpg",
-              "date": "2025-09-01",
-              "url": "assets/gallery/c06/g1565.jpg"
+              "name": "IMG_3465.PNG",
+              "date": "2025-11-06",
+              "url": "assets/gallery/c06/g1573.jpg"
             },
             {
-              "name": "04-02_作文文狀元_114年文狀元頒獎典禮（狀元江沂潔、秀才饒恩慈）_9241.jpg",
-              "date": "2025-09-01",
-              "url": "assets/gallery/c06/g1566.jpg"
+              "name": "IMG_3466.PNG",
+              "date": "2025-11-06",
+              "url": "assets/gallery/c06/g1574.jpg"
             },
             {
-              "name": "04-02_作文文狀元_114年文狀元頒獎典禮（狀元江沂潔、秀才饒恩慈）_9242.jpg",
-              "date": "2025-09-01",
-              "url": "assets/gallery/c06/g1567.jpg"
+              "name": "江沂潔作文.jpg",
+              "date": "2025-12-14",
+              "url": "assets/gallery/c06/g1575.jpg"
             }
           ],
           "catalogSub": "作文文狀元與夢花文學獎",
           "webDocCount": 11,
-          "webImgCount": 29,
+          "webImgCount": 20,
           "vidCount": 0,
           "archDocCount": 1,
           "archImgCount": 0
@@ -2224,17 +2207,16 @@ window.YONGZHEN_ARCHIVE = {
       "id": "07_識字金銀島與閱讀研討會研究",
       "code": "07",
       "title": "識字金銀島實證與閱讀研討發表",
-      "summary": "收錄 2025 自主學習節論文發表證明、2026 第十六屆閱讀評量與教學研討會實況（866 檔）、高年級識字適性教學研究與全國前 20 名英雄榜數據。",
+      "summary": "收錄 2025 自主學習節論文發表證明、2026 第十六屆閱讀評量與教學研討會實況（866 檔）、高年級識字適性教學研究與全國學習島嶼英雄榜獎勵。",
       "thumb": "assets/images/literacy-test.jpg",
       "totalFiles": 1000,
       "mediaCount": 900,
       "docCount": 100,
       "mb": 665.04,
       "highlights": [
-        "2026 第十六屆閱讀評量與教學研討會籌備與現場",
         "2025 自主學習節識字金銀島論文發表證明",
-        "114-2 全國識字英雄榜前 20 名（永貞 3 位上榜）",
-        "高年級班級識字量適性施測實證追蹤"
+        "114-2 學習島嶼全國英雄榜前 20 名（永貞 3 位上榜）",
+        "2026 第十六屆閱讀評量與教學研討會籌備暨現場實況"
       ],
       "subfolders": [
         {
@@ -2289,10 +2271,10 @@ window.YONGZHEN_ARCHIVE = {
           ],
           "catalogSub": "2026第十六屆閱讀評量與教學研討會_現場暨籌備影像(00歸檔)",
           "webDocCount": 0,
-          "webImgCount": 333,
+          "webImgCount": 323,
           "vidCount": 1,
           "archDocCount": 0,
-          "archImgCount": 532
+          "archImgCount": 516
         },
         {
           "name": "2025自主學習節_識字金銀島論文發表",
@@ -2321,12 +2303,6 @@ window.YONGZHEN_ARCHIVE = {
               "m": 0.01
             },
             {
-              "name": "教師指派任務(熱門任務清單).xlsx",
-              "date": "2026-01-01",
-              "url": "assets/docs/c07/d0022.xlsx",
-              "m": 0.02
-            },
-            {
               "name": "【全文】自主學習節-探究「識字金銀島」平台對國小五年級適性學習成效與行為分析之影響.docx",
               "date": "2026-01-01",
               "url": "assets/docs/c07/d0025.docx",
@@ -2339,51 +2315,10 @@ window.YONGZHEN_ARCHIVE = {
               "m": 0.03
             }
           ],
-          "sampleImgs": [
-            {
-              "name": "【601】113-1-期初.png",
-              "date": "2024-09-01",
-              "url": "assets/gallery/c07/g1961.jpg"
-            },
-            {
-              "name": "【603】113-1-期初.png",
-              "date": "2024-09-01",
-              "url": "assets/gallery/c07/g1962.jpg"
-            },
-            {
-              "name": "【601】113-2-期初.png",
-              "date": "2025-02-01",
-              "url": "assets/gallery/c07/g1963.jpg"
-            },
-            {
-              "name": "【601】113-2-期末.png",
-              "date": "2025-02-01",
-              "url": "assets/gallery/c07/g1964.jpg"
-            },
-            {
-              "name": "【601】114-1-期初.png",
-              "date": "2025-09-01",
-              "url": "assets/gallery/c07/g1965.jpg"
-            },
-            {
-              "name": "【601】114-2-期初.png",
-              "date": "2026-02-01",
-              "url": "assets/gallery/c07/g1966.jpg"
-            },
-            {
-              "name": "【601】114-2-期末.png",
-              "date": "2026-02-01",
-              "url": "assets/gallery/c07/g1967.jpg"
-            },
-            {
-              "name": "【602】114-2-期初.png",
-              "date": "2026-02-01",
-              "url": "assets/gallery/c07/g1968.jpg"
-            }
-          ],
+          "sampleImgs": [],
           "catalogSub": "2025自主學習節_識字金銀島論文發表",
-          "webDocCount": 6,
-          "webImgCount": 13,
+          "webDocCount": 5,
+          "webImgCount": 0,
           "vidCount": 0,
           "archDocCount": 0,
           "archImgCount": 0
@@ -2439,10 +2374,10 @@ window.YONGZHEN_ARCHIVE = {
               "m": 0.24
             },
             {
-              "name": "識字量證書.pdf",
-              "date": "2026-01-01",
-              "url": "assets/docs/c07/d0146.pdf",
-              "m": 1.43
+              "name": "徐秉鴻、陳慈怡-【2025自主學習節簡報】探究「識字金銀島」平台對國小五年級適性學習成效與行為.pdf",
+              "date": "2025-01-01",
+              "url": "assets/docs/c07/d0156.pdf",
+              "m": 2.15
             }
           ],
           "sampleImgs": [
@@ -2453,7 +2388,7 @@ window.YONGZHEN_ARCHIVE = {
             }
           ],
           "catalogSub": "2026第十六屆閱讀評量與教學研討會_論文與海報",
-          "webDocCount": 13,
+          "webDocCount": 12,
           "webImgCount": 1,
           "vidCount": 0,
           "archDocCount": 0,
@@ -2519,7 +2454,7 @@ window.YONGZHEN_ARCHIVE = {
           "archImgCount": 0
         },
         {
-          "name": "識字金銀島施測數據與英雄榜",
+          "name": "學習島嶼全國英雄榜與獎勵",
           "planQuota": null,
           "files": 15,
           "images": 10,
@@ -2575,7 +2510,7 @@ window.YONGZHEN_ARCHIVE = {
               "url": "assets/gallery/c07/g2315.jpg"
             }
           ],
-          "catalogSub": "識字金銀島施測數據與英雄榜",
+          "catalogSub": "學習島嶼全國英雄榜與獎勵",
           "webDocCount": 1,
           "webImgCount": 9,
           "vidCount": 0,
@@ -2766,7 +2701,7 @@ window.YONGZHEN_ARCHIVE = {
           ],
           "catalogSub": "圖推教師與明日閱讀證書獎狀(2024-2026)",
           "webDocCount": 14,
-          "webImgCount": 31,
+          "webImgCount": 30,
           "vidCount": 0,
           "archDocCount": 0,
           "archImgCount": 0
