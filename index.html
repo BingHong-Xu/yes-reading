@@ -8,9 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261118f">
-  <link rel="stylesheet" href="css/catalog.css?v=20261118f">
-  <link rel="stylesheet" href="css/homework.css?v=20261118f">
+  <link rel="stylesheet" href="css/styles.css?v=20261118g">
+  <link rel="stylesheet" href="css/catalog.css?v=20261118g">
+  <link rel="stylesheet" href="css/homework.css?v=20261118g">
 </head>
 <body>
   <!-- 鍵盤導覽快速跳轉列（無障礙焦點顯示） -->
@@ -619,18 +619,19 @@
         <!-- 學生拍照並上傳互動專區（自動串接教師 Google Drive 收件夾） -->
         <section id="homework-zone" class="hw-banner-card" aria-labelledby="hw-banner-heading">
           <div class="hw-banner-copy">
-            <span class="hw-banner-kicker">INTERACTIVE HOMEWORK UPLOAD ‧ 手機／平板拍照交作業</span>
-            <h3 id="hw-banner-heading" class="hw-banner-title">永貞閱讀作業｜拍照並上傳互動專區</h3>
+            <span class="hw-banner-kicker">INTERACTIVE HOMEWORK &amp; CLOUD BACKEND ‧ 拍照交作業＆後台成果蒐集</span>
+            <h3 id="hw-banner-heading" class="hw-banner-title">永貞閱讀作業｜拍照上傳＆雲端學習成果後台</h3>
             <p class="hw-banner-desc">
-              使用平板、手機前後鏡頭即時拍照，或直接從裝置挑選學習單圖檔與 PDF；系統將自動最佳化尺寸、依「班級・座號・主題」規範命名後送往「永貞閱讀網成果」雲端收件夾（網站前台絕不公開學生名單）。
+              已直接架接 Google Drive「<strong>永貞閱讀網成果</strong>」雲端資料夾（<code>1G7qZu9Jxu4uqRDB_ZFmkN7SDNwL8ebak</code>）。學生可用平板、手機前後鏡頭即時拍照或選取學習單，系統自動依「日期_班級_座號_姓名_主題」標準命名並串接雲端繳交；教師可直接在後台即時檢視與彙整全校學習成果。
             </p>
             <div style="margin-top:10px;">
-              <span class="hw-status-badge" id="hw-banner-status">📷 相機拍照＆作業轉檔待命</span>
+              <span class="hw-status-badge" id="hw-banner-status">☁️ 已直接架接雲端後台：永貞閱讀網成果（Google Drive 即時連線）</span>
             </div>
           </div>
           <div class="hw-banner-actions">
-            <button type="button" class="btn btn-gold" data-open-modal="modal-homework">📸 開啟相機拍照／上傳作業</button>
-            <a href="https://drive.google.com/drive/folders/1G7qZu9Jxu4uqRDB_ZFmkN7SDNwL8ebak?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-ghost-light">☁️ 開啟教師雲端資料夾 &#8599;</a>
+            <button type="button" class="btn btn-gold" data-open-modal="modal-homework" data-hw-open-tab="upload">📸 學生拍照／上傳作業</button>
+            <button type="button" class="btn btn-ghost-light" data-open-modal="modal-homework" data-hw-open-tab="backend">📊 學習成果後台（永貞閱讀網成果）</button>
+            <a href="https://drive.google.com/drive/folders/1G7qZu9Jxu4uqRDB_ZFmkN7SDNwL8ebak?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-ghost-light">☁️ 開啟雲端硬碟 &#8599;</a>
           </div>
         </section>
 
@@ -1105,147 +1106,217 @@
     </div>
   </section>
 
-  <!-- Modal 10: 學生作業拍照並上傳互動專區 -->
+  <!-- Modal 10: 學生作業拍照並上傳互動專區 & 雲端學習成果後台 -->
   <section id="modal-homework" class="app-modal modal-wide" role="dialog" aria-modal="true" aria-labelledby="hw-modal-title" hidden>
     <div class="modal-header">
       <div>
-        <span class="modal-kicker">CAMERA &amp; CLOUD SUBMISSION ‧ 學生閱讀作業提交專區</span>
-        <h2 id="hw-modal-title">拍照並上傳作業（自動部署至雲端「永貞閱讀網成果」）</h2>
+        <span class="modal-kicker">CAMERA UPLOAD &amp; CLOUD BACKEND ‧ 學生閱讀作業提交暨教師成果蒐集後台</span>
+        <h2 id="hw-modal-title">永貞閱讀作業｜拍照上傳＆「永貞閱讀網成果」雲端後台</h2>
       </div>
       <button type="button" class="modal-close" aria-label="關閉拍照交作業視窗">&times;</button>
     </div>
     <div class="modal-body">
       <div class="hw-dest-strip">
         <div>
-          <strong>目標雲端位置：</strong>
-          <a href="https://drive.google.com/drive/folders/1G7qZu9Jxu4uqRDB_ZFmkN7SDNwL8ebak?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive「永貞閱讀網成果」資料夾 &#8599;</a>
+          <strong>已架接雲端資料夾：</strong>
+          <a href="https://drive.google.com/drive/folders/1G7qZu9Jxu4uqRDB_ZFmkN7SDNwL8ebak?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive「永貞閱讀網成果」 &#8599;</a>
           （ID: <code>1G7qZu9Jxu4uqRDB_ZFmkN7SDNwL8ebak</code>）
         </div>
-        <span id="hw-endpoint-status" style="font-weight:600; color:#1e3a8a;"></span>
+        <span id="hw-endpoint-status" style="font-weight:600; color:#1e3a8a;">狀態：✅ 已直接架接「永貞閱讀網成果」雲端資料夾</span>
       </div>
 
-      <form id="hw-upload-form">
-        <div class="hw-grid">
-          <div class="hw-panel">
-            <h3 class="hw-step-title"><span class="hw-step-num">1</span>填寫交作業基本資訊</h3>
-            <div class="hw-form-row">
+      <!-- 模式切換頁籤：學生拍照上傳 / 教師學習成果後台 -->
+      <div class="hw-mode-tabs" role="tablist" aria-label="作業提交與後台成果切換">
+        <button type="button" role="tab" id="hw-tab-btn-upload" class="hw-mode-tab is-active" aria-selected="true" data-hw-tab="upload">
+          📸 學生端：拍照並上傳學習成果
+        </button>
+        <button type="button" role="tab" id="hw-tab-btn-backend" class="hw-mode-tab" aria-selected="false" data-hw-tab="backend">
+          📊 教師後台：「永貞閱讀網成果」雲端即時蒐集中心
+        </button>
+      </div>
+
+      <!-- 分頁 1：學生拍照與上傳 -->
+      <div id="hw-pane-upload" class="hw-tab-pane" role="tabpanel" aria-labelledby="hw-tab-btn-upload">
+        <form id="hw-upload-form">
+          <div class="hw-grid">
+            <div class="hw-panel">
+              <h3 class="hw-step-title"><span class="hw-step-num">1</span>填寫交作業基本資訊</h3>
+              <div class="hw-form-row">
+                <div class="hw-field">
+                  <label for="hw-class">班級</label>
+                  <select id="hw-class" required>
+                    <option value="一年甲班">一年甲班</option>
+                    <option value="一年乙班">一年乙班</option>
+                    <option value="一年丙班">一年丙班</option>
+                    <option value="二年甲班">二年甲班</option>
+                    <option value="二年乙班">二年乙班</option>
+                    <option value="二年丙班">二年丙班</option>
+                    <option value="三年甲班">三年甲班</option>
+                    <option value="三年乙班">三年乙班</option>
+                    <option value="三年丙班">三年丙班</option>
+                    <option value="四年甲班">四年甲班</option>
+                    <option value="四年乙班">四年乙班</option>
+                    <option value="四年丙班">四年丙班</option>
+                    <option value="五年甲班" selected>五年甲班</option>
+                    <option value="五年乙班">五年乙班</option>
+                    <option value="五年丙班">五年丙班</option>
+                    <option value="六年甲班">六年甲班</option>
+                    <option value="六年乙班">六年乙班</option>
+                    <option value="六年丙班">六年丙班</option>
+                  </select>
+                </div>
+                <div class="hw-field">
+                  <label for="hw-seat">座號</label>
+                  <input id="hw-seat" type="number" min="1" max="40" value="1" required placeholder="例如 5">
+                </div>
+                <div class="hw-field">
+                  <label for="hw-name">學生姓名</label>
+                  <input id="hw-name" type="text" required maxlength="20" placeholder="僅附於教師雲端收件">
+                </div>
+              </div>
+
               <div class="hw-field">
-                <label for="hw-class">班級</label>
-                <select id="hw-class" required>
-                  <option value="一年甲班">一年甲班</option>
-                  <option value="一年乙班">一年乙班</option>
-                  <option value="一年丙班">一年丙班</option>
-                  <option value="二年甲班">二年甲班</option>
-                  <option value="二年乙班">二年乙班</option>
-                  <option value="二年丙班">二年丙班</option>
-                  <option value="三年甲班">三年甲班</option>
-                  <option value="三年乙班">三年乙班</option>
-                  <option value="三年丙班">三年丙班</option>
-                  <option value="四年甲班">四年甲班</option>
-                  <option value="四年乙班">四年乙班</option>
-                  <option value="四年丙班">四年丙班</option>
-                  <option value="五年甲班" selected>五年甲班</option>
-                  <option value="五年乙班">五年乙班</option>
-                  <option value="五年丙班">五年丙班</option>
-                  <option value="六年甲班">六年甲班</option>
-                  <option value="六年乙班">六年乙班</option>
-                  <option value="六年丙班">六年丙班</option>
+                <label for="hw-topic">作業主題類別（後台依主題自動命名歸檔）</label>
+                <select id="hw-topic" required>
+                  <option value="MSSR身教式晨讀紀錄">MSSR 身教式晨讀與聊書單</option>
+                  <option value="新聞小偵探學習單">國語日報「新聞小偵探」讀報學習單</option>
+                  <option value="主題書展闖關作品">主題書展「書中自有祕密基地」學習單</option>
+                  <option value="跨域美感閱讀創作">《子竹嚐肉》《世界窗》跨領域創作</option>
+                  <option value="週三聽故事心得繪圖">週三聽故事與明日說書人心得</option>
+                  <option value="其他閱讀教學作業">其他閱讀教學作業</option>
                 </select>
               </div>
+
               <div class="hw-field">
-                <label for="hw-seat">座號</label>
-                <input id="hw-seat" type="number" min="1" max="40" value="1" required placeholder="例如 5">
+                <label for="hw-note">學習心得或給老師的一句話（選填）</label>
+                <textarea id="hw-note" rows="2" maxlength="200" placeholder="可簡述書名、閱讀發現或拍照頁數..."></textarea>
               </div>
-              <div class="hw-field">
-                <label for="hw-name">學生姓名</label>
-                <input id="hw-name" type="text" required maxlength="20" placeholder="僅附於教師雲端收件">
+
+              <div class="hw-filename-preview">
+                <strong>自動命名檔名預覽：</strong><span id="hw-filename-preview">20261118_五年甲班_01號_姓名_MSSR身教式晨讀紀錄.jpg</span>
               </div>
+              <p style="margin:8px 0 0; font-size:0.76rem; color:#475569;">
+                🔒 隱私保護：學生姓名與作業檔案僅送往教師「永貞閱讀網成果」Google 雲端硬碟後台，網站公開頁面絕不顯示學生個資。
+              </p>
             </div>
 
-            <div class="hw-field">
-              <label for="hw-topic">作業主題類別（後端依主題自動分類歸檔）</label>
-              <select id="hw-topic" required>
-                <option value="MSSR身教式晨讀紀錄">MSSR 身教式晨讀與聊書單</option>
-                <option value="新聞小偵探學習單">國語日報「新聞小偵探」讀報學習單</option>
-                <option value="主題書展闖關作品">主題書展「書中自有祕密基地」學習單</option>
-                <option value="跨域美感閱讀創作">《子竹嚐肉》《世界窗》跨領域創作</option>
-                <option value="週三聽故事心得繪圖">週三聽故事與明日說書人心得</option>
-                <option value="其他閱讀教學作業">其他閱讀教學作業</option>
-              </select>
-            </div>
+            <div class="hw-panel">
+              <h3 class="hw-step-title"><span class="hw-step-num">2</span>即時拍照或選取作業檔案</h3>
+              <div class="hw-camera-box">
+                <video id="hw-video" playsinline autoplay muted hidden></video>
+                <img id="hw-preview-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="作業拍照預覽" hidden>
+                <div id="hw-cam-placeholder" class="hw-camera-placeholder">
+                  點選下方「開啟即時相機」直接拍下紙本學習單／作品，<br>
+                  或選擇「從裝置拍照／選檔」上傳手機照片與 PDF（上限 10 MB）。
+                </div>
+              </div>
 
-            <div class="hw-field">
-              <label for="hw-note">學習心得或給老師的一句話（選填）</label>
-              <textarea id="hw-note" rows="2" maxlength="200" placeholder="可簡述書名、閱讀發現或拍照頁數..."></textarea>
-            </div>
+              <div class="hw-cam-controls">
+                <button type="button" id="hw-start-cam" class="btn btn-primary btn-sm">📷 開啟即時相機</button>
+                <button type="button" id="hw-flip-cam" class="btn btn-outline btn-sm" hidden>🔄 切換前／後鏡頭</button>
+                <button type="button" id="hw-snap-btn" class="btn btn-gold btn-sm" hidden>📸 拍攝作業</button>
+                <button type="button" id="hw-retake-btn" class="btn btn-outline btn-sm" hidden>↩️ 重新拍攝</button>
+                <label class="hw-file-label" for="hw-file-input">
+                  <span>🖼️ 從裝置拍照／選檔</span>
+                  <input id="hw-file-input" type="file" accept="image/*,.pdf" capture="environment" class="sr-only">
+                </label>
+              </div>
+              <div id="hw-file-info" class="hw-file-info">尚未選擇或拍攝作業影像。</div>
 
-            <div class="hw-filename-preview">
-              <strong>自動命名檔名預覽：</strong><span id="hw-filename-preview">20261118_五年甲班_01號_姓名_MSSR身教式晨讀紀錄.jpg</span>
+              <div class="hw-submit-bar">
+                <button type="submit" id="hw-submit-btn" class="btn btn-gold">☁️ 確認上傳至「永貞閱讀網成果」雲端</button>
+                <a id="hw-download-btn" class="btn btn-outline btn-sm" href="#" download="homework.jpg" hidden>⬇️ 下載已命名作業圖檔</a>
+              </div>
+              <div id="hw-feedback" class="hw-feedback-box" aria-live="polite"></div>
             </div>
-            <p style="margin:8px 0 0; font-size:0.76rem; color:#475569;">
-              🔒 隱私聲明：學生姓名與影像僅透過加密連線送往教師授權之 Google 雲端收件夾，網站前台絕不儲存或公開張貼任何學生名單或作業內容。
+          </div>
+        </form>
+      </div>
+
+      <!-- 分頁 2：教師學習成果後台（直接內嵌 Google Drive 1G7qZu9Jxu4uqRDB_ZFmkN7SDNwL8ebak + 收件名冊匯出） -->
+      <div id="hw-pane-backend" class="hw-tab-pane" role="tabpanel" aria-labelledby="hw-tab-btn-backend" hidden>
+        <div class="hw-backend-toolbar">
+          <div>
+            <strong style="color:#1e3a8a;">📂 Google Drive 雲端後台即時檢視：</strong>
+            <span>永貞閱讀網成果（<code>1G7qZu9Jxu4uqRDB_ZFmkN7SDNwL8ebak</code>）</span>
+          </div>
+          <div class="hw-backend-actions">
+            <button type="button" id="hw-drive-view-grid" class="btn btn-primary btn-sm">🖼️ 縮圖格狀檢視</button>
+            <button type="button" id="hw-drive-view-list" class="btn btn-outline btn-sm">📋 詳細清單檢視</button>
+            <button type="button" id="hw-drive-reload" class="btn btn-outline btn-sm">🔄 重新整理雲端</button>
+            <a href="https://drive.google.com/drive/folders/1G7qZu9Jxu4uqRDB_ZFmkN7SDNwL8ebak?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">☁️ 開啟雲端硬碟完整後台（新增／管理檔案）&#8599;</a>
+          </div>
+        </div>
+
+        <div class="hw-drive-embed-wrap">
+          <iframe
+            id="hw-drive-iframe"
+            class="hw-drive-iframe"
+            title="永貞閱讀網成果 Google Drive 雲端後台"
+            src="https://drive.google.com/embeddedfolderview?id=1G7qZu9Jxu4uqRDB_ZFmkN7SDNwL8ebak#grid"
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <div class="hw-local-log-box">
+          <div class="hw-local-log-head">
+            <div>
+              <strong style="color:#1e3a8a;">📋 本機作業提交紀錄＆收件名冊匯出</strong>
+              <span id="hw-local-log-count" style="font-size:0.8rem; color:#475569; margin-left:6px;">（目前累積 0 筆）</span>
+            </div>
+            <div class="hw-backend-actions">
+              <button type="button" id="hw-export-csv" class="btn btn-primary btn-sm">📥 匯出作業收件名冊 (.CSV)</button>
+              <button type="button" id="hw-clear-log" class="btn btn-outline btn-sm">清除本機紀錄</button>
+            </div>
+          </div>
+          <div class="hw-local-log-table-wrap">
+            <table class="hw-local-log-table">
+              <thead>
+                <tr>
+                  <th>提交時間</th>
+                  <th>班級</th>
+                  <th>座號</th>
+                  <th>姓名</th>
+                  <th>作業主題</th>
+                  <th>標準化檔名</th>
+                  <th>繳交方式</th>
+                </tr>
+              </thead>
+              <tbody id="hw-local-log-tbody">
+                <tr><td colspan="7" style="text-align:center; color:#64748b;">尚無本機提交紀錄；學生於上方拍照提交後將自動記錄於此並同步開啟雲端資料夾。</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <details class="hw-teacher-details" id="hw-teacher-details">
+          <summary>⚙️ 教師雲端進階管理：權限檢查＆已預建之 Google Apps Script 背景直寫專案</summary>
+          <div class="hw-teacher-body">
+            <p style="margin-top:0;">
+              <strong>1. 雲端資料夾共用權限提醒（必要）：</strong><br>
+              目標資料夾 <a href="https://drive.google.com/drive/folders/1G7qZu9Jxu4uqRDB_ZFmkN7SDNwL8ebak?usp=sharing" target="_blank" rel="noopener noreferrer">「永貞閱讀網成果」&#8599;</a> 擁有者為 <code>bing@ms2.yes.mlc.edu.tw</code>。請於 Google Drive 對該資料夾按右鍵 ➔「<strong>共用</strong>」➔ 將一般存取權由「檢視者」改為「<strong>知道連結的任何人：編輯者 (Editor)</strong>」，學生與後台即擁有寫入權限。
             </p>
-          </div>
-
-          <div class="hw-panel">
-            <h3 class="hw-step-title"><span class="hw-step-num">2</span>即時拍照或選取作業檔案</h3>
-            <div class="hw-camera-box">
-              <video id="hw-video" playsinline autoplay muted hidden></video>
-              <img id="hw-preview-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="作業拍照預覽" hidden>
-              <div id="hw-cam-placeholder" class="hw-camera-placeholder">
-                點選下方「開啟即時相機」直接拍下紙本學習單／作品，<br>
-                或選擇「從裝置拍照／選檔」上傳手機照片與 PDF（上限 10 MB）。
-              </div>
+            <p style="margin-top:8px;">
+              <strong>2. 已為您自動建置於雲端硬碟的免寫程式收件腳本（選用）：</strong><br>
+              系統已自動在您的雲端硬碟建立好 <a href="https://script.google.com/d/1x8I4WIHBZYQ3_36lFw5iPpUP_ao-xgkvJxdHi0OOZidXqrComsefqY5g/edit" target="_blank" rel="noopener noreferrer"><strong>永貞國小閱讀作業上傳後台_HomeworkUpload</strong> &#8599;</a> 並共用編輯權限予 <code>bing@ms2.yes.mlc.edu.tw</code>。若欲啟用「免跳轉全自動背景直寫」，只需點開該連結按「<strong>部署 ➔ 新增部署作業（網頁應用程式／任何人）</strong>」，打開產生的網址點選「🚀 一鍵綁定」或貼入下方即可：
+            </p>
+            <div class="hw-gas-row">
+              <input id="hw-gas-url-input" type="url" placeholder="選填：貼入 https://script.google.com/macros/s/.../exec 啟用背景靜默直寫">
+              <button type="button" id="hw-gas-save" class="btn btn-primary btn-sm">綁定背景直寫端點</button>
+              <button type="button" id="hw-gas-clear" class="btn btn-outline btn-sm">回復雲端資料夾直連模式</button>
+              <a href="https://script.google.com/d/1x8I4WIHBZYQ3_36lFw5iPpUP_ao-xgkvJxdHi0OOZidXqrComsefqY5g/edit" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">⚡ 開啟已預建之 Apps Script 專案 &#8599;</a>
             </div>
-
-            <div class="hw-cam-controls">
-              <button type="button" id="hw-start-cam" class="btn btn-primary btn-sm">📷 開啟即時相機</button>
-              <button type="button" id="hw-flip-cam" class="btn btn-outline btn-sm" hidden>🔄 切換前／後鏡頭</button>
-              <button type="button" id="hw-snap-btn" class="btn btn-gold btn-sm" hidden>📸 拍攝作業</button>
-              <button type="button" id="hw-retake-btn" class="btn btn-outline btn-sm" hidden>↩️ 重新拍攝</button>
-              <label class="hw-file-label" for="hw-file-input">
-                <span>🖼️ 從裝置拍照／選檔</span>
-                <input id="hw-file-input" type="file" accept="image/*,.pdf" capture="environment" class="sr-only">
-              </label>
-            </div>
-            <div id="hw-file-info" class="hw-file-info">尚未選擇或拍攝作業影像。</div>
-
-            <div class="hw-submit-bar">
-              <button type="submit" id="hw-submit-btn" class="btn btn-gold">☁️ 確認上傳提交作業</button>
-              <a id="hw-download-btn" class="btn btn-outline btn-sm" href="#" download="homework.jpg" hidden>⬇️ 下載已命名作業圖檔</a>
-            </div>
-            <div id="hw-feedback" class="hw-feedback-box" aria-live="polite"></div>
+            <p id="hw-teacher-msg" style="margin:6px 0 0; color:#1e3a8a; font-weight:600;"></p>
           </div>
-        </div>
-      </form>
-
-      <details class="hw-teacher-details" id="hw-teacher-details">
-        <summary>⚙️ 教師管理員：Google Apps Script 自動寫入端點設定（3 分鐘免金鑰直連 Google Drive）</summary>
-        <div class="hw-teacher-body">
-          <p style="margin-top:0;">
-            為避免在公開的 GitHub Pages 原始碼暴露個人 Google 授權憑證，網站採用 <strong>Google Apps Script 網頁應用程式（Execute as: 我／Access: 任何人）</strong> 接收作業照片並寫入指定資料夾 <code>1G7qZu9Jxu4uqRDB_ZFmkN7SDNwL8ebak</code>：
-          </p>
-          <ol style="margin:6px 0 10px 18px; padding:0;">
-            <li>開啟 <a href="https://script.google.com/" target="_blank" rel="noopener noreferrer">Google Apps Script &#8599;</a> 建立專案，貼入預設程式碼（<a href="apps-script/HomeworkUpload.gs" target="_blank" rel="noopener">檢視 HomeworkUpload.gs</a> ／ <a href="apps-script/DEPLOY_GUIDE.md" target="_blank" rel="noopener">完整圖文步驟</a>）。</li>
-            <li>部署為「網頁應用程式」（執行身分選 <strong>我</strong>、誰可以存取選 <strong>任何人</strong>），取得 <code>https://script.google.com/macros/s/.../exec</code> 網址。</li>
-            <li>貼入下方進行單機測試；如需全校學生免設定直接上傳，將該網址填入專案 <code>js/upload-config.js</code> 的 <code>appsScriptUrl</code> 欄位並推送即可。</li>
-          </ol>
-          <div class="hw-gas-row">
-            <input id="hw-gas-url-input" type="url" placeholder="貼入 https://script.google.com/macros/s/.../exec">
-            <button type="button" id="hw-gas-save" class="btn btn-primary btn-sm">暫存並啟用端點</button>
-            <button type="button" id="hw-gas-clear" class="btn btn-outline btn-sm">清除</button>
-            <button type="button" id="hw-copy-gs" class="btn btn-gold btn-sm">📋 複製 Apps Script 程式碼</button>
-          </div>
-          <p id="hw-teacher-msg" style="margin:6px 0 0; color:#1e3a8a; font-weight:600;"></p>
-        </div>
-      </details>
+        </details>
+      </div>
     </div>
   </section>
 
-  <script src="js/archive-data.js?v=20261118f"></script>
-  <script src="js/catalog-index.js?v=20261118f"></script>
-  <script src="js/upload-config.js?v=20261118f"></script>
-  <script src="js/app.js?v=20261118f"></script>
-  <script src="js/homework-upload.js?v=20261118f"></script>
+  <script src="js/archive-data.js?v=20261118g"></script>
+  <script src="js/catalog-index.js?v=20261118g"></script>
+  <script src="js/upload-config.js?v=20261118g"></script>
+  <script src="js/app.js?v=20261118g"></script>
+  <script src="js/homework-upload.js?v=20261118g"></script>
 </body>
 </html>

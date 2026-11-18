@@ -1,31 +1,56 @@
 /**
  * 永貞國小數位閱讀成果網 — 學生作業拍照自動上傳 Google Drive 接收端 (Google Apps Script)
  * 目標雲端資料夾：「永貞閱讀網成果」 (ID: 1G7qZu9Jxu4uqRDB_ZFmkN7SDNwL8ebak)
- *
- * 部署步驟：
- * 1. 使用擁有「永貞閱讀網成果」資料夾編輯權限的 Google 帳號登入 https://script.google.com/
- * 2. 新增專案 -> 將本檔案全部貼入 程式碼.gs
- * 3. 右上角「部署」->「新增部署作業」-> 類型選「網頁應用程式」
- *    - 執行身分：我（您的帳號）
- *    - 誰可以存取：任何人
- * 4. 複製產生的網頁應用程式網址 (https://script.google.com/macros/s/.../exec)
- * 5. 貼入網站 js/upload-config.js 的 appsScriptUrl 欄位（或於網站「教師雲端串接設定」貼上啟用）
+ * 雲端資料夾網址：https://drive.google.com/drive/folders/1G7qZu9Jxu4uqRDB_ZFmkN7SDNwL8ebak?usp=sharing
+ * 線上腳本專案網址：https://script.google.com/d/1ib953S4wbSMz6ey5hC3aZOyudQT-KoPgOKPGXsNGxgNOMZKUT-2YNDG5/edit
  */
 
 const TARGET_FOLDER_ID = "1G7qZu9Jxu4uqRDB_ZFmkN7SDNwL8ebak";
+const PORTAL_URL = "https://binghong-xu.github.io/yes-reading/";
 const LOG_SHEET_NAME = "學生閱讀作業自動收件紀錄表";
 const MAX_DECODED_BYTES = 15 * 1024 * 1024; // 15 MB
 
 function doGet(e) {
   try {
     var rootFolder = DriveApp.getFolderById(TARGET_FOLDER_ID);
-    return jsonResponse_({
-      ok: true,
-      service: "YongzhenReadingHomeworkUpload",
-      folderName: rootFolder.getName(),
-      folderId: TARGET_FOLDER_ID,
-      timestamp: new Date().toISOString()
-    });
+    var execUrl = "";
+    try {
+      execUrl = ScriptApp.getService().getUrl() || "";
+    } catch (ignore) {}
+
+    if (e && e.parameter && e.parameter.format === "json") {
+      return jsonResponse_({
+        ok: true,
+        service: "YongzhenReadingHomeworkUpload",
+        folderName: rootFolder.getName(),
+        folderId: TARGET_FOLDER_ID,
+        execUrl: execUrl,
+        timestamp: new Date().toISOString()
+      });
+    }
+
+    var bindLink = execUrl
+      ? PORTAL_URL + "?gas=" + encodeURIComponent(execUrl) + "#homework-zone"
+      : PORTAL_URL + "#homework-zone";
+
+    var html = [
+      "<!DOCTYPE html><html lang='zh-Hant'><head><meta charset='utf-8'>",
+      "<meta name='viewport' content='width=device-width,initial-scale=1'>",
+      "<title>永貞閱讀網成果 — 雲端收件後台已就緒</title>",
+      "<style>body{font-family:sans-serif;background:#f8fafc;color:#0f172a;padding:32px;line-height:1.6}",
+      ".card{max-width:640px;margin:0 auto;background:#fff;border:2px solid #1e3a8a;border-radius:16px;padding:28px;box-shadow:0 12px 30px rgba(15,23,42,.08)}",
+      "h1{color:#1e3a8a;font-size:1.35rem;margin-top:0}",
+      ".code{background:#f1f5f9;padding:10px 12px;border-radius:8px;font-family:monospace;word-break:break-all;font-size:.9rem}",
+      ".btn{display:inline-block;margin-top:16px;background:#1e3a8a;color:#fff;text-decoration:none;padding:12px 20px;border-radius:999px;font-weight:700}",
+      "</style></head><body><div class='card'>",
+      "<h1>✅ 永貞國小數位閱讀成果網｜雲端作業收件端點運作中</h1>",
+      "<p>已成功連結目標雲端資料夾：<strong>" + rootFolder.getName() + "</strong>（<code>" + TARGET_FOLDER_ID + "</code>）</p>",
+      execUrl ? "<p>您的專屬收件端點網址：</p><div class='code'>" + execUrl + "</div>" : "",
+      "<a class='btn' href='" + bindLink + "'>🚀 一鍵綁定並返回【永貞國小數位閱讀成果網】</a>",
+      "</div></body></html>"
+    ].join("");
+
+    return HtmlService.createHtmlOutput(html).setTitle("永貞閱讀網成果 — 雲端收件後台已就緒");
   } catch (err) {
     return jsonResponse_({ ok: false, error: String(err) });
   }
@@ -62,27 +87,39 @@ function doPost(e) {
 
     var safeFileName = sanitizeFileName_(rawName);
     var rootFolder = DriveApp.getFolderById(TARGET_FOLDER_ID);
-    var topicFolder = getOrCreateSubfolder_(rootFolder, topic);
-    var blob = Utilities.newBlob(bytes, mimeType, safeFileName);
-    var createdFile = topicFolder.createFile(blob);
+    var targetFolder = rootFolder;
+    try {
+      targetFolder = getOrCreateSubfolder_(rootFolder, topic);
+    } catch (subErr) {
+      targetFolder = rootFolder;
+    }
 
-    appendSubmissionLog_(rootFolder, {
-      submittedAt: new Date(),
-      studentClass: studentClass,
-      seatNo: seatNo,
-      studentName: studentName,
-      topic: topic,
-      note: note,
-      fileName: safeFileName,
-      fileId: createdFile.getId(),
-      fileUrl: createdFile.getUrl()
-    });
+    var blob = Utilities.newBlob(bytes, mimeType, safeFileName);
+    blob.setDescription("永貞國小閱讀作業｜班級：" + studentClass + "｜座號：" + seatNo + "｜姓名：" + studentName + "｜主題：" + topic + (note ? "｜備註：" + note : ""));
+    var createdFile = targetFolder.createFile(blob);
+
+    try {
+      appendSubmissionLog_(rootFolder, {
+        submittedAt: new Date(),
+        studentClass: studentClass,
+        seatNo: seatNo,
+        studentName: studentName,
+        topic: topic,
+        note: note,
+        fileName: safeFileName,
+        fileId: createdFile.getId(),
+        fileUrl: createdFile.getUrl()
+      });
+    } catch (logErr) {
+      // 若試算表 API 未啟用或權限受限，不影響學生作業檔案本身寫入雲端硬碟
+    }
 
     return jsonResponse_({
       ok: true,
       fileId: createdFile.getId(),
       fileName: safeFileName,
-      folderName: rootFolder.getName() + " / " + topicFolder.getName()
+      fileUrl: createdFile.getUrl(),
+      folderName: rootFolder.getName() + (targetFolder.getId() !== rootFolder.getId() ? " / " + targetFolder.getName() : "")
     });
   } catch (err) {
     return jsonResponse_({ ok: false, error: String(err) });

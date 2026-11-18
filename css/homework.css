@@ -1,5 +1,5 @@
 /* =========================================================
-   永貞國小數位閱讀成果網 — 學生拍照並上傳互動專區樣式
+   永貞國小數位閱讀成果網 — 學生拍照並上傳互動專區 & 雲端學習成果後台樣式
    ========================================================= */
 
 .hw-banner-card {
@@ -69,6 +69,50 @@
   background: rgba(15, 23, 42, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #f8fafc;
+}
+
+/* Modal Mode Tabs (學生拍照上傳 / 雲端學習成果後台) */
+.hw-mode-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+.hw-mode-tab {
+  appearance: none;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #334155;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 9px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.18s ease;
+}
+
+.hw-mode-tab:hover {
+  background: #eff6ff;
+  border-color: #93c5fd;
+  color: #1e3a8a;
+}
+
+.hw-mode-tab.is-active {
+  background: #1e3a8a;
+  border-color: #1e3a8a;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.22);
+}
+
+.hw-tab-pane[hidden] {
+  display: none !important;
 }
 
 /* Modal Layout */
@@ -290,8 +334,89 @@
   color: #991b1b;
 }
 
+/* Backend Dashboard (教師雲端學習成果後台) */
+.hw-backend-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.hw-backend-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.hw-drive-embed-wrap {
+  width: 100%;
+  height: 410px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  margin-bottom: 14px;
+}
+
+.hw-drive-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.hw-local-log-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+
+.hw-local-log-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.hw-local-log-table-wrap {
+  overflow-x: auto;
+}
+
+.hw-local-log-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hw-local-log-table th,
+.hw-local-log-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+.hw-local-log-table th {
+  background: #f1f5f9;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
 .hw-teacher-details {
-  margin-top: 16px;
+  margin-top: 14px;
   border: 1px solid #cbd5e1;
   border-radius: 10px;
   background: #ffffff;
@@ -332,6 +457,9 @@
   .hw-grid {
     grid-template-columns: 1fr;
   }
+  .hw-drive-embed-wrap {
+    height: 340px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -346,6 +474,10 @@
   }
   .hw-banner-actions .btn {
     width: 100%;
+    justify-content: center;
+  }
+  .hw-mode-tab {
+    flex: 1 1 100%;
     justify-content: center;
   }
 }
