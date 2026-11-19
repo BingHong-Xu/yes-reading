@@ -337,8 +337,8 @@
 /* Photo Gallery Grid */
 .cat-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(172px, 1fr));
+  gap: 12px;
 }
 
 .cat-photo-card {
@@ -352,7 +352,7 @@
   text-align: left;
   cursor: pointer;
   font-family: inherit;
-  transition: transform 0.16s ease, box-shadow 0.16s ease;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
 }
 
 .cat-photo-card:hover {
@@ -370,15 +370,17 @@
 }
 
 .cat-photo-cap {
-  padding: 6px 8px;
-  font-size: 0.74rem;
+  padding: 8px 10px;
+  font-size: 0.78rem;
   color: #334155;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 .cat-photo-cap strong {
   display: block;
   color: #0f172a;
+  font-size: 0.82rem;
+  margin-bottom: 2px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -432,7 +434,7 @@
 .yz-gallery-dialog {
   position: relative;
   width: min(920px, 100%);
-  max-height: 92vh;
+  max-height: 92dvh;
   background: #0f172a;
   color: #f8fafc;
   border-radius: 14px;
@@ -494,13 +496,13 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   background: rgba(15, 23, 42, 0.72);
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -533,24 +535,46 @@
 }
 
 @media (max-width: 767px) {
+  .cat-view-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 6px;
+  }
+  .cat-view-tab {
+    width: 100%;
+    min-height: 42px;
+    text-align: center;
+    justify-content: center;
+    display: inline-flex;
+    align-items: center;
+  }
   .cat-controls-right {
     justify-content: stretch;
+    width: 100%;
   }
   .cat-sub-select,
   .cat-filter-input {
     max-width: none;
     width: 100%;
+    min-height: 42px;
   }
   .cat-doc-row {
     flex-direction: column;
     align-items: stretch;
   }
   .cat-doc-actions {
-    justify-content: flex-end;
+    justify-content: stretch;
+    width: 100%;
+  }
+  .cat-doc-actions .doc-act-btn {
+    flex: 1 1 0;
+    justify-content: center;
+    min-height: 40px;
   }
   .cat-gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
-    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
   .sub-thumb-strip {
     grid-template-columns: repeat(2, 1fr);

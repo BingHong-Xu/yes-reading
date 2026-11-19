@@ -2009,8 +2009,12 @@ button, input, select, textarea {
 }
 
 .modal-close {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   border: 1px solid var(--border-strong);
   background: #FFFFFF;
@@ -2018,6 +2022,7 @@ button, input, select, textarea {
   line-height: 1;
   cursor: pointer;
   color: var(--ink-primary);
+  transition: background-color 0.18s ease, color 0.18s ease, transform 0.15s ease;
 }
 
 .modal-close:hover {
@@ -2306,6 +2311,17 @@ button, input, select, textarea {
     display: inline-flex;
   }
 
+  .utility-inner {
+    flex-wrap: wrap;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    gap: 8px 12px;
+  }
+
+  .utility-actions {
+    flex-wrap: wrap;
+  }
+
   .brand-zh {
     font-size: 1.12rem;
   }
@@ -2321,6 +2337,17 @@ button, input, select, textarea {
 
   .mobile-acc-links li a {
     padding: 9px 4px;
+  }
+
+  .mobile-quick-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+    gap: 8px;
+  }
+
+  .mobile-quick-actions .btn {
+    width: 100%;
+    min-height: 44px;
   }
 
   .utility-action-btn,
@@ -2360,27 +2387,67 @@ button, input, select, textarea {
 @media (max-width: 960px) {
   .hero-content {
     grid-template-columns: 1fr;
-    padding-top: 36px;
-    padding-bottom: 72px;
-    padding-left: 64px;
-    padding-right: 64px;
+    padding-top: 34px;
+    padding-bottom: 76px;
+    padding-left: 44px;
+    padding-right: 44px;
+    gap: 22px;
+  }
+
+  .hero-stat-panel {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    padding: 16px 18px;
+  }
+
+  .hero-stat-item {
+    border-bottom: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.16);
+    padding-bottom: 0;
+    padding-right: 12px;
+  }
+
+  .hero-stat-item:last-child {
+    border-right: none;
+    padding-right: 0;
   }
 
   .asymmetric-grid,
   .stage-detail-layout,
   .two-col-modal,
-  .fp-images-grid,
-  .subfolders-grid,
-  .opac-results {
+  .fp-images-grid {
     grid-template-columns: 1fr;
   }
 
+  .subfolders-grid,
+  .opac-results,
   .audience-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  #modal-archive .activity-filter-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+    scrollbar-width: thin;
+  }
+
+  #modal-archive .activity-filter-bar .pill-filter {
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 }
 
 @media (max-width: 767px) {
+  /* 防止 iOS Safari 點擊表單輸入框時畫面自動放大 */
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
   .container {
     padding: 0 16px;
   }
@@ -2395,7 +2462,7 @@ button, input, select, textarea {
 
   .utility-inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     padding-top: 8px;
     padding-bottom: 8px;
   }
@@ -2430,24 +2497,39 @@ button, input, select, textarea {
   }
 
   .hero-content {
-    padding-top: 28px;
-    padding-bottom: 82px;
+    padding-top: 26px;
+    padding-bottom: 80px;
     padding-left: 16px;
     padding-right: 16px;
-    gap: 20px;
+    gap: 18px;
   }
 
   .hero-desc {
     font-size: 0.94rem;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
+  }
+
+  .hero-stat-panel {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 12px 14px;
+  }
+
+  .stat-num {
+    font-size: 1.28rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    line-height: 1.35;
   }
 
   .hero-arrow {
     top: auto;
     bottom: 14px;
     transform: none;
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
   }
 
   .hero-arrow-prev { left: 12px; }
@@ -2494,6 +2576,8 @@ button, input, select, textarea {
   .newbooks-list,
   .stage-books-grid,
   .opac-controls,
+  .subfolders-grid,
+  .opac-results,
   .form-row-2,
   .form-row-3 {
     grid-template-columns: 1fr;
@@ -2563,15 +2647,61 @@ button, input, select, textarea {
   }
 
   .modal-header {
-    padding: 14px 16px;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.06rem;
+    line-height: 1.35;
   }
 
   .modal-body {
     padding: 14px 16px;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
 @media (max-width: 540px) {
+  .utility-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 6px;
+  }
+
+  .utility-action-btn {
+    justify-content: center;
+    width: 100%;
+    min-height: 40px;
+  }
+
+  .hero-cta-row .btn {
+    flex: 1 1 100%;
+    min-height: 44px;
+  }
+
+  .hero-stat-panel {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .hero-stat-item {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    padding-right: 0;
+    padding-bottom: 8px;
+  }
+
+  .hero-stat-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
   .tab-bar {
     padding: 6px 8px 0;
     gap: 4px;

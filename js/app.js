@@ -184,6 +184,19 @@
     });
   }
 
+  function formatPhotoDisplayTitle(it, idx) {
+    const raw = String((it && it.n) || "").replace(/\.[a-z0-9]+$/i, "").trim();
+    const sub = String((it && it.s) || "學習情境").replace(/\(.*?\)|（.*?）/g, "").trim();
+    if (!raw || /^(?:IMG|PXL|DSC|S_|LINE_ALBUM|[0-9_-]+$)/i.test(raw)) {
+      const albumMatch = /^LINE_ALBUM_(.+?)_\d{6}_\d+$/i.exec(raw);
+      if (albumMatch && albumMatch[1]) {
+        return `${albumMatch[1].replace(/^\d{6,8}/, "").trim() || sub}（情境 ${idx + 1}）`;
+      }
+      return `${sub}・學習情境 #${idx + 1}`;
+    }
+    return raw;
+  }
+
   function closeMobileDrawer() {
     if (!hamburgerBtn || !mobileDrawer) return;
     hamburgerBtn.setAttribute("aria-expanded", "false");
@@ -195,6 +208,11 @@
       const expanded = hamburgerBtn.getAttribute("aria-expanded") === "true";
       hamburgerBtn.setAttribute("aria-expanded", String(!expanded));
       mobileDrawer.hidden = expanded;
+    });
+    mobileDrawer.addEventListener("click", (e) => {
+      if (e.target.closest("a[href]")) {
+        closeMobileDrawer();
+      }
     });
   }
 
@@ -679,9 +697,9 @@
                 .map(
                   (it, i) => `
                 <button type="button" class="cat-photo-card" data-gidx="${i}" title="點擊放大：${escapeHtml(it.n)}">
-                  <img src="${escapeHtml(it.u)}" alt="${escapeHtml(it.n)}" loading="lazy">
+                  <img src="${escapeHtml(it.u)}" alt="${escapeHtml(formatPhotoDisplayTitle(it, i))}" loading="lazy">
                   <div class="cat-photo-cap">
-                    <strong>${escapeHtml(it.n)}</strong>
+                    <strong>${escapeHtml(formatPhotoDisplayTitle(it, i))}</strong>
                     <span>${escapeHtml(it.d || "活動紀錄")} ・ ${escapeHtml(it.s)}</span>
                   </div>
                 </button>`
@@ -1316,9 +1334,9 @@
                   .slice(0, 10)
                   .map(
                     (it, idx) => `
-                  <button type="button" class="cat-photo-card" data-sgidx="${idx}">
-                    <img src="${escapeHtml(it.u)}" alt="${escapeHtml(it.n)}" loading="lazy">
-                    <div class="cat-photo-cap"><strong>${escapeHtml(it.n)}</strong><span>${escapeHtml(it.s)}</span></div>
+                  <button type="button" class="cat-photo-card" data-sgidx="${idx}" title="點擊放大：${escapeHtml(it.n)}">
+                    <img src="${escapeHtml(it.u)}" alt="${escapeHtml(formatPhotoDisplayTitle(it, idx))}" loading="lazy">
+                    <div class="cat-photo-cap"><strong>${escapeHtml(formatPhotoDisplayTitle(it, idx))}</strong><span>${escapeHtml(it.s)}</span></div>
                   </button>`
                   )
                   .join("")}

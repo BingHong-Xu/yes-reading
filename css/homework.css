@@ -391,10 +391,12 @@
 
 .hw-local-log-table-wrap {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .hw-local-log-table {
   width: 100%;
+  min-width: 560px;
   border-collapse: collapse;
   font-size: 0.82rem;
   background: #ffffff;
@@ -462,7 +464,7 @@
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 640px) {
   .hw-banner-card {
     padding: 18px 16px;
   }
@@ -474,10 +476,35 @@
   }
   .hw-banner-actions .btn {
     width: 100%;
+    min-height: 44px;
     justify-content: center;
   }
   .hw-mode-tab {
     flex: 1 1 100%;
+    min-height: 44px;
+    justify-content: center;
+  }
+  .hw-cam-controls .btn,
+  .hw-file-label {
+    min-height: 42px;
+  }
+  .hw-submit-bar .btn {
+    width: 100%;
+    min-height: 46px;
+    justify-content: center;
+  }
+  .hw-backend-actions {
+    width: 100%;
+  }
+  .hw-backend-actions .btn {
+    flex: 1 1 calc(50% - 6px);
+    min-height: 40px;
+    justify-content: center;
+    text-align: center;
+  }
+  .hw-gas-row .btn {
+    flex: 1 1 calc(50% - 6px);
+    min-height: 40px;
     justify-content: center;
   }
 }
