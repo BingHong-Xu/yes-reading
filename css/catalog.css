@@ -92,7 +92,9 @@
   background: #eff6ff;
 }
 
-.cat-view-tab.is-active {
+.cat-view-tab.is-active,
+.cat-view-tab.is-active:hover,
+.cat-view-tab.is-active:focus {
   background: #1e3a8a;
   border-color: #1e3a8a;
   color: #ffffff;

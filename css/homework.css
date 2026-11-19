@@ -104,7 +104,9 @@
   color: #1e3a8a;
 }
 
-.hw-mode-tab.is-active {
+.hw-mode-tab.is-active,
+.hw-mode-tab.is-active:hover,
+.hw-mode-tab.is-active:focus {
   background: #1e3a8a;
   border-color: #1e3a8a;
   color: #ffffff;
