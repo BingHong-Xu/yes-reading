@@ -561,7 +561,7 @@
             ? `<button type="button" class="sub-jump-btn" data-jump-tab="docs" data-jump-sub="${escapeHtml(subKey)}">📄 全部可開檔案 (${sDocs.length})</button>`
             : "",
           sImgs.length
-            ? `<button type="button" class="sub-jump-btn is-gold" data-jump-tab="imgs" data-jump-sub="${escapeHtml(subKey)}">🖼️ 相片藝廊 (${sImgs.length})</button>`
+            ? `<button type="button" class="sub-jump-btn is-gold" data-jump-tab="imgs" data-jump-sub="${escapeHtml(subKey)}">🖼️ 精選學習情境圖 (${sImgs.length})</button>`
             : "",
           sVids.length || sArchOthers.length
             ? `<button type="button" class="sub-jump-btn" data-jump-tab="arch" data-jump-sub="${escapeHtml(subKey)}">🎬 影音／原檔索引 (${sVids.length + sArchOthers.length})</button>`
@@ -575,7 +575,7 @@
           <h4>📁 ${escapeHtml(s.name)}</h4>
           <div class="chip-row">
             ${sDocs.length ? `<span class="chip chip-navy">線上可開檔 ${sDocs.length} 份</span>` : ""}
-            ${sImgs.length ? `<span class="chip chip-gold">藝廊相片 ${sImgs.length} 張</span>` : ""}
+            ${sImgs.length ? `<span class="chip chip-gold">精選情境圖 ${sImgs.length} 張</span>` : ""}
             ${sVids.length ? `<span class="chip chip-soft">影音 ${sVids.length} 支</span>` : ""}
             <span class="chip chip-soft">全校盤點 ${s.files} 檔</span>
           </div>
@@ -600,16 +600,16 @@
         <div class="cat-stats-banner">
           <div class="cat-stats-pills">
             <span class="cat-stat-pill">📄 線上可開啟／下載 <strong>${catDocs.length}</strong> 份</span>
-            <span class="cat-stat-pill">🖼️ 活動相片藝廊 <strong>${catImgs.length}</strong> 張</span>
+            <span class="cat-stat-pill">🖼️ 精選學生學習情境圖 <strong>${catImgs.length}</strong> 張（每區最多 10 張）</span>
             <span class="cat-stat-pill">🎬 影音暨大型原檔索引 <strong>${catArch.length}</strong> 筆</span>
           </div>
-          <p class="cat-privacy-note">已嚴格排除經費申請、核銷憑證、簽到名冊與師生個資；大型簡報與影片提供目錄查詢並典藏於校內備份磁碟。</p>
+          <p class="cat-privacy-note">每個區塊僅呈現最多 10 張精選學生學習最佳意象情境示意圖以節省雲端空間；已嚴格排除經費申請、核銷憑證、簽到名冊與師生個資。</p>
         </div>
         <div class="cat-toolbar">
           <div class="cat-view-tabs" role="tablist">
             <button type="button" class="cat-view-tab is-active" data-cview="subs">📁 子資料夾分類導覽</button>
             <button type="button" class="cat-view-tab" data-cview="docs">📄 公開教學檔案 (${catDocs.length})</button>
-            <button type="button" class="cat-view-tab" data-cview="imgs">🖼️ 活動相片藝廊 (${catImgs.length})</button>
+            <button type="button" class="cat-view-tab" data-cview="imgs">🖼️ 精選學習情境圖 (${catImgs.length})</button>
             <button type="button" class="cat-view-tab" data-cview="arch">🎬 影音暨原檔索引 (${catArch.length})</button>
           </div>
           <div class="cat-controls-right" data-filter-bar hidden>
@@ -670,9 +670,10 @@
           return;
         }
 
-        const shown = filtered.slice(0, pageSize);
+        const shown = activeTab === "imgs" ? filtered.slice(0, 10) : filtered.slice(0, pageSize);
         if (activeTab === "imgs") {
           listPanel.innerHTML = `
+            <p class="cat-privacy-note" style="margin-bottom:10px;">✨ 本區塊僅呈現最多 10 張精選之「學生學習最佳意象情境示意圖」（目前顯示 ${shown.length} 張），以大幅節省雲端空間；完整活動相片皆典藏於校內備份硬碟。</p>
             <div class="cat-gallery-grid">
               ${shown
                 .map(
@@ -687,14 +688,9 @@
                 )
                 .join("")}
             </div>
-            ${
-              filtered.length > pageSize
-                ? `<div class="cat-load-more-wrap"><button type="button" class="cat-load-more-btn" data-more>顯示更多相片（目前 ${shown.length} / ${filtered.length} 張）</button></div>`
-                : ""
-            }
           `;
           listPanel.querySelectorAll("[data-gidx]").forEach((btn) => {
-            btn.addEventListener("click", () => openGalleryLightbox(filtered, Number(btn.dataset.gidx)));
+            btn.addEventListener("click", () => openGalleryLightbox(shown, Number(btn.dataset.gidx)));
           });
         } else if (activeTab === "docs") {
           listPanel.innerHTML = `
@@ -1314,10 +1310,10 @@
       ${
         matchedCatImgs.length
           ? `<div class="search-cat-group">
-              <h3 style="color:var(--brand-navy);">五、相符活動相片藝廊（共 ${matchedCatImgs.length} 張，顯示前 12 張點擊放大）</h3>
+              <h3 style="color:var(--brand-navy);">五、相符學生學習精選情境示意圖（共 ${matchedCatImgs.length} 張，最多顯示 10 張點擊放大）</h3>
               <div class="cat-gallery-grid" id="yz-search-photo-grid">
                 ${matchedCatImgs
-                  .slice(0, 12)
+                  .slice(0, 10)
                   .map(
                     (it, idx) => `
                   <button type="button" class="cat-photo-card" data-sgidx="${idx}">
@@ -1361,7 +1357,7 @@
     if (spGrid && window.__yzOpenGalleryLightbox) {
       spGrid.querySelectorAll("[data-sgidx]").forEach((btn) => {
         btn.addEventListener("click", () => {
-          window.__yzOpenGalleryLightbox(matchedCatImgs.slice(0, 12), Number(btn.dataset.sgidx || 0));
+          window.__yzOpenGalleryLightbox(matchedCatImgs.slice(0, 10), Number(btn.dataset.sgidx || 0));
         });
       });
     }
@@ -1582,10 +1578,10 @@
       banner.innerHTML = `
         <div class="cat-stats-pills">
           <span class="cat-stat-pill">📄 已上線公開教學檔案 <strong>${catStats.deployedDocs}</strong> 份（${catStats.deployedDocsMB} MB）</span>
-          <span class="cat-stat-pill">🖼️ 線上活動相片藝廊 <strong>${catStats.deployedPhotos.toLocaleString()}</strong> 張（${catStats.deployedPhotosMB} MB）</span>
+          <span class="cat-stat-pill">🖼️ 各區塊精選學生學習情境圖 <strong>${catStats.deployedPhotos.toLocaleString()}</strong> 張（每區塊最多 10 張・僅 ${catStats.deployedPhotosMB} MB）</span>
           <span class="cat-stat-pill">🎬 影音暨校內大檔索引 <strong>${catStats.archivedVideos + catStats.archivedDocsLarge + catStats.archivedPhotosMore}</strong> 筆（全庫 ${catStats.totalPublicIndexed.toLocaleString()} 筆公開檢索）</span>
         </div>
-        <p class="cat-privacy-note">點選下方任一分類卡片即可瀏覽與下載公開 PDF／書單／教案，並開啟高畫質活動相片藝廊；經費計畫依規範僅揭露名稱與額度。</p>
+        <p class="cat-privacy-note">點選下方任一分類卡片即可瀏覽與下載公開 PDF／書單／教案，每區塊最多呈現 10 張精選學生學習最佳意象情境示意圖以節省雲端空間；經費計畫依規範僅揭露名稱與額度。</p>
       `;
       const grid = archExplorer.querySelector(".archive-grid");
       if (grid) {
