@@ -16,9 +16,9 @@ window.YONGZHEN_ARCHIVE = {
     "semesterAccumulatedBorrow": 7428,
     "mssrYears": 10,
     "deployedDocs": 259,
-    "deployedPhotos": 75,
-    "totalPublicIndexed": 6006,
-    "totalDeployedMB": 401.2
+    "deployedPhotos": 71,
+    "totalPublicIndexed": 4956,
+    "totalDeployedMB": 403.4
   },
   "fundedPlans": [
     {
@@ -64,7 +64,7 @@ window.YONGZHEN_ARCHIVE = {
       "code": "01",
       "title": "館務推動、編目與補助額度總覽",
       "summary": "彙整全校閱讀課表、中圖法編目與 13,310 冊館藏建置、e 啟讀出未來電子書載具、圖書館小大使值勤日誌；各項經費補助案依規範僅揭示計畫名稱與額度。",
-      "thumb": "assets/images/space-tour.jpg",
+      "thumb": "assets/images/book-donation.jpg",
       "totalFiles": 277,
       "mediaCount": 24,
       "docCount": 253,
@@ -357,77 +357,36 @@ window.YONGZHEN_ARCHIVE = {
           "docs": 18,
           "mb": 66.9,
           "sampleDocs": [],
-          "sampleImgs": [],
-          "catalogSub": "新館建築施工圖說（32 張設計圖・預算文件不公開）",
-          "webDocCount": 0,
-          "webImgCount": 0,
-          "vidCount": 0,
-          "archDocCount": 0,
-          "archImgCount": 0
-        },
-        {
-          "name": "空間規劃攝影與手繪草圖",
-          "planQuota": null,
-          "files": 35,
-          "images": 30,
-          "docs": 5,
-          "mb": 12.9,
-          "sampleDocs": [],
           "sampleImgs": [
             {
-              "name": "LINE_ALBUM_0821參考照片_260825_10.jpg",
-              "date": "2026-08-25",
-              "url": "assets/gallery/c02/g0027.jpg"
+              "name": "永貞國小蘆映書院_圖號05平面配置圖.jpg",
+              "date": "2026-10-19",
+              "url": "assets/gallery/c02/g0019.jpg"
             },
             {
-              "name": "LINE_ALBUM_0821參考照片_260825_11.jpg",
-              "date": "2026-08-25",
-              "url": "assets/gallery/c02/g0028.jpg"
+              "name": "永貞國小蘆映書院_圖號09家具與設備配置圖.jpg",
+              "date": "2026-10-19",
+              "url": "assets/gallery/c02/g0020.jpg"
             },
             {
-              "name": "LINE_ALBUM_0821參考照片_260825_12.jpg",
-              "date": "2026-08-25",
-              "url": "assets/gallery/c02/g0029.jpg"
+              "name": "永貞國小蘆映書院_圖號08護眼照明暨照度分析圖.jpg",
+              "date": "2026-10-19",
+              "url": "assets/gallery/c02/g0021.jpg"
             },
             {
-              "name": "LINE_ALBUM_0821參考照片_260825_14.jpg",
-              "date": "2026-08-25",
-              "url": "assets/gallery/c02/g0031.jpg"
+              "name": "永貞國小蘆映書院_圖號31入口意象與造型大小窩居3D示意.jpg",
+              "date": "2026-10-19",
+              "url": "assets/gallery/c02/g0022.jpg"
             },
             {
-              "name": "LINE_ALBUM_0821參考照片_260825_16.jpg",
-              "date": "2026-08-25",
-              "url": "assets/gallery/c02/g0033.jpg"
-            },
-            {
-              "name": "LINE_ALBUM_0821參考照片_260825_17.jpg",
-              "date": "2026-08-25",
-              "url": "assets/gallery/c02/g0034.jpg"
-            },
-            {
-              "name": "LINE_ALBUM_0821參考照片_260825_19.jpg",
-              "date": "2026-08-25",
-              "url": "assets/gallery/c02/g0036.jpg"
-            },
-            {
-              "name": "LINE_ALBUM_0821參考照片_260825_22.jpg",
-              "date": "2026-08-25",
-              "url": "assets/gallery/c02/g0040.jpg"
-            },
-            {
-              "name": "LINE_ALBUM_0821參考照片_260825_7.jpg",
-              "date": "2026-08-25",
-              "url": "assets/gallery/c02/g0053.jpg"
-            },
-            {
-              "name": "LINE_ALBUM_0821參考照片_260825_9.jpg",
-              "date": "2026-08-25",
-              "url": "assets/gallery/c02/g0055.jpg"
+              "name": "永貞國小蘆映書院_圖號32室內3D全景示意圖.jpg",
+              "date": "2026-10-19",
+              "url": "assets/gallery/c02/g0023.jpg"
             }
           ],
-          "catalogSub": "空間規劃攝影與手繪草圖",
+          "catalogSub": "新館建築施工圖說（32 張設計圖・預算文件不公開）",
           "webDocCount": 0,
-          "webImgCount": 10,
+          "webImgCount": 5,
           "vidCount": 0,
           "archDocCount": 0,
           "archImgCount": 0
@@ -489,10 +448,31 @@ window.YONGZHEN_ARCHIVE = {
               "m": 3.22
             }
           ],
-          "sampleImgs": [],
+          "sampleImgs": [
+            {
+              "name": "永貞國小40週年閱讀小書_A款永貞時光機.jpg",
+              "date": "2026-11-02",
+              "url": "assets/gallery/c02/g0024.jpg"
+            },
+            {
+              "name": "永貞國小40週年閱讀小書_B款永貞小達人.jpg",
+              "date": "2026-11-02",
+              "url": "assets/gallery/c02/g0025.jpg"
+            },
+            {
+              "name": "永貞國小40週年閱讀小書_C款永貞未來誌.jpg",
+              "date": "2026-11-02",
+              "url": "assets/gallery/c02/g0026.jpg"
+            },
+            {
+              "name": "永貞國小蘆映書院_空間分區手繪規劃草圖.jpg",
+              "date": "2026-11-16",
+              "url": "assets/gallery/c02/g0027.jpg"
+            }
+          ],
           "catalogSub": "圖書館命名_蘆映書院與祕密基地",
           "webDocCount": 19,
-          "webImgCount": 0,
+          "webImgCount": 4,
           "vidCount": 2,
           "archDocCount": 0,
           "archImgCount": 0
@@ -1698,73 +1678,6 @@ window.YONGZHEN_ARCHIVE = {
       ],
       "subfolders": [
         {
-          "name": "2026第十六屆閱讀評量與教學研討會_現場暨籌備影像(00歸檔)",
-          "planQuota": null,
-          "files": 866,
-          "images": 866,
-          "docs": 0,
-          "mb": 463.4,
-          "sampleDocs": [],
-          "sampleImgs": [
-            {
-              "name": "LINE_ALBUM_2026120 前金國小打字練習測試_260121_11.jpg",
-              "date": "2026-01-20",
-              "url": "assets/gallery/c07/g2016.jpg"
-            },
-            {
-              "name": "LINE_ALBUM_2026120 前金國小打字練習測試_260121_16.jpg",
-              "date": "2026-01-20",
-              "url": "assets/gallery/c07/g2018.jpg"
-            },
-            {
-              "name": "LINE_ALBUM_2026120 前金國小打字練習測試_260121_21.jpg",
-              "date": "2026-01-20",
-              "url": "assets/gallery/c07/g2020.jpg"
-            },
-            {
-              "name": "LINE_ALBUM_2026120 前金國小打字練習測試_260121_26.jpg",
-              "date": "2026-01-20",
-              "url": "assets/gallery/c07/g2022.jpg"
-            },
-            {
-              "name": "LINE_ALBUM_2026120 前金國小打字練習測試_260121_30.jpg",
-              "date": "2026-01-20",
-              "url": "assets/gallery/c07/g2024.jpg"
-            },
-            {
-              "name": "LINE_ALBUM_2026120 前金國小打字練習測試_260121_35.jpg",
-              "date": "2026-01-20",
-              "url": "assets/gallery/c07/g2026.jpg"
-            },
-            {
-              "name": "LINE_ALBUM_2026120 前金國小打字練習測試_260121_4.jpg",
-              "date": "2026-01-20",
-              "url": "assets/gallery/c07/g2028.jpg"
-            },
-            {
-              "name": "LINE_ALBUM_2026120 前金國小打字練習測試_260121_44.jpg",
-              "date": "2026-01-20",
-              "url": "assets/gallery/c07/g2030.jpg"
-            },
-            {
-              "name": "LINE_ALBUM_2026120 前金國小打字練習測試_260121_5.jpg",
-              "date": "2026-01-20",
-              "url": "assets/gallery/c07/g2032.jpg"
-            },
-            {
-              "name": "FB6.jpg",
-              "date": "2026-07-23",
-              "url": "assets/gallery/c07/g2080.jpg"
-            }
-          ],
-          "catalogSub": "2026第十六屆閱讀評量與教學研討會_現場暨籌備影像(00歸檔)",
-          "webDocCount": 0,
-          "webImgCount": 10,
-          "vidCount": 1,
-          "archDocCount": 0,
-          "archImgCount": 516
-        },
-        {
           "name": "2025自主學習節_識字金銀島論文發表",
           "planQuota": null,
           "files": 57,
@@ -1803,10 +1716,16 @@ window.YONGZHEN_ARCHIVE = {
               "m": 0.03
             }
           ],
-          "sampleImgs": [],
+          "sampleImgs": [
+            {
+              "name": "永貞國小徐秉鴻教師_2025自主學習節識字金銀島論文發表證明.jpg",
+              "date": "2025-12-03",
+              "url": "assets/gallery/c07/g2313.jpg"
+            }
+          ],
           "catalogSub": "2025自主學習節_識字金銀島論文發表",
           "webDocCount": 5,
-          "webImgCount": 0,
+          "webImgCount": 1,
           "vidCount": 0,
           "archDocCount": 0,
           "archImgCount": 0
@@ -1868,10 +1787,21 @@ window.YONGZHEN_ARCHIVE = {
               "m": 2.15
             }
           ],
-          "sampleImgs": [],
+          "sampleImgs": [
+            {
+              "name": "永貞國小徐秉鴻教師_2026第十六屆閱讀評量與教學研討會發表證明.jpg",
+              "date": "2026-10-03",
+              "url": "assets/gallery/c07/g2314.jpg"
+            },
+            {
+              "name": "永貞國小徐秉鴻教師_第十五屆閱讀評量與教學研討會發表證明.jpg",
+              "date": "2025-10-18",
+              "url": "assets/gallery/c07/g2315.jpg"
+            }
+          ],
           "catalogSub": "2026第十六屆閱讀評量與教學研討會_論文與海報",
           "webDocCount": 12,
-          "webImgCount": 0,
+          "webImgCount": 2,
           "vidCount": 0,
           "archDocCount": 0,
           "archImgCount": 0
@@ -1950,10 +1880,31 @@ window.YONGZHEN_ARCHIVE = {
               "m": 0.28
             }
           ],
-          "sampleImgs": [],
+          "sampleImgs": [
+            {
+              "name": "永貞國小榮登113-1學習島嶼識字英雄榜全國前20名.jpg",
+              "date": "2025-01-15",
+              "url": "assets/gallery/c07/g2308.jpg"
+            },
+            {
+              "name": "永貞國小榮獲113-1學習島嶼持續學習獎榜單.jpg",
+              "date": "2025-01-15",
+              "url": "assets/gallery/c07/g2309.jpg"
+            },
+            {
+              "name": "永貞國小榮登114-1學習島嶼識字英雄榜全國前20名.jpg",
+              "date": "2026-01-15",
+              "url": "assets/gallery/c07/g2310.jpg"
+            },
+            {
+              "name": "永貞國小榮登114-2學習島嶼識字英雄榜全國前20名.jpg",
+              "date": "2026-06-05",
+              "url": "assets/gallery/c07/g2312.jpg"
+            }
+          ],
           "catalogSub": "學習島嶼全國英雄榜與獎勵",
           "webDocCount": 1,
-          "webImgCount": 0,
+          "webImgCount": 4,
           "vidCount": 0,
           "archDocCount": 0,
           "archImgCount": 0
@@ -1994,49 +1945,54 @@ window.YONGZHEN_ARCHIVE = {
           ],
           "sampleImgs": [
             {
-              "name": "LINE_ALBUM_20251029差異化閱讀理解策略研習_260421_14.jpg",
+              "name": "永貞國小差異化閱讀理解策略研習_教師雙人共學實作.jpg",
               "date": "2025-10-29",
               "url": "assets/gallery/c08/g2353.jpg"
             },
             {
-              "name": "LINE_ALBUM_20251029差異化閱讀理解策略研習_260421_16.jpg",
+              "name": "永貞國小差異化閱讀理解策略研習_數位平台操作研討.jpg",
               "date": "2025-10-29",
               "url": "assets/gallery/c08/g2355.jpg"
             },
             {
-              "name": "LINE_ALBUM_20251029差異化閱讀理解策略研習_260421_19.jpg",
+              "name": "永貞國小差異化閱讀理解策略研習_跨年段教師分組共備.jpg",
               "date": "2025-10-29",
               "url": "assets/gallery/c08/g2357.jpg"
             },
             {
-              "name": "LINE_ALBUM_20251029差異化閱讀理解策略研習_260421_20.jpg",
+              "name": "永貞國小差異化閱讀理解策略研習_線上閱讀診斷實作.jpg",
               "date": "2025-10-29",
               "url": "assets/gallery/c08/g2359.jpg"
             },
             {
-              "name": "LINE_ALBUM_20251029差異化閱讀理解策略研習_260421_3.jpg",
+              "name": "永貞國小差異化閱讀理解策略研習_部件家族教學策略講解.jpg",
               "date": "2025-10-29",
               "url": "assets/gallery/c08/g2369.jpg"
             },
             {
-              "name": "LINE_ALBUM_20251029差異化閱讀理解策略研習_260421_4.jpg",
+              "name": "永貞國小差異化閱讀理解策略研習_全校教師電腦教室共學.jpg",
               "date": "2025-10-29",
               "url": "assets/gallery/c08/g2377.jpg"
             },
             {
-              "name": "LINE_ALBUM_20251029差異化閱讀理解策略研習_260421_8.jpg",
+              "name": "永貞國小差異化閱讀理解策略研習_文本提問設計小組討論.jpg",
               "date": "2025-10-29",
               "url": "assets/gallery/c08/g2381.jpg"
             },
             {
-              "name": "LINE_ALBUM_20251126寫作融入資訊教學研習_260421_11.jpg",
+              "name": "永貞國小彭仁星主任主講_寫作融入資訊教學校內增能研習.jpg",
+              "date": "2025-11-26",
+              "url": "assets/gallery/c08/g2383.jpg"
+            },
+            {
+              "name": "永貞國小寫作融入資訊教學研習_閱讀與寫作架構探討.jpg",
               "date": "2025-11-26",
               "url": "assets/gallery/c08/g2385.jpg"
             }
           ],
           "catalogSub": "校內閱讀理解與寫作增能研習",
           "webDocCount": 1,
-          "webImgCount": 8,
+          "webImgCount": 9,
           "vidCount": 0,
           "archDocCount": 1,
           "archImgCount": 3
@@ -2100,19 +2056,14 @@ window.YONGZHEN_ARCHIVE = {
           ],
           "sampleImgs": [
             {
-              "name": "2025夢花文學獎-姿涵_0001.jpg",
+              "name": "永貞國小鍾姿涵同學_2025苗栗縣夢花文學獎小夢花兒童詩優選.jpg",
               "date": "2026-10-05",
               "url": "assets/gallery/c08/g2337.jpg"
-            },
-            {
-              "name": "reading_nknu_pair_guidance_group.jpg",
-              "date": "2026-10-20",
-              "url": "assets/gallery/c08/g2347.jpg"
             }
           ],
           "catalogSub": "圖推教師與明日閱讀證書獎狀(2024-2026)",
           "webDocCount": 14,
-          "webImgCount": 2,
+          "webImgCount": 1,
           "vidCount": 0,
           "archDocCount": 0,
           "archImgCount": 0
